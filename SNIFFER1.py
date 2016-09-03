@@ -62,8 +62,11 @@ while True:
               latnew=titud
               longnew=gtitud
               minnew=minutes
+              print("Data uploaded to DB")
         db.commit()
         cursor.close()
         db.close()
-        
+    else:
+        print("Mensaje Corrupto")    
+    
 
