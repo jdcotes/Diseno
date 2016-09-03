@@ -1,7 +1,7 @@
 <?php
   $server = "localhost";
   $username = "root";
-  $password = "";
+  $password = "1234";
   $database = "disenouninorte";
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
