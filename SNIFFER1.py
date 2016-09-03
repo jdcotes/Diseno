@@ -61,7 +61,7 @@ while True:
         secsincemidnight= float(data[11:16])
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
-        tsql= t.strfime(f)
+        tsql= t.strtime(f)
         tsql2= str(tsql)
 
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
