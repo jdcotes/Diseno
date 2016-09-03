@@ -8,8 +8,6 @@ numero_mensaje = 1
 latnew=0
 longnew=0
 minnew=0
-print("Sniffer Address: %s" % IP)
-print("Puerto: %.0f" % PORT)
 
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 sock.bind((IP,PORT))
@@ -18,9 +16,7 @@ while True:
     data,addr=sock.recvfrom(1024)
     Fecha_captura = datetime.datetime.now()
 
-    print("--------------------------------")
-    print("Mensaje N°: %i" % numero_mensaje)
-    numero_mensaje = numero_mensaje + 1
+
     
     if len(data) == 63:
         
@@ -53,27 +49,8 @@ while True:
     #   gtitud=float(data[28:35])/-100000
         gtitud=float(data[28:35])/1000
         long=str(gtitud)
-        text_file=open("Fecha.txt","w")
-        text_file.write("%s/%s/%s" %(Anio,Mes,Dia))
-        text_file.close()
 
-        text_file=open("Hora.txt","w")
-        text_file.write("%s:%s:%s" %(Hora, Mins, Secs))
-        text_file.close()
-
-        text_file=open("Latitud.txt","w")
-        text_file.write("%s" %(lat))
-        text_file.close()
-
-        text_file=open("Longitud.txt","w")
-        text_file.write("%s" %(long))
-        text_file.close()
-
-        print("Tamaño de mensaje: 63")
-        print("Fecha:             %s/%s/%s" %(Anio,Mes,Dia))
-        print("Hora:              %s:%s:%s" %(Hora, Mins, Secs))
-        print("Latitud:           %s" % lat)
-        print("Longitud:         %s" % long)
+ 
 
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
@@ -85,11 +62,8 @@ while True:
               latnew=titud
               longnew=gtitud
               minnew=minutes
-              print("Data Uploaded to DB")
         db.commit()
         cursor.close()
         db.close()
         
 
-    else:
-        print("Mensaje Corrupto")
