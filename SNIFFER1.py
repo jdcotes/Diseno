@@ -55,7 +55,7 @@ while True:
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
         
-        db = MySQLdb.connect(host='localhost',user='root',password='1234',database='disenouninorte')
+        db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
         if abs(titud-latnew)>0 or abs(gtitud-longnew)>0 or abs(minutes-minnew)>0 :
               cursor.execute("INSERT INTO coordenadas (Fecha,Hora,Latitud,Longitud) VALUES('%s','%s','%s','%s')" % (fecha_db,hora_db,lat,long))
