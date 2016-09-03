@@ -61,16 +61,15 @@ while True:
         secsincemidnight= float(data[11:16])
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
-        tsql= t.strtime(f)
-        tsql2= str(tsql)
-
+        tsql= t.strftime(f)
+        
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
         
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
         if abs(titud-latnew)>0 or abs(gtitud-longnew)>0 or abs(minutes-minnew)>0 :
-              cursor.execute("INSERT INTO coordenadas (Fecha,Hora,Latitud,Longitud) VALUES('%s','%s','%s','%s')" % (fecha_db,tsql2,lat,long))
+              cursor.execute("INSERT INTO coordenadas (Fecha,Hora,Latitud,Longitud) VALUES('%s','%s','%s','%s')" % (fecha_db,tsql,lat,long))
               latnew=titud
               longnew=gtitud
               minnew=minutes
