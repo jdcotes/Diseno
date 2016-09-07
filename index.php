@@ -142,11 +142,7 @@
 	<br>
 	<h4>Fecha</h4>
 	<div>
-		<?php
-			include("conexion.php");
-			$Con = new conexion();
-			$Con->recuperarDatos();
-		?>
+		
 	</div>
 	<br>
 		<h4>Hora</h4>
