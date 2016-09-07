@@ -53,7 +53,7 @@
 	 }
 
 	 .main .articles{
-	 	width: 68.5%;
+	 	width: 100%;
 	 	margin-right:1.5%;
 	 	float:left;
 	 }
@@ -64,17 +64,10 @@
 	 	margin-bottom: 20px;
 	 }
 
-
-	 aside{
-	 	width:30%;
-	 	background: #D8D8D8;
-	 	float: left;
-	 	padding: 20px;
-	 	box-sizing: border-box;
-	 }
-
+  
 	 footer {
 	 	background: #610B0B;
+	 	width: 100%;
 	 	color:#D8D8D8;
 	 	clear:both;
 	 	padding:10px 0px;
@@ -87,10 +80,6 @@
 	  header{
 	  	background:#e6e6e6;
 	  	width: 1012px;
-	  }
-
-	  p .aside{
-	  	text-align: justify;
 	  }
 
 	</style>
@@ -125,20 +114,24 @@
 <section class="main">
 <section class="articles">
 <article>
-	<h2>¿Donde ha estado mi vehículo?</h2>
-
+	<h2>¿Quienes somos?</h2>
+	<br>
+				<br>Hernan Carrillo 
+				<br>Cristian Cepeda 
+				<br>Juan Diego Cotes
+				<br>Andrea Fontalvo 
+				<br>
+				<br><strong>Universidad del Norte
+				<br>2016 </strong>
+				<br></br>
+				</div>
 	</article>
 
-    <article>
+   <!-- <article>
     <div id='map'> </div>
 	</article>
- </section>
+ </section>-->
 
-<aside>
-	<h3>Calendario</h3>
-	<br>
-	<p></p>
-</aside>
 
              	<!-- <div id='map'> </div>					
 				<p>Diseño Electrónico</p>

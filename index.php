@@ -17,7 +17,7 @@
 	 	background:#e6e6e6;
 	 }
 
-	 h2, h3{
+	 h2, h3, h4{
 	 	color:#B40404;
 	 }
 	 
@@ -119,7 +119,7 @@
 		<ul>
 			<li><a href="index.php">Inicio</a></li>
 			<li><a href="indexx.php">Histórico</a></li>
-			<li><a href="##">Acerca de Nosotros</a></li>
+			<li><a href="index3.php">Acerca de Nosotros</a></li>
 		</ul>
 	</nav>
 </header>		
@@ -127,8 +127,7 @@
 <section class="articles">
 <article>
 	<h2>¿Donde está mi vehiculo?</h2>
-	<br>
-	<p> </p>
+
 	</article>
 
     <article>
@@ -139,7 +138,18 @@
 <aside>
 	<h3>Ultima ubicación</h3>
 	<br>
-	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo. </p>
+	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
+	<br>
+	<h4>Fecha</h4>
+	<div>
+		<?php
+			include("conexion.php");
+			$Con = new conexion();
+			$Con->recuperarDatos();
+		?>
+	</div>
+	<br>
+		<h4>Hora</h4>
 </aside>
 
              	<!-- <div id='map'> </div>					
