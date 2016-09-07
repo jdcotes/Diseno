@@ -73,7 +73,7 @@
 	 	box-sizing: border-box;
 	 }
 
-	 footer{
+	 footer {
 	 	background: #610B0B;
 	 	color:#D8D8D8;
 	 	clear:both;
@@ -110,7 +110,6 @@
 
 	<body>
 		<font face="helvetica">
-
 <header>
 	<div class="logo">
 		<img src="logo.PNG">
@@ -126,7 +125,7 @@
 <section class="main">
 <section class="articles">
 <article>
-	<h2>¿Donde está mi vehiculo?</h2>
+	<h2>¿Donde ha estado mi vehículo?</h2>
 	<br>
 	<p> </p>
 	</article>
@@ -137,9 +136,9 @@
  </section>
 
 <aside>
-	<h3>Ultima ubicación</h3>
+	<h3>Calendario</h3>
 	<br>
-	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo. </p>
+	<p></p>
 </aside>
 
              	<!-- <div id='map'> </div>					
@@ -159,8 +158,8 @@
 </section>
 
 <footer>
-	<p> Diseño Electrónico - Universidad del Norte - 2016</p>
+	<p class="foot"> Diseño Electrónico - Universidad del Norte - 2016</p>
 </footer>
-		<script src="js/realtime.js"></script>
+		
 	</body>
 </html>
