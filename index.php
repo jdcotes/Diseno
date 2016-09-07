@@ -141,9 +141,7 @@
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
 	<h4>Fecha</h4>
-	<div>
-		
-	</div>
+
 	<br>
 		<h4>Hora</h4>
 </aside>
