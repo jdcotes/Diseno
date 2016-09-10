@@ -2,20 +2,30 @@
 class conexion{
 	function recuperarDatos(){
 
-  $server = "localhost";
-  $username = "root";
-  $password = "";
-  $database = "disenouninorte";
-  
-  $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
-  mysql_select_db($database,$con)or die("No se encontró la base de datos");
+  $servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "disenouninorte";
 
-  $query = "SELECT Hora FROM `coordenadas` ORDER by Hora limit 1";
-  $resultado = mysql_query($query);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
+$sql = "SELECT Fecha, Hora FROM `coordenadas` order by fecha DESC limit 1";
+$result = $conn->query($sql);
 
-$cosa=mysql_free_result($resultado);
-echo($cosa);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Fecha: " . $row["Fecha"]. " - Hora: " . $row["Hora"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
 }
 }
 ?>

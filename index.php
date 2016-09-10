@@ -64,7 +64,6 @@
 	 	margin-bottom: 20px;
 	 }
 
-
 	 aside{
 	 	width:30%;
 	 	background: #D8D8D8;
@@ -140,10 +139,14 @@
 	<br>
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
-	<h4>Fecha</h4>
-
-	<br>
-		<h4>Hora</h4>
+	<div>
+		<?php
+			include("Conexion.php");
+			$con = new Conexion();
+			$con->recuperarDatos();
+		?>
+	</div>
+	
 </aside>
 
              	<!-- <div id='map'> </div>					
