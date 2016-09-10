@@ -27,3 +27,10 @@ mysql_free_result($consulta);
 
 $lat=$floatlat;
 $long=$floatlong;
+
+}
+}
+
+mysql_close($con);
+
+?>
