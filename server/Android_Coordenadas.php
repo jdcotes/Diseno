@@ -22,7 +22,7 @@ $floatlong = floatval($_POST[Longitud_gps]);
 
 if ((abs($floatlat-$lat)>=0.0001) or (abs($floatlong-$long)>=0.0001) ) { 
 
-$consulta=mysql_query("INSERT INTO coordenadas (Fecha,Hora,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
+$consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
 mysql_free_result($consulta);
 
 $lat=$floatlat;
