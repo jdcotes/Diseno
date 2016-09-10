@@ -17,10 +17,10 @@ $long=0;
 
 while true {
 
-$floatlat  = floatval("'$_POST[Latitud_gps]'");
-$floatlong = floatval("'$_POST[Longitud_gps]'");
+$floatlat  = floatval($_POST['Latitud_gps']);
+$floatlong = floatval($_POST['Longitud_gps']);
 
-if ((abs($floatlat-$lat)>=0.0001) || (abs($floatlong-$long)>=0.0001) ) { 
+if (($floatlat-$lat)>=0.0003 || ($floatlong-$long)>=0.0003 || ($lat-$floatlat)>=0.0003 || ($long-$floatlong)>=0.0003  ) { 
 
 $consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
 mysql_free_result($consulta);
