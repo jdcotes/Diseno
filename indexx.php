@@ -173,6 +173,6 @@
 <footer>
 	<p class="foot"> Diseño Electrónico - Universidad del Norte - 2016</p>
 </footer>
-		
+	<script src="js/realtime.js"></script>	
 	</body>
 </html>
