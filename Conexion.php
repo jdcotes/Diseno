@@ -29,7 +29,7 @@ if ($result->num_rows > 0) {
 		fwrite($file, "Esto es una nueva linea de texto" . PHP_EOL);
 		fclose($file);
 
-        echo "Fecha: " . $row["FECHA"] . "<br>". "Hora: " . $row["HORA"]. "<br>";
+        echo "Fecha: " . $row["FECHA"] . "Hora: " . $row["HORA"]. "<br>";
         
     }
 } else {
