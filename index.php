@@ -128,7 +128,6 @@
 	<h2>¿Donde está mi vehiculo?</h2>
 
 	</article>
-
     <article>
     <div id='map'> </div>
 	</article>
@@ -139,16 +138,17 @@
 	<br>
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
-	<div>
-		<?php
-			include("Conexion.php");
-			$con = new Conexion();
-			$con->recuperarDatos();
-		?>
+	<div id='Fecha'>
+	<ul></ul>
+			<script src="js/my_script.js"></script>		
+
+	</div>
+
+	<div id='Hora'>
+		
 	</div>
 	
 </aside>
-
              	<!-- <div id='map'> </div>					
 				<p>Diseño Electrónico</p>
 				<p><strong>Presentado por:</strong>
@@ -169,5 +169,6 @@
 	<p> Diseño Electrónico - Universidad del Norte - 2016</p>
 </footer>
 		<script src="js/realtime.js"></script>
+		<script src="js/my_script.js"></script>		
 	</body>
 </html>
