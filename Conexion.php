@@ -21,16 +21,15 @@ LIMIT 1";
 
 $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        
-        $file = fopen("Fecha.txt", "w");
+$file = fopen("Fecha.txt", "w");
 		fwrite($file, "Esto es una nueva linea de texto" . PHP_EOL);
 		fclose($file);
 
-        echo "Fecha: " . $row["FECHA"] . "Hora: " . $row["HORA"]. "<br>";
-        
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+       echo "Fecha: " . $row["FECHA"] . "<br>" . "Hora: " . $row["HORA"]. "<br>";
+       
     }
 } else {
     echo "0 results";
