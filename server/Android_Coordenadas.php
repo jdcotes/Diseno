@@ -10,7 +10,7 @@ $server = "localhost";
 date_default_timezone_set('America/Bogota');
 $fecha_servidor = date('Y-m-d H:i:s');
 
-global $lat,$lon,$floatlat,$floatlong
+
 
 $lat=0;
 $long=0;
