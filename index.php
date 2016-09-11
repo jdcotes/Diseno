@@ -139,7 +139,6 @@
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
 	<div id='Fecha'>
-	<script type="text/javascript" src=></script>
 		<?php
 			include("Conexion.php");
 			$con = new Conexion();
