@@ -137,6 +137,20 @@
 <aside>
 	<h3>Calendario</h3>
 	<br>
+	<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<title>Simple Tigra Calendar</title>
+
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal.css" />
+	<script type="text/javascript" src="tcal.js"></script> 
+</head>
+<body>
+	<form action="#">
+		<!-- add class="tcal" to your input field -->
+		<div><input type="text" name="date" class="tcal" value="" /></div>
+		<div><input type="text" name="date" class="tcal" value="" /></div>
+	</form>
 	<p></p>
 </aside>
 
