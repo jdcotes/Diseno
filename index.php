@@ -148,8 +148,9 @@
 			function fecha(){
 
 				    $.post("server/Conexion.php",function(respuesta) {
-				    DATE = JSON.parse(respuesta);
-				     }
+				    DATE = JSON.parse(respuesta)
+				    });
+				    
 			}
 	</script>
 	</div>
