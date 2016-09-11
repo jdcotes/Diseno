@@ -12,25 +12,36 @@ $fecha_servidor = date('Y-m-d H:i:s');
 
 
 
-$lat=0;
-$long=0;
 
 
-while (true) {
 
 $floatlat  = floatval($_POST['Latitud_gps']);
 $floatlong = floatval($_POST['Longitud_gps']);
 
-if (($floatlat-$lat)>=0.0003 || ($floatlong-$long)>=0.0003 || ($lat-$floatlat)>=0.0003 || ($long-$floatlong)>=0.0003  ) { 
+
+
+  $sql = "SELECT * FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
+  $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
+  $lat=array();
+  $long=array();
+  $i=0;
+
+  while($reg=mysql_fetch_array($ejecutar_sql1)){  
+  $lat[$i]=$reg['Latitud'];
+  $long[$i]=$reg['Longitud'];
+  $i++;  
+    }
+
+
+
+
+if (( abs($floatlat-$lat[0])>=0.0001) || abs($floatlong-$long[0])>=0.0001)) { 
 
 $consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
 mysql_free_result($consulta);
-
-$lat=$floatlat;
-$long=$floatlong;
-
 }
-}
+
+
 
 mysql_close($con);
 
