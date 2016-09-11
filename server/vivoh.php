@@ -9,7 +9,7 @@
   $uno = '2016/09/02';
   $dos = '2016/09/07';
 
-  $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  $uno AND  $dos;";
+  $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$uno' AND  '$dos';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
   
   $tabla=array();

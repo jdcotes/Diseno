@@ -13,8 +13,8 @@ var routes2=[];
      
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
-    Tabla_MySql = JSON.parse(respuesta);
-
+      Tabla_MySql = JSON.parse(respuesta);
+      
      	// console.log(Tabla_MySql[0].Fecha);
      	// console.log(Tabla_MySql[0].Hora);
      	// console.log(Tabla_MySql[0].Latitud);
