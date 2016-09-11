@@ -2,7 +2,7 @@
 class conexion{
 	function recuperarDatos(){
 
-$servername = "localhost";
+  $servername = "localhost";
 $username = "root";
 $password = "1234";
 $dbname = "disenouninorte";
@@ -20,7 +20,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "" . $row["FechaGPS"]. "<br>";
+        echo "" . $row["FechaGPS"]. " - Hora: " . $row["FechaGPS"]. "<br>";
     }
 } else {
     echo "0 results";
