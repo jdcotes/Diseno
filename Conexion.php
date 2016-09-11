@@ -24,11 +24,17 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo json_encode("Fecha: " . $row["FECHA"] . "<br>". "Hora: " . $row["HORA"]. "<br>") ;
+        echo "Fecha: " . $row["FECHA"] . "<br>". "Hora: " . $row["HORA"]. "<br>";
+        
+		$file = fopen("Fecha.txt", "w");
+		fwrite($file, "Esto es una nueva linea de texto" . PHP_EOL);
+		fclose($file);
     }
 } else {
     echo "0 results";
 }
+
+
 $conn->close();
 }
 }
