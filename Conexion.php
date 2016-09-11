@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "Fecha: " . $row["FECHA"]. " - Hora: " . $row["HORA"]. "<br>";
+        echo "Fecha: " . $row["FECHA"] . "<br>". " - Hora: " . $row["HORA"]. "<br>";
     }
 } else {
     echo "0 results";
