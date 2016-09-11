@@ -6,6 +6,8 @@
 	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
 	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
      <link rel="stylesheet" href="css/estilo.css">
    
 	 <style type="text/css">
@@ -139,11 +141,17 @@
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
 	<div id='Fecha'>
-		<?php
-			include("Conexion.php");
-			$con = new Conexion();
-			$con->recuperarDatos();
-		?>
+		<script type="text/javascript">
+			var intervalo1
+			var DATE
+			intevalo1 = setInterval(function(){fecha()},5000);
+			function fecha(){
+
+				    $.post("server/Conexion.php",function(respuesta) {
+				    DATE = JSON.parse(respuesta);
+				     }
+			}
+	</script>
 	</div>
 
 	<div id='Hora'>

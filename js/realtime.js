@@ -1,13 +1,14 @@
 			
 var intevalo1;
 var entro=0;
- var map2;
-   var Tabla_MySql;
+var map2;
+var Tabla_MySql;
  //intevalo1 = setInterval('mapa1()',11000);
- intevalo1 = setInterval(function(){mapa1()},5000);
+intevalo1 = setInterval(function(){mapa1()},5000);
         // mapa1();
 var markerArray =[],total=0;
 var routes2=[];
+
  function mapa1(){
      
      $.post("server/vivo.php",function(respuesta) {
@@ -23,8 +24,8 @@ var routes2=[];
          var lat, lon;
           for (var j in prueba1) {
               var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
-              lat=parseFloat(prueba1[j].Latitud);
-              lon= parseFloat(prueba1[j].Longitud);
+              lat = parseFloat(prueba1[j].Latitud);
+              lon = parseFloat(prueba1[j].Longitud);
              }
            if(entro==0)
            {
@@ -33,7 +34,6 @@ var routes2=[];
            center: myLatLng
             });
             entro=1;
-          
            }
            routes2[total] =  new google.maps.LatLng(lat,lon);
            total=total+1;
