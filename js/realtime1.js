@@ -3,7 +3,7 @@ var intevalo1;
 var entro=0;
 var map2;
 var Tabla_MySql;
-intevalo1 = setInterval(function(){initMap()},30000);
+intevalo1 = setInterval(function(){initMap()},5000);
 var map;
 function initMap() {
 	if(entro==0){
