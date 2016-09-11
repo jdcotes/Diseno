@@ -11,8 +11,6 @@ date_default_timezone_set('America/Bogota');
 $fecha_servidor = date('Y-m-d H:i:s');
 
 
-$lat=0;
-$long=0;
 
 
 
@@ -22,18 +20,13 @@ $floatlong = floatval($_POST['Longitud_gps']);
 
 
 
-  $sql = "SELECT Latitud FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
+  $sql = "SELECT * FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
   while($reg=mysql_fetch_array($ejecutar_sql1)){  
-  $lat=$reg;
+  $lat=$reg['Latitud'];
+  $long=$reg['Longitud'];
     }
 
-
-  $sql2 = "SELECT Longitud FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
-  $ejecutar_sql2=mysql_query($sql2) or die("Problemas en consulta: ".mysql_error());
-  while($reg2=mysql_fetch_array($ejecutar_sql2)){  
-  $long=$reg2;
-  }
 
 
 
