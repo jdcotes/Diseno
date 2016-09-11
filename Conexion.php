@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT SUBSTRING( FechaGPS, 1, 10 ) AS FECHA 
+$sql = "SELECT SUBSTRING( FechaGPS, 1, 10) AS FECHA, SUBSTRING( FechaGPS, 12, 8) AS HORA
 FROM coordenadas
 ORDER BY FechaGPS DESC 
 LIMIT 1";
@@ -24,7 +24,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "" . $row["FECHA"]. " - Hora: " . $row["FECHA"]. "<br>";
+        echo "Fecha: " . $row["FECHA"]. " - Hora: " . $row["HORA"]. "<br>";
     }
 } else {
     echo "0 results";
