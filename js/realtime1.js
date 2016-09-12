@@ -51,7 +51,7 @@ function initMap() {
           zoom: 15});
         }
 
-	  if(entro==0){
+	   else{
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:myLatLng,
           zoom: 15});
