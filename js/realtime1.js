@@ -14,7 +14,9 @@ var tamaño;
 function initMap() {
 	var date1 = fecha1.value;
     var date2 = fecha2.value;
-
+    $.post("server/vivohp.php",{fechita: date1,fechita2: date2},function(respuesta){
+    	alert(respuesta);
+    });
 
 	//$.post("server/vivoh")
 	$.post("server/vivoh.php",function(respuesta) {

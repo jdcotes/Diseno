@@ -6,9 +6,12 @@
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
 
-  $uno = $_GET['date1'];
-  $dos = $_GET['date2'];
+  $uno = $_POST['fechita'];
+  $dos = $_POST['fechita2'];
 
+  echo $uno;
+  echo $dos;
+  
   $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$uno' AND  '$dos';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
   
