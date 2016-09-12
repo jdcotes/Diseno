@@ -24,7 +24,7 @@ function initMap() {
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
         }
-
+       prueba = parseFloat(prueba1);
 	  if(entro==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
@@ -33,7 +33,7 @@ function initMap() {
       entro=1;
 
        //routes2[total] =  new google.maps.LatLng(lat,lon);
-       routes2 = prueba1;
+       routes2 = prueba;
        total=total+1;
        var polyline = new google.maps.Polyline({
            path: routes2,
