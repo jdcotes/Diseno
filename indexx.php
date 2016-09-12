@@ -146,10 +146,11 @@
 	<script type="text/javascript" src="tcal.js"></script> 
 </head>
 <body>
-	<form action="#">
+	<form method= "get" action= "server/vivoh.php" >
+	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
-		<div method= "get" action= "server/vivoh.php"> fecha:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
-		<div method= "get" action= "server/vivoh.php"><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
+		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
+		<div > Fecha2:<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
 	</form>
 	<p></p>
 </aside>
