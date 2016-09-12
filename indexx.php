@@ -148,8 +148,8 @@
 <body>
 	<form action="#">
 		<!-- add class="tcal" to your input field -->
-		<div><input id="fecha1" runat="server" type="text" name="date" class="tcal" value="" /></div>
-		<div><input id="fecha2" runat= "server" type="text" name="date" class="tcal" value="" /></div>
+		<div method= "get" action= "server/vivoh.php"> fecha:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
+		<div method= "get" action= "server/vivoh.php"><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
 	</form>
 	<p></p>
 </aside>
