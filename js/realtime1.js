@@ -56,6 +56,7 @@ function initMap() {
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:myLatLng,
           zoom: 15});
+          console.log("aqui estoy");
         }
       entro=1;
 
