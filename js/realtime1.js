@@ -45,11 +45,11 @@ function initMap() {
            j=j+1;
         }
        
-       if(entro ==0 && tamaño == 0){
+       if(entro==0 && tamaño==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: -34.397, lng: 150.644},
           zoom: 15});
-          entro=0;
+          entro=1;
           console.log("hola");
         }
 
