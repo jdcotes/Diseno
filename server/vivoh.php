@@ -6,7 +6,7 @@
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
 
-  $uno = '2016/09/02';
+  $uno = 'fecha1.value';
   $dos = '2016/09/07';
 
   $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$uno' AND  '$dos';";
