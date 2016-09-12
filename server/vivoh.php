@@ -9,8 +9,8 @@
   $uno = $_POST['fechita'];
   $dos = $_POST['fechita2'];
 
-  echo $uno;
-  echo $dos;
+  //echo $uno;
+  //echo $dos;
   
   $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$uno' AND  '$dos';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
