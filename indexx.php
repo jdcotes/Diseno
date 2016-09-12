@@ -149,8 +149,9 @@
 	<form action="#">
 		<!-- add class="tcal" to your input field -->
 		<div><input id="fecha1" runat="server" type="text" name="date" class="tcal" value="" /></div>
+		<output onforminput="value=fecha1.value" for="fecha1"></output>
 		<script src= ></script>
-		<div><input id="fecha2" runat="server" type="text" name="date" class="tcal" value="" /></div>
+		<div><input id="fecha2"  type="text" name="date" class="tcal" value="" /></div>
 	</form>
 	<p></p>
 </aside>

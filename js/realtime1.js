@@ -9,7 +9,7 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
-var valor = Fecha1.value;
+var valor = fecha1.value;
 console.log(valor);
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
