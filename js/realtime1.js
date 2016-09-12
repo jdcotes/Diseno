@@ -12,6 +12,10 @@ var tamaño;
 
 
 function initMap() {
+	var date1 = fecha1.value;
+    var date2 = fecha2.value;
+	//var date1 = JSON.encode(fecha1.value)
+	//$.post("server/vivoh")
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
      //Tabla_MySql = JSON.parse(respuesta);
@@ -19,8 +23,7 @@ function initMap() {
    	 //console.log(Tabla_MySql[0].Longitud);
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
-   	 var date1 = fecha1.value;
-     var date2 = fecha2.value;
+   	 
    	 console.log(date1);
    	 console.log(date2);
 
