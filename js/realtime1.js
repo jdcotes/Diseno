@@ -45,13 +45,14 @@ function initMap() {
            j=j+1;
         }
        
-       if(lat == 0 && long == 0){
+       if(tamaño == 0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: -34.397, lng: 150.644},
           zoom: 15});
+          entro=0;
         }
 
-	   else{
+	  if(entro==0 && tamaño>0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:myLatLng,
           zoom: 15});
