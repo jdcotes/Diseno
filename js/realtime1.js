@@ -45,9 +45,15 @@ function initMap() {
            j=j+1;
         }
        
-	  if(entro==0){
+       if(myLatLng = 0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: -34.397, lng: 150.644},
+          zoom: 15});
+        }
+
+	  if(entro==0){
+          map2 = new google.maps.Map(document.getElementById('map'), {
+          center:myLatLng,
           zoom: 15});
         }
       entro=1;
