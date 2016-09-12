@@ -9,8 +9,7 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
-var date1 = null;
-var date2 = null;
+
 
 function initMap() {
 	var date1 = fecha1.value;
@@ -53,27 +52,27 @@ function initMap() {
         }
       entro=1;
 
+      if(tamaño>0){
+         var polyline = new google.maps.Polyline({
+            path: routes2,
+            map: map2, 
+            strokeColor: '#143254', 
+            strokeWeight: 5, 
+            strokeOpacity: 0.3, 
+            clickable: false
+          });
 
-       var polyline = new google.maps.Polyline({
-           path: routes2,
-           map: map2, 
-           strokeColor: '#143254', 
-           strokeWeight: 5, 
-           strokeOpacity: 0.3, 
-           clickable: false
-        });
-
-       var marker = new google.maps.Marker({
+         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
             title: 'You are here'
-        });
-        j=j+1;
-        for (var i = 0; i < markerArray.length; i++) {
-             markerArray[i].setMap(null);
+         });
+         j=j+1;
+         for (var i = 0; i < markerArray.length; i++) {
+              markerArray[i].setMap(null);
             };
-        markerArray= [];
-        markerArray.push(marker);
-
+         markerArray= [];
+         markerArray.push(marker);
+        }
     });
 }
