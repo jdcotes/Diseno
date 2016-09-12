@@ -8,7 +8,7 @@
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
-     <link rel="stylesheet" href="css/estilo.css">
+     <link rel="stylesheet">
    
 	 <style type="text/css">
 	 *{
