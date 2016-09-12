@@ -26,13 +26,14 @@ function initMap() {
         }
 
 	  if(entro==0){
-          map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 10.963889, lng: -74.796389},
+          map2 = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
           zoom: 15});
         }
       entro=1;
 
-       routes2[total] =  new google.maps.LatLng(lat,lon);
+       //routes2[total] =  new google.maps.LatLng(lat,lon);
+       routes2 = prueba1;
        total=total+1;
        var polyline = new google.maps.Polyline({
            path: routes2,
