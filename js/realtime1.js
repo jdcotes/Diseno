@@ -14,12 +14,12 @@ var tamaño;
 function initMap() {
 	var date1 = fecha1.value;
     var date2 = fecha2.value;
-    $.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta){
-    	//alert(respuesta);
-    });
+    //$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta){
+    //	alert(respuesta);
+    //});
 
 	//$.post("server/vivoh")
-	$.post("server/vivoh.php",function(respuesta) {
+	$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
      //Tabla_MySql = JSON.parse(respuesta);
    	 //console.log(Tabla_MySql[0].Latitud);
