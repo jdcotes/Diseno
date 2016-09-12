@@ -140,13 +140,21 @@
 	<br>
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
-	<div id='Fecha'>
-				<?php
-				include("Conexion.php");
-				$con = new Conexion();
-				$con->recuperarDatos();
-				?>
-	</div>
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/
+		libs/jquery/1.3.0/jquery.min.js"></script>
+
+		<script type="text/javascript">
+		var auto_refresh = setInterval(
+		function ()
+		{
+		$('#FECHA').load('LLAMAR.php').fadeIn("slow");
+		}, 5000); // refresh every 10000 milliseconds
+
+		<div id="FECHA"> </div>
+
+		</script>
+ 
 
 	<div id='Hora'>
 		
