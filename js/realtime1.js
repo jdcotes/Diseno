@@ -9,7 +9,8 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
-
+var date1 = null;
+var date2 = null;
 
 function initMap() {
 	var date1 = fecha1.value;
@@ -34,6 +35,8 @@ function initMap() {
        tamaño = prueba1.length
        console.log(tamaño);
        var lat, lon;
+
+        
 
        for (var j in prueba1) {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
