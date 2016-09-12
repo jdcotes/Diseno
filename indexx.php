@@ -146,7 +146,7 @@
 	<script type="text/javascript" src="tcal.js"></script> 
 </head>
 <body>
-	<form method= "get" action= "server/vivoh.php" >
+	<form method= "get" action= "http://trackntruck.ddns.net/Diseno/server/vivoh.php" >
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
 		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
