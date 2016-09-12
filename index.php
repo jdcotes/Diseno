@@ -6,6 +6,8 @@
 	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
 	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/
+		libs/jquery/1.3.0/jquery.min.js"></script>
 
 
      <link rel="stylesheet">
@@ -140,22 +142,15 @@
 	<br>
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
-
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/
-		libs/jquery/1.3.0/jquery.min.js"></script>
-
 		<script type="text/javascript">
 		var auto_refresh = setInterval(
 		function ()
 		{
 		$('#FECHA').load('LLAMAR.php').fadeIn("slow");
 		}, 5000); // refresh every 10000 milliseconds
-
-		<div id="FECHA"> </div>
-
 		</script>
- 
-
+		
+	<div id="FECHA"> </div>
 	<div id='Hora'>
 		
 	</div>
