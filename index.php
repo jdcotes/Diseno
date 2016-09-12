@@ -151,7 +151,7 @@
 				    DATE = JSON.parse(respuesta);
 					fechaa = DATE[0].Fecha;
 					horaa = DATE[0].Hora;
-					document.write(DATE)
+					document.write(fechaa)
 				    });
 			}
 	</script>
