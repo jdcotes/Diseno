@@ -7,7 +7,7 @@ var map;
 var total = 0;
 var markerArray = [];
 var routes2 = [];
-
+var j = 0;
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -19,12 +19,12 @@ function initMap() {
    	   var prueba1 = JSON.parse(respuesta);
        var lat, lon;
 
-       for (var j in prueba1) {
+       //for (var j in prueba1) {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-        }
-       prueba = parseFloat(prueba1);
+        //}
+       
 	  if(entro==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center: myLatLng,
@@ -32,8 +32,8 @@ function initMap() {
         }
       entro=1;
 
-       //routes2[total] =  new google.maps.LatLng(lat,lon);
-       routes2 = prueba;
+       routes2[total] =  new google.maps.LatLng(lat,lon);
+       //routes2 = prueba;
        total=total+1;
        var polyline = new google.maps.Polyline({
            path: routes2,
@@ -49,7 +49,7 @@ function initMap() {
             map: map2,
             title: 'You are here'
         });
-
+        j=j+1;
         //for (var i = 0; i < markerArray.length; i++) {
         //     markerArray[i].setMap(null);
         //    };
