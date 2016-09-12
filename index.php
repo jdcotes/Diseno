@@ -141,25 +141,11 @@
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
 	<div id='Fecha'>
-		<script type="text/javascript">
-			var intervalo1
-			var DATE
-			intevalo1 = setInterval(function(){fecha()},5000);
-			function fecha(){
-
-				    $.post("server/Conexion.php",function(respuesta) {
-				    DATE = JSON.parse(respuesta);
-					fechaa = DATE[0].Fecha;
-					horaa = DATE[0].Hora;
-
-					console.log(fechaa);
-					console.log(horaa);
-
-					document.write(fechaa)
-				    });
-				}
-			
-	</script>
+				<?php
+				include("Conexion.php");
+				$con = new Conexion();
+				$con->recuperarDatos();
+				?>
 	</div>
 
 	<div id='Hora'>
