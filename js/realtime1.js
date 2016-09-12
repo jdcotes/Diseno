@@ -10,7 +10,7 @@ var routes2 = [];
 var j = 0;
 var tamaño;
 var valor = fecha1.value;
-console.log(valor);
+
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -19,6 +19,7 @@ function initMap() {
    	 //console.log(Tabla_MySql[0].Longitud);
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
+   	 console.log(valor);
    	   var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
        console.log(tamaño);
