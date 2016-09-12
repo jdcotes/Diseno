@@ -9,6 +9,8 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
+var valor = Fecha1.value;
+console.log(valor);
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/

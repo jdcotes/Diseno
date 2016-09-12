@@ -6,7 +6,7 @@
 	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
 	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-     <link rel="stylesheet" href="css/estilo.css">
+     <link rel="stylesheet">
    
 	 <style type="text/css">
 	 *{
@@ -148,8 +148,9 @@
 <body>
 	<form action="#">
 		<!-- add class="tcal" to your input field -->
-		<div><input type="text" name="date" class="tcal" value="" /></div>
-		<div><input type="text" name="date" class="tcal" value="" /></div>
+		<div><input id="fecha1" runat="server" type="text" name="date" class="tcal" value="" /></div>
+		<script src= ></script>
+		<div><input id="fecha2" runat="server" type="text" name="date" class="tcal" value="" /></div>
 	</form>
 	<p></p>
 </aside>
