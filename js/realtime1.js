@@ -9,7 +9,7 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
-
+var verificar = 0;
 
 function initMap() {
 	var date1 = fecha1.value;
@@ -45,10 +45,11 @@ function initMap() {
            j=j+1;
         }
        
-       if(entro==0 && tamaño==0){
+       if(verificar==0 && tamaño==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
-          center:{lat: -34.397, lng: 150.644},
+          center:{lat: 11.01999, lng: -74.8509},
           zoom: 15});
+          verificar=1;
           console.log("hola");
         }
 
