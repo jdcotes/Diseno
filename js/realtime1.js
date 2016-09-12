@@ -12,9 +12,21 @@ var tamaño;
 
 
 function initMap() {
-	var date1 = fecha1.value;
-    var date2 = fecha2.value;
-	//var date1 = JSON.encode(fecha1.value)
+	//var date1 = fecha1.value;
+    //var date2 = fecha2.value;
+	var date1 = JSON.encode(fecha1.value);
+	var date2 = JSON.encode(fecha2.value);
+	var miAjax = new Request({
+		url: "server/vivoh.php",
+		data: "date1=" + date1,
+	})
+	var miAjax2 = new Request({
+		url: "server/vivoh.php",
+		data: "date2=" + date2,
+	})
+	miAjax.send();
+	miAjax2.send();
+
 	//$.post("server/vivoh")
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
