@@ -50,6 +50,7 @@ function initMap() {
           center:{lat: -34.397, lng: 150.644},
           zoom: 15});
           entro=0;
+          console.log("hola");
         }
 
 	  if(entro==0 && tamaño>0){
@@ -57,8 +58,8 @@ function initMap() {
           center:myLatLng,
           zoom: 15});
           console.log("aqui estoy");
+          entro=1;
         }
-      entro=1;
 
       if(tamaño>0){
          var polyline = new google.maps.Polyline({
