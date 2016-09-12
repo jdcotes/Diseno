@@ -22,11 +22,13 @@ function initMap() {
        console.log(tamaño);
        var lat, lon;
 
-       //for (var j in prueba1) {
+       for (var j in prueba1) {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-        //}
+           routes2[j] =  new google.maps.LatLng(lat,lon);
+           j=j+1;
+        }
        
 	  if(entro==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
@@ -35,9 +37,7 @@ function initMap() {
         }
       entro=1;
 
-       routes2[total] =  new google.maps.LatLng(lat,lon);
-       //routes2 = prueba;
-       total=total+1;
+
        var polyline = new google.maps.Polyline({
            path: routes2,
            map: map2, 
