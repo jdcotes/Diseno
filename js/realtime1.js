@@ -41,7 +41,7 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-           routes2[j] =  new google.maps.LatLng(lat,lon);
+           routes2[j] = new google.maps.LatLng(lat,lon);
            j=j+1;
         }
        
@@ -49,7 +49,6 @@ function initMap() {
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: -34.397, lng: 150.644},
           zoom: 15});
-          entro=1;
           console.log("hola");
         }
 
@@ -73,7 +72,6 @@ function initMap() {
 
          var marker = new google.maps.Marker({
             position: myLatLng,
-            center: myLatLng, 
             map: map2,
             title: 'You are here'
          });
