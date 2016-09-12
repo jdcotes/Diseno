@@ -6,7 +6,7 @@
 	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
 	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 
      <link rel="stylesheet" href="css/estilo.css">
    
@@ -140,20 +140,22 @@
 	<br>
 	<p class="aside">Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
 	<br>
-	<div class="result"></div>
-	<script>
-	    function refresh_div() {
-	        jQuery.ajax({
-	            url:'http://trackntruck.ddns.net/Diseno/Conexion.php',
-	            type:'POST',
-	            success:function(results) {
-	                jQuery(".result").html(results);
-	            }
-	        });
-	    }
+	<div id='Fecha'>
+		<script type="text/javascript">
+			var intervalo1
+			var DATE
+			intevalo1 = setInterval(function(){fecha()},5000);
+			function fecha(){
 
-	    t = setInterval(refresh_div,5000);
+				    $.post("server/Conexion.php",function(respuesta) {
+				    DATE = JSON.parse(respuesta);
+					fechaa = DATE[0].Fecha;
+					horaa = DATE[0].Hora;
+					document.write(DATE)
+				    });
+			}
 	</script>
+	</div>
 
 	<div id='Hora'>
 		

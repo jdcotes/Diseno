@@ -24,11 +24,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        
-        $file = fopen("Fecha.txt", "w+");
-		fwrite($file, "Esto es una nueva linea de texto" . PHP_EOL);
-		fclose($file);
-
+    	
         echo "Fecha: " . $row["FECHA"] . "<br>" . "Hora: " . $row["HORA"]. "<br>";
         
     }
