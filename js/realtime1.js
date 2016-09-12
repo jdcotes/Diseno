@@ -2,12 +2,13 @@
 var intevalo1;
 var entro=0;
 var map2;
-intevalo1 = setInterval(function(){initMap()},5000);
+intevalo1 = setInterval(function(){initMap()},1000);
 var map;
 var total = 0;
 var markerArray = [];
 var routes2 = [];
 var j = 0;
+var tamaño;
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -17,6 +18,8 @@ function initMap() {
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
    	   var prueba1 = JSON.parse(respuesta);
+       tamaño = prueba1.length
+       console.log(tamaño);
        var lat, lon;
 
        //for (var j in prueba1) {
