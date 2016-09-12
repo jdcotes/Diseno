@@ -152,12 +152,13 @@
 					fechaa = DATE[0].Fecha;
 					horaa = DATE[0].Hora;
 
-					console.log(fechaa)
-					console.log(horaa)
-					
+					console.log(fechaa);
+					console.log(horaa);
+
 					document.write(fechaa)
 				    });
-			}
+				}
+			
 	</script>
 	</div>
 
