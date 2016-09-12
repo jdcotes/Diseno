@@ -50,11 +50,11 @@ function initMap() {
             title: 'You are here'
         });
         j=j+1;
-        //for (var i = 0; i < markerArray.length; i++) {
-        //     markerArray[i].setMap(null);
-        //    };
-        //markerArray= [];
-        //markerArray.push(marker);
+        for (var i = 0; i < markerArray.length; i++) {
+             markerArray[i].setMap(null);
+            };
+        markerArray= [];
+        markerArray.push(marker);
 
     });
 }
