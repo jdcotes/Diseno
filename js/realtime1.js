@@ -9,7 +9,7 @@ var markerArray = [];
 var routes2 = [];
 var j = 0;
 var tamaño;
-var valor = fecha1.value;
+
 
 function initMap() {
 	$.post("server/vivoh.php",function(respuesta) {
@@ -19,6 +19,7 @@ function initMap() {
    	 //console.log(Tabla_MySql[0].Longitud);
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
+   	 var valor = fecha1.value;
    	 console.log(valor);
    	   var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
