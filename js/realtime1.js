@@ -73,27 +73,28 @@ function initMap() {
       // Pintado de polilinea y establecer ubicación de marcador //
             
 
-	      if(tamaño>0){
-	         var polyline = new google.maps.Polyline({
-	            path: routes2,
-	            map: map2, 
-	            strokeColor: '#143254', 
-	            strokeWeight: 5, 
-	            strokeOpacity: 0.3, 
-	            clickable: false
-	          });
+	    if(tamaño>0){
+	        var polyline = new google.maps.Polyline({
+	         path: routes2,
+	         map: map2, 
+	         strokeColor: '#143254', 
+	         strokeWeight: 5, 
+	         strokeOpacity: 0.3, 
+	         clickable: false
+	        });
 
-	         var marker = new google.maps.Marker({
-	            position: myLatLng,
-	            map: map2,
-	            title: 'You are here'
-	         });
+	       var marker = new google.maps.Marker({
+	         position: myLatLng,
+	         map: map2,
+	         title: 'You are here'
+	        });
 	         j=j+1;
-	         for (var i = 0; i < markerArray.length; i++) {
-	              markerArray[i].setMap(null);
-	            };
-	         markerArray= [];
-	         markerArray.push(marker);
-	        }
-	        
+	        for (var i = 0; i < markerArray.length; i++) {
+	           markerArray[i].setMap(null);
+	        };
+	        markerArray= [];
+	        markerArray.push(marker);
+	    }  
+	           
+    });
 }
