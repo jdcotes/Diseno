@@ -63,8 +63,23 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-           routes2[j] = new google.maps.LatLng(lat,lon);
+           
            j=j+1;
+        if (j==0) {
+        	latold=0;
+        	longold=0; 	
+             routes2[j] = new google.maps.LatLng(lat,lon);
+        } 
+        if (j>1) {
+        
+        if ((abs(lat-latold)>0.0003) || (abs(lon-longold)>0.0003)){
+        	routes2[j] = new google.maps.LatLng(lat,lon);
+            latold=lat;
+            longold=lon;
+        }
+        }
+ 
+
         }
        
        // Condicional para cuando la consulta devuelve 0 datos //
