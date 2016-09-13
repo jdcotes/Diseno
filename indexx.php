@@ -144,6 +144,24 @@
 	<!-- link calendar resources -->
 	<link rel="stylesheet" type="text/css" href="tcal.css" />
 	<script type="text/javascript" src="tcal.js"></script> 
+	
+	<!-- HORAS SRC LINK ETC -->
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+	<style type="text/css">
+
+	.custom-date-style {
+		background-color: red !important;
+	}
+
+	.input{	
+	}
+	.input-wide{
+	width: 500px;
+	}
+
+</style>
 </head>
 <body>
 	<form method= "get" action= "http://trackntruck.ddns.net/Diseno/server/vivoh.php" >
@@ -151,6 +169,10 @@
 		<!-- add class="tcal" to your input field -->
 		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
 		<div > Fecha2:<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
+		
+		<div > Desde: <input type="text" value="" id="Desde" /></div>
+		<div > Hasta: <input type="text" value="" id="Hasta" /></div>
+	
 	</form>
 	<p></p>
 </aside>
@@ -176,4 +198,19 @@
 </footer>
 	<script src="js/realtime1.js"></script>	
 	</body>
+	<script src="./jquery.js"></script>
+<script src="build/jquery.datetimepicker.full.js"></script>
+<script>
+$.datetimepicker.setLocale('es');
+$("#Desde").datetimepicker({
+datepicker:false,
+format:'H:i'
+
+});
+$("#Hasta").datetimepicker({
+datepicker:false,
+format:'H:i'
+});
+
+</script>
 </html>
