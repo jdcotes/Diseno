@@ -17,6 +17,8 @@ center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
 
 function initMap() {
+
+	polyline.setMap(null);
 	var date1 = fecha1.value;
     var date2 = fecha2.value;
     var time1 = Desde.value;
