@@ -76,6 +76,7 @@ function initMap() {
             routes2[a] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
+            myLatLng = routes2[a];
             a = a + 1;
             console.log(a);
           }
@@ -114,7 +115,6 @@ function initMap() {
            strokeWeight: 5, 
            strokeOpacity: 1, 
            clickable: false
-
           });
 
          var marker = new google.maps.Marker({
