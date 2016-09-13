@@ -58,6 +58,7 @@ function initMap() {
        // LLenado de vector prueba 1 con la consulta realizada //
 
        for (var j in prueba1) {
+       	   console.log(j);
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
