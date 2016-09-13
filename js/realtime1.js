@@ -31,7 +31,7 @@ function initMap() {
 
     routes2 = [];
     polyline.setMap(null);
-  var date1 = fecha1.value;
+    var date1 = fecha1.value;
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
@@ -68,9 +68,9 @@ function initMap() {
            //console.log(lat);
            //console.log(lon);
            //routes2[j] = new google.maps.LatLng(lat,lon);
-          var prueba = lat-latold;
-          var hola = Math.abs(prueba)
-          console.log(hola);
+           //var prueba = lat-latold;
+           //var hola = Math.abs(prueba)
+           //console.log(hola);
 
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
             routes2[i] = new google.maps.LatLng(lat,lon);
