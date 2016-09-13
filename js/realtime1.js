@@ -95,9 +95,5 @@ function initMap() {
 	         markerArray= [];
 	         markerArray.push(marker);
 	        }
-	        if (routes2 == polyline){
-	          polyline.setMap(null);
-	          //patha = polyline;
-            }     
-    });
+	        
 }
