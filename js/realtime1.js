@@ -11,8 +11,8 @@ var j = 0;
 var tamaño;
 var verificar = 0;
 var patha = null;   // Evitar repintado
-var latold;
-var longold;
+var latold = 0;
+var longold = 0;
 
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
@@ -65,24 +65,18 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-           console.log(lat);
-           console.log(lon);
+           //console.log(lat);
+           //console.log(lon);
           
-          if (j == 0) {
-            latold = 0;
-            longold = 0;  
-              routes2[j] = new google.maps.LatLng(lat,lon);
-          } 
-          if (j>0) {
           var prueba = lat-latold;
           console.log(prueba);
 
-            if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
-              routes2[j] = new google.maps.LatLng(lat,lon);
-                latold=lat;
-                longold=lon;
-            }
+          if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+            routes2[j] = new google.maps.LatLng(lat,lon);
+           latold=lat;
+           longold=lon;
           }
+          
            j=j+1;
        }
         console.log(routes2);
