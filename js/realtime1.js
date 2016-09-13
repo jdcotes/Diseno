@@ -111,7 +111,7 @@ function initMap() {
            polyline = new google.maps.Polyline({
            path: routes2,
            map: map2, 
-           strokeColor: '#99CCFF', 
+           strokeColor: '#33CCCC', 
            strokeWeight: 5, 
            strokeOpacity: 1, 
            clickable: false
