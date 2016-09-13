@@ -11,6 +11,8 @@ var j = 0;
 var tamaño;
 var verificar = 0;
 var patha = null;   // Evitar repintado
+var latold;
+var longold;
 
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
@@ -72,7 +74,7 @@ function initMap() {
         } 
         if (j>1) {
         
-        if ((abs(lat-latold)>0.0003) || (abs(lon-longold)>0.0003)){
+        if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
         	routes2[j] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
