@@ -70,9 +70,7 @@ function initMap() {
           console.log("aqui estoy");
           entro=1;
         }
-      if (patha != routes2){
-           console.log("condicional borrar");
-           // Pintado de polilinea y establecer ubicación de marcador //
+      // Pintado de polilinea y establecer ubicación de marcador //
             
 
 	      if(tamaño>0){
@@ -97,8 +95,9 @@ function initMap() {
 	         markerArray= [];
 	         markerArray.push(marker);
 	        }
-	        patha.setMap(null);
-	        patha = polyline;
-       }
+	        if (routes2 == polyline){
+	          polyline.setMap(null);
+	          //patha = polyline;
+            }     
     });
 }
