@@ -17,7 +17,6 @@ function initMap() {
     //$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta){
     //	alert(respuesta);
     //});
-
 	//$.post("server/vivoh")
 	$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
