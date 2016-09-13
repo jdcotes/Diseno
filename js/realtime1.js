@@ -93,6 +93,10 @@ function initMap() {
           zoom: 15});
           verificar=1;
           console.log("hola");
+          if (tamaño==0){
+
+          alert ("No hay datos entre las fechas ingresadas");          
+          }
         }
 
        // Cargar una sola vez el mapa cuando se realiza la primera consulta //
