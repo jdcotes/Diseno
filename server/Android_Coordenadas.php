@@ -19,7 +19,7 @@
   //$long=array();
   //$i=0;
 
- while($reg=mysql_fetch_array($ejecutar_sql1)){  
+ while($reg==mysql_fetch_array($ejecutar_sql1)){  
     //$lat[$i]=$reg['Latitud'];
     //$long[$i]=$reg['Longitud'];
     //$i++;  
