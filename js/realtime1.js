@@ -39,7 +39,7 @@ function initMap() {
     //	alert(respuesta);
     //});
 	//$.post("server/vivoh")
-	$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
+	 $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
      //Tabla_MySql = JSON.parse(respuesta);
    	 //console.log(Tabla_MySql[0].Latitud);
@@ -67,21 +67,21 @@ function initMap() {
            lon = parseFloat(prueba1[j].Longitud);
            console.log(lat);
            console.log(lon);
-          
-	        if (j == 0) {
-	        	latold = 0;
-	        	longold = 0; 	
-	            routes2[j] = new google.maps.LatLng(lat,lon);
-	        } 
-	        if (j>0) {
+          routes2[j] = new google.maps.LatLng(lat,lon);
+	        // if (j == 0) {
+	        // 	latold = 0;
+	        // 	longold = 0; 	
+	        //     routes2[j] = new google.maps.LatLng(lat,lon);
+	        // } 
+	        // if (j>0) {
 	        
-	        if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
-	        	routes2[j] = new google.maps.LatLng(lat,lon);
-	            latold=lat;
-	            longold=lon;
-	        }
-	        }
-           j=j+1;
+	        // if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+	        // 	routes2[j] = new google.maps.LatLng(lat,lon);
+	        //     latold=lat;
+	        //     longold=lon;
+	        // }
+	        // }
+         //   j=j+1;
        }
         console.log(routes2);
        // Condicional para cuando la consulta devuelve 0 datos //
@@ -129,5 +129,5 @@ function initMap() {
 	        markerArray.push(marker);
 	    }  
 	           
-    });
+  });
 }
