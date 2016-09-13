@@ -16,9 +16,9 @@ function initMap() {
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
-    //$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta){
-    //	alert(respuesta);
-    //});
+    $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
+    	alert(respuesta);
+    });
 	//$.post("server/vivoh")
 	$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -28,8 +28,10 @@ function initMap() {
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
    	 
-   	 //console.log(time1);
-   	 //console.log(time2);
+   	 console.log(date1);
+   	 console.log(date2);
+   	 console.log(time1);
+   	 console.log(time2);
 
    	   var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
