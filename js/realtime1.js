@@ -13,7 +13,7 @@ var verificar = 0;
 var patha = null;   // Evitar repintado
 var latold = 0;
 var longold = 0;
-
+var i = 0;
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
@@ -67,15 +67,16 @@ function initMap() {
            lon = parseFloat(prueba1[j].Longitud);
            //console.log(lat);
            //console.log(lon);
-          routes2[j] = new google.maps.LatLng(lat,lon);
+           //routes2[j] = new google.maps.LatLng(lat,lon);
           var prueba = lat-latold;
           var hola = Math.abs(prueba)
           console.log(hola);
 
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
-            //routes2[j] = new google.maps.LatLng(lat,lon);
+            routes2[i] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
+            i = i + 1;
           }
           
            j=j+1;
