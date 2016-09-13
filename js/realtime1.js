@@ -20,7 +20,7 @@ function initMap() {
     //	alert(respuesta);
     //});
 	//$.post("server/vivoh")
-	$.post("server/vivoh.php",{fechita: date1,fechita2: date2},function(respuesta) {
+	$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/
      //Tabla_MySql = JSON.parse(respuesta);
    	 //console.log(Tabla_MySql[0].Latitud);
@@ -28,16 +28,14 @@ function initMap() {
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
    	 
-   	 console.log(time1);
-   	 console.log(time2);
+   	 //console.log(time1);
+   	 //console.log(time2);
 
    	   var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
        console.log(tamaño);
        var lat, lon;
-
-        
-
+     
        for (var j in prueba1) {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
