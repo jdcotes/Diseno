@@ -76,7 +76,7 @@ function initMap() {
             routes2[a] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
-            i = i + 1;
+            a = a + 1;
             console.log(a);
           }
           
