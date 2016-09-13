@@ -113,6 +113,7 @@ function initMap() {
            strokeWeight: 5, 
            strokeOpacity: 1, 
            clickable: false
+           a = 0;
           });
 
          var marker = new google.maps.Marker({
