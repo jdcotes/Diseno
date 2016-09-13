@@ -170,8 +170,8 @@
 		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
 		<div > Fecha2:<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
 		
-		<div > Desde: <input type="text" value="" id="desde" /></div>
-		<div > Hasta: <input type="text" value="" id="hasta" /></div>
+		<div > Desde: <input type="text" value="" id="Desde" /></div>
+		<div > Hasta: <input type="text" value="" id="Hasta" /></div>
 	
 	</form>
 	<p></p>
