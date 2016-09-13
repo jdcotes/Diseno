@@ -57,7 +57,7 @@ function initMap() {
        tamaño = prueba1.length
        console.log(tamaño);
        var lat, lon;
-       console.log(prueba1);
+       //console.log(prueba1);
        // LLenado de vector prueba 1 con la consulta realizada //
 
        for (var j in prueba1) {
@@ -71,12 +71,13 @@ function initMap() {
            //var prueba = lat-latold;
            //var hola = Math.abs(prueba)
            //console.log(hola);
-
+          console.log(i);
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
             routes2[i] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
             i = i + 1;
+            console.log(i);
           }
           
            j=j+1;
