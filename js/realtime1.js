@@ -71,7 +71,7 @@ function initMap() {
           entro=1;
         }
       if (patha != routes2){
-           
+           console.log("condicional borrar");
            // Pintado de polilinea y establecer ubicación de marcador //
 
 	      if(tamaño>0){
