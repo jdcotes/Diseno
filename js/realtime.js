@@ -42,7 +42,7 @@ var routes2=[];
             , map: map2
             , strokeColor: '#ff0000'
             , strokeWeight: 5
-            , strokeOpacity: 0.3
+            , strokeOpacity: 1
             , clickable: false
           });
             var marker = new google.maps.Marker({
