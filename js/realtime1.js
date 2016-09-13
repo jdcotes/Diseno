@@ -86,17 +86,16 @@ function initMap() {
        a = 0;
        //console.log(routes2);
        // Condicional para cuando la consulta devuelve 0 datos //
-
+         if (tamaño==0){
+            alert ("No hay datos entre las fechas ingresadas");          
+          }
        if(verificar==0 && tamaño==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: 11.01999, lng: -74.8509},
           zoom: 15});
           verificar=1;
           console.log("hola");
-          if (tamaño==0){
-
-          alert ("No hay datos entre las fechas ingresadas");          
-          }
+          
         }
 
        // Cargar una sola vez el mapa cuando se realiza la primera consulta //
