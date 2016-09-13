@@ -52,7 +52,7 @@ function initMap() {
         //console.log(time1);
         //console.log(time2);
      // -----------------------//
-
+       entr = 0;
        var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
        console.log(tamaño);
