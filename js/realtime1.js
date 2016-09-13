@@ -57,7 +57,7 @@ function initMap() {
        tamaño = prueba1.length
        console.log(tamaño);
        var lat, lon;
-       
+       console.log(prueba1);
        // LLenado de vector prueba 1 con la consulta realizada //
 
        for (var j in prueba1) {
@@ -65,7 +65,8 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-           
+           console.log(lat);
+           console.log(lon);
           
 	        if (j == 0) {
 	        	latold = 0;
@@ -82,7 +83,7 @@ function initMap() {
 	        }
            j=j+1;
        }
-       
+        console.log(routes2);
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
