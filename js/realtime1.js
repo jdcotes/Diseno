@@ -69,12 +69,13 @@ function initMap() {
            //console.log(lon);
           
           var prueba = lat-latold;
-          console.log(prueba);
+          var hola = Math.abs(prueba)
+          console.log(hola);
 
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
             routes2[j] = new google.maps.LatLng(lat,lon);
-           latold=lat;
-           longold=lon;
+            latold=lat;
+            longold=lon;
           }
           
            j=j+1;
