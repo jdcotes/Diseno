@@ -16,9 +16,9 @@ function initMap() {
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
-    $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
-    	alert(respuesta);
-    });
+    //$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
+    //	alert(respuesta);
+    //});
 	//$.post("server/vivoh")
 	$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
      /*bueno para que accedan a cada una de las filas de las tablas es así:*/

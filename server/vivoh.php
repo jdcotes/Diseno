@@ -13,7 +13,7 @@
 
   $desde = $uno . $tres;
   $hasta = $dos . $cuatro;
-  echo $desde;
+  //echo $desde;
   //echo $dos;
   
   $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$desde' AND  '$hasta';";
@@ -27,7 +27,7 @@
       $i++;
     }
 
-  //echo json_encode($tabla);
+  echo json_encode($tabla);
   mysql_free_result($ejecutar_sql1);
   mysql_close($con);
 
