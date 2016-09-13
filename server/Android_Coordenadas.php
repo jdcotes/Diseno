@@ -13,7 +13,7 @@
   $floatlat  = floatval($_POST['Latitud_gps']);
   $floatlong = floatval($_POST['Longitud_gps']);
 
-  $sql = "SELECT * FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
+  $sql = "SELECT Latitud, Longitud FROM coordenadas ORDER BY ID DESC LIMIT 1"  ;
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
   //$lat=array();
   //$long=array();
@@ -25,8 +25,8 @@
     //$i++;  
   
   if ($reg==mysql_fetch_row($ejecutar_sql1))
-  $lat=floatval($reg['Latitud']);
-  $long=floatval($reg['Longitud']);
+  $lat=floatval($reg[0]);
+  $long=floatval($reg[1]);
   }
 
 
