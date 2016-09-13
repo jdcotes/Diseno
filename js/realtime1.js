@@ -74,8 +74,7 @@ function initMap() {
            console.log("condicional borrar");
            // Pintado de polilinea y establecer ubicación de marcador //
             
-            patha.setMap(null);
-	     
+
 	      if(tamaño>0){
 	         var polyline = new google.maps.Polyline({
 	            path: routes2,
@@ -98,6 +97,7 @@ function initMap() {
 	         markerArray= [];
 	         markerArray.push(marker);
 	        }
+	        patha.setMap(null);
 	        patha = polyline;
        }
     });
