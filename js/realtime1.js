@@ -10,6 +10,8 @@ var routes2 = [];
 var j = 0;
 var tamaño;
 var verificar = 0;
+var patha = null;   // Evitar repintado
+
 
 function initMap() {
 	var date1 = fecha1.value;
@@ -27,17 +29,20 @@ function initMap() {
    	 //console.log(Tabla_MySql[0].Longitud);
    	 // console.log(Tabla_MySql[0].Latitud);
    	 // console.log(Tabla_MySql[0].Longitud);
-   	 
-   	 console.log(date1);
-   	 console.log(date2);
-   	 console.log(time1);
-   	 console.log(time2);
+   	 // Exclusivo desarrollador //
+   	    console.log(date1);
+   	    console.log(date2);
+   	    console.log(time1);
+   	    console.log(time2);
+   	 // -----------------------//
 
    	   var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
        console.log(tamaño);
        var lat, lon;
-     
+       
+       // LLenado de vector prueba 1 con la consulta realizada //
+
        for (var j in prueba1) {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
@@ -46,6 +51,8 @@ function initMap() {
            j=j+1;
         }
        
+       // Condicional para cuando la consulta devuelve 0 datos //
+
        if(verificar==0 && tamaño==0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:{lat: 11.01999, lng: -74.8509},
@@ -54,6 +61,8 @@ function initMap() {
           console.log("hola");
         }
 
+       // Cargar una sola vez el mapa cuando se realiza la primera consulta //
+
 	  if(entro==0 && tamaño>0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:myLatLng,
@@ -61,28 +70,33 @@ function initMap() {
           console.log("aqui estoy");
           entro=1;
         }
+      if (patha != routes2){
+           
+           // Pintado de polilinea y establecer ubicación de marcador //
 
-      if(tamaño>0){
-         var polyline = new google.maps.Polyline({
-            path: routes2,
-            map: map2, 
-            strokeColor: '#143254', 
-            strokeWeight: 5, 
-            strokeOpacity: 0.3, 
-            clickable: false
-          });
+	      if(tamaño>0){
+	         var polyline = new google.maps.Polyline({
+	            path: routes2,
+	            map: map2, 
+	            strokeColor: '#143254', 
+	            strokeWeight: 5, 
+	            strokeOpacity: 0.3, 
+	            clickable: false
+	          });
 
-         var marker = new google.maps.Marker({
-            position: myLatLng,
-            map: map2,
-            title: 'You are here'
-         });
-         j=j+1;
-         for (var i = 0; i < markerArray.length; i++) {
-              markerArray[i].setMap(null);
-            };
-         markerArray= [];
-         markerArray.push(marker);
-        }
+	         var marker = new google.maps.Marker({
+	            position: myLatLng,
+	            map: map2,
+	            title: 'You are here'
+	         });
+	         j=j+1;
+	         for (var i = 0; i < markerArray.length; i++) {
+	              markerArray[i].setMap(null);
+	            };
+	         markerArray= [];
+	         markerArray.push(marker);
+	        }
+	        patha = routes2;
+       }
     });
 }
