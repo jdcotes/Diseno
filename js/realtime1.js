@@ -12,6 +12,9 @@ var tamaño;
 var verificar = 0;
 var patha = null;   // Evitar repintado
 
+map2 = new google.maps.Map(document.getElementById('map'), {
+center:{lat: 11.01999, lng: -74.8509},
+zoom: 15});
 
 function initMap() {
 	var date1 = fecha1.value;
@@ -79,7 +82,7 @@ function initMap() {
 	         map: map2, 
 	         strokeColor: '#143254', 
 	         strokeWeight: 5, 
-	         strokeOpacity: 0.3, 
+	         strokeOpacity: 1, 
 	         clickable: false
 	        });
 
