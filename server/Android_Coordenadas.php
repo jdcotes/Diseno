@@ -17,9 +17,9 @@
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
   
-  $reg = mysql_fetch_row($ejecutar_sql1);
-  $lat = floatval($reg[0]);
-  $long = floatval($reg[1]);
+  //$reg = mysql_fetch_row($ejecutar_sql1);
+  //$lat = floatval($reg[0]);
+  //$long = floatval($reg[1]);
   
 
 
