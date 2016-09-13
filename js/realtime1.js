@@ -30,7 +30,7 @@ zoom: 15});
 function initMap() {
 
     routes2 = [];
-  polyline.setMap(null);
+    polyline.setMap(null);
   var date1 = fecha1.value;
     var date2 = fecha2.value;
     var time1 = Desde.value;
@@ -47,10 +47,10 @@ function initMap() {
      // console.log(Tabla_MySql[0].Latitud);
      // console.log(Tabla_MySql[0].Longitud);
      // Exclusivo desarrollador //
-        console.log(date1);
-        console.log(date2);
-        console.log(time1);
-        console.log(time2);
+        //console.log(date1);
+        //console.log(date2);
+        //console.log(time1);
+        //console.log(time2);
      // -----------------------//
 
        var prueba1 = JSON.parse(respuesta);
@@ -67,13 +67,13 @@ function initMap() {
            lon = parseFloat(prueba1[j].Longitud);
            //console.log(lat);
            //console.log(lon);
-          
+          routes2[j] = new google.maps.LatLng(lat,lon);
           var prueba = lat-latold;
           var hola = Math.abs(prueba)
           console.log(hola);
 
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
-            routes2[j] = new google.maps.LatLng(lat,lon);
+            //routes2[j] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
           }
