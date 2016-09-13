@@ -55,7 +55,7 @@ function initMap() {
        entr = 0;
        var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
-       console.log(tamaño);
+       //console.log(tamaño);
        var lat, lon;
        //console.log(prueba1);
        // LLenado de vector prueba 1 con la consulta realizada //
@@ -71,7 +71,7 @@ function initMap() {
            //var prueba = lat-latold;
            //var hola = Math.abs(prueba)
            //console.log(hola);
-          console.log(a);
+           //console.log(a);
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
             routes2[a] = new google.maps.LatLng(lat,lon);
             latold=lat;
@@ -84,7 +84,7 @@ function initMap() {
            j=j+1;
        }
        a = 0;
-        console.log(routes2);
+       //console.log(routes2);
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
@@ -119,7 +119,6 @@ function initMap() {
 
          var marker = new google.maps.Marker({
            position: myLatLng,
-           center: myLatLng,
            map: map2,
            title: 'You are here'
           });
