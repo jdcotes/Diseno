@@ -2,7 +2,7 @@
 var intevalo1;
 var entro=0;
 var map2;
-intevalo1 = setInterval(function(){initMap()},5000);
+//intevalo1 = setInterval(function(){initMap()},5000);
 var map;
 var total = 0;
 var markerArray = [];

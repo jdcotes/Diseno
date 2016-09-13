@@ -164,7 +164,7 @@
 </style>
 </head>
 <body>
-	<form method= "get" action= "http://trackntruck.ddns.net/Diseno/server/vivoh.php" >
+	<form>
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
 		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
@@ -172,7 +172,7 @@
 		
 		<div > Desde: <input type="text" runat ="server" value="" id="Desde" /></div>
 		<div > Hasta: <input type="text" runat = "server" value="" id="Hasta" /></div>
-	
+	    <input id = "Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
 	</form>
 	<p></p>
 </aside>
