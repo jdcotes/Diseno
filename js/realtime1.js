@@ -27,6 +27,7 @@ zoom: 15});
 
 function initMap() {
 
+    routes2 = [];
 	polyline.setMap(null);
 	var date1 = fecha1.value;
     var date2 = fecha2.value;
@@ -58,7 +59,7 @@ function initMap() {
        // LLenado de vector prueba 1 con la consulta realizada //
 
        for (var j in prueba1) {
-       	   console.log(j);
+       	   //console.log(j);
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
