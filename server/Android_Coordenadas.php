@@ -19,18 +19,17 @@
   //$long=array();
   //$i=0;
 
- while($reg==mysql_fetch_array($ejecutar_sql1)){  
+ // while($reg==mysql_fetch_array($ejecutar_sql1)){  
     //$lat[$i]=$reg['Latitud'];
     //$long[$i]=$reg['Longitud'];
     //$i++;  
+  
+  if ($reg==mysql_fetch_row($ejecutar_sql1))
   $lat=floatval($reg['Latitud']);
   $long=floatval($reg['Longitud']);
   }
 
-    echo($lat);
-    echo($long);
-    echo($floatlat);
-    echo($floatlong);
+
   if (( abs($floatlat-$lat)>=0.0001) || abs($floatlong-$long)>=0.0001)) { 
 
     $consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
