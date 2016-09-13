@@ -119,6 +119,7 @@ function initMap() {
 
          var marker = new google.maps.Marker({
            position: myLatLng,
+           center: myLatLng,
            map: map2,
            title: 'You are here'
           });
