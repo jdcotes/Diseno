@@ -16,6 +16,15 @@ map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
 
+	        var polyline = new google.maps.Polyline({
+	         path: routes2,
+	         map: map2, 
+	         strokeColor: '#143254', 
+	         strokeWeight: 5, 
+	         strokeOpacity: 1, 
+	         clickable: false
+	        });
+
 function initMap() {
 
 	polyline.setMap(null);
@@ -79,7 +88,7 @@ function initMap() {
             
 
 	    if(tamaño>0){
-	        var polyline = new google.maps.Polyline({
+	         polyline = new google.maps.Polyline({
 	         path: routes2,
 	         map: map2, 
 	         strokeColor: '#143254', 
