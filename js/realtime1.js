@@ -66,23 +66,22 @@ function initMap() {
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
            
+          
+	        if (j == 0) {
+	        	latold = 0;
+	        	longold = 0; 	
+	            routes2[j] = new google.maps.LatLng(lat,lon);
+	        } 
+	        if (j>0) {
+	        
+	        if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+	        	routes2[j] = new google.maps.LatLng(lat,lon);
+	            latold=lat;
+	            longold=lon;
+	        }
+	        }
            j=j+1;
-        if (j==0) {
-        	latold=0;
-        	longold=0; 	
-             routes2[j] = new google.maps.LatLng(lat,lon);
-        } 
-        if (j>1) {
-        
-        if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
-        	routes2[j] = new google.maps.LatLng(lat,lon);
-            latold=lat;
-            longold=lon;
-        }
-        }
- 
-
-        }
+       }
        
        // Condicional para cuando la consulta devuelve 0 datos //
 
