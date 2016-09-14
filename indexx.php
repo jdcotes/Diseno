@@ -120,15 +120,6 @@
 	text-decoration:none;
 	text-shadow:0px 1px 0px #a6130c;
 	}
-	
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
 
 .myButton:hover {
 	background-color:#eb675e;
@@ -138,7 +129,7 @@
 	top:1px;
 }
 
-}
+
 .myButton:hover {
 	background-color:#eb675e;
 }
@@ -147,7 +138,14 @@
 	top:1px;
 }
 
-
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 	</style>
 		
 	<style>
