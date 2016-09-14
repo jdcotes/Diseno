@@ -264,10 +264,11 @@
 
 <!-- slider-->
 <div class="flat-slider" id="flat-slider"></div>
+
 <script type="text/javascript">
 	$('#flat-slider').slider({
   orientation: 'horizontal',
-  range:       false,
+  range:       true,
   value:      17
 });
 </script>	
