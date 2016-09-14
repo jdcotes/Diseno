@@ -268,7 +268,7 @@
 <script type="text/javascript">
 	$('#flat-slider').slider({
   orientation: 'horizontal',
-  range:       true,
+  range:       false,
   value:      17
 });
 </script>	
