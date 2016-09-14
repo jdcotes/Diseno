@@ -8,6 +8,9 @@ intevalo1 = setInterval(function(){mapa1()},5000);
         // mapa1();
 var markerArray =[],total=0;
 var routes2=[];
+var latold = 0;
+var longold = 0;
+var a = 0;
 
  function mapa1(){
      
