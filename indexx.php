@@ -169,11 +169,14 @@
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
 		<div > <h4>Fecha1:</h4>
-				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />	
-				</center></div>
+				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
+
+				<br>	
+				</div>
 		<div > <h4>Fecha2:</h4>
-				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" />
-				</center></div>
+				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></center>
+				<br>
+				</div>
 		
 		<div > Desde: <input type="text" runat ="server" value="" id="Desde" /></div>
 		<div > Hasta: <input type="text" runat = "server" value="" id="Hasta" /></div>
