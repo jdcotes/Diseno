@@ -35,7 +35,7 @@ function initMap() {
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
-    var scrol = flat-slider.value;
+    var scrol = slider.value;
     console.log(scrol);
     //$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
     //  alert(respuesta);

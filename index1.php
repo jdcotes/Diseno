@@ -263,10 +263,10 @@
 	</form>
 
 <!-- slider-->
-<div class="flat-slider" runat = "server" id="flat-slider"></div>
+<div class="flat-slider" runat = "server" id="slider"></div>
 
 <script type="text/javascript">
-	$('#flat-slider').slider({
+	$('#slider').slider({
   orientation: 'horizontal',
   range:       true,
   value:      17
