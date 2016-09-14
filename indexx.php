@@ -168,8 +168,8 @@
 	<form>
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
-		<div > Fecha1:<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
-		<div > Fecha2:<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
+		<div > <h3>Fecha1:</h3><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></div>
+		<div > <h3>Fecha2:</h3><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></div>
 		
 		<div > Desde: <input type="text" runat ="server" value="" id="Desde" /></div>
 		<div > Hasta: <input type="text" runat = "server" value="" id="Hasta" /></div>
