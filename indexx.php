@@ -23,7 +23,7 @@
 	 }
 
 	 h4{
-	 	color:#29088A;
+	 	color:#8A0829;
 	 }
 	 
 	 header, .main, footer{
@@ -144,7 +144,7 @@
  </section>
 
 <aside>
-	<h3>Calendario</h3>
+	<h3>Consulta Histórico</h3>
 	<br>
 	<head>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
