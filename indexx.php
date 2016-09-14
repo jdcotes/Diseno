@@ -237,11 +237,12 @@
 			<br><center><input type="text" runat = "server" value="" id="Hasta" /></center>
 		</div>
 
-	    <br>
-	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
+	    <br><center>
+	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
 	    <br>
 
-		<center><a href="#" class="myButton">Consultar</a></center>
+		
+		
 
 	</form>
 	<p></p>
