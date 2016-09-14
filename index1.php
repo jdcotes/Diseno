@@ -263,7 +263,7 @@
 	</form>
 
 <!-- slider-->
-<div class="flat-slider" runat = "server" id="slider"></div>
+<div class="flat-slider" runat = "server" type= "text" id="slider"></div>
 
 <script type="text/javascript">
 	$('#slider').slider({
