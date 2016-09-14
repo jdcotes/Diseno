@@ -192,7 +192,8 @@
 		<div > <h4>Hora Final:</h4> 
 			<br><center><input type="text" runat = "server" value="" id="Hasta" /></center>
 		</div>
-	    
+
+	    <br>
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
 
 	</form>
@@ -223,6 +224,7 @@
 	<script src="./jquery.js"></script>
 <script src="build/jquery.datetimepicker.full.js"></script>
 <script>
+
 $.datetimepicker.setLocale('es');
 $("#Desde").datetimepicker({
 datepicker:false,
