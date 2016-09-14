@@ -206,8 +206,8 @@
 	</form>
 
 <!-- slider-->
-<div >
-	<input class="flat-slider" runat = "server" type = "range" id="slider" />
+<div ><center>
+	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
 </div>
 
 <script type="text/javascript">
