@@ -1,6 +1,6 @@
 <?php
 
-$server = "localhost";
+  $server = "localhost";
   $username = "root";
   $password = "1234";
   $database = "disenouninorte";
@@ -10,11 +10,8 @@ $server = "localhost";
 date_default_timezone_set('America/Bogota');
 $fecha_servidor = date('Y-m-d H:i:s');
 
-
-
 $lat=0;
 $long=0;
-
 
 while (true) {
 
@@ -28,7 +25,6 @@ mysql_free_result($consulta);
 
 $lat=$floatlat;
 $long=$floatlong;
-
 }
 }
 

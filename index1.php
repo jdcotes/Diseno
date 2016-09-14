@@ -137,20 +137,16 @@
 <section class="articles">
 <article>
 	<h2>¿Donde ha estado mi vehículo?</h2>
-
-	</article>
-
-    <article>
-    <div id='map'> </div>
-	</article>
- </section>
-
-<aside>
+</article>
 
 <article>
-	
-		<h3>Consulta Histórico</h3>
+    <div id='map'> </div>
+	</article>
+</section>
 
+<aside>
+<article>
+		<h3>Consulta Histórico</h3>
 </article>
 	<br>
 	<head>
