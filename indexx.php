@@ -102,7 +102,7 @@
 	  	text-align: justify;
 	  }
 
-	  .myButton {
+	 .myButton {
 	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
 	box-shadow:inset 0px 39px 0px -24px #e67a73;
@@ -110,15 +110,24 @@
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
-	border:1px solid #ffffff;
+	border:1px solid #e600c4;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+	font-family:Verdana;
 	font-size:15px;
-	padding:6px 15px;
+	padding:6px 37px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #a6130c;
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
 }
 .myButton:hover {
 	background-color:#eb675e;
@@ -224,8 +233,8 @@
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
 	    <br>
 
-		<a href="#" class="myButton">light red</a>
-	
+		<center><a href="#" class="myButton">Consultar</a></center>
+
 	</form>
 	<p></p>
 </aside>
