@@ -1,0 +1,296 @@
+<html class="no-js">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Diseño Uninorte 201630</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
+	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+     <link rel="stylesheet">
+   
+	 <style type="text/css">
+	 *{
+	 	margin:0;
+	 	padding:0;
+	 }
+	 body{
+	 	background:#e6e6e6;
+	 }
+
+	 h2, h3{
+	 	color:#B40404;
+	 }
+
+	 h4{
+	 	color:#B40404;
+	 }
+	 
+	 header, .main, footer{
+	 	width: 90%;
+	 	margin:auto;
+	 	max-width: 1012px;
+	 	margin: 20px auto;
+	 }
+
+	 header nav{
+	 	background: #0B0B61;
+	 	overflow:hidden;
+	 }
+
+	 header nav ul{
+	 	list-style:none;
+	 }
+
+	 header nav ul li{
+	 	float:left;
+	 }
+
+	 header nav ul li a{
+	 	padding:10px 20px;
+	 	display:block;
+	 	color:#fff;
+	 	text-decoration:none;
+	 }
+
+	 header nav ul li a:hover{
+	 	background:#0431B4;
+	 }
+
+	 .main .articles{
+	 	width: 68.5%;
+	 	margin-right:1.5%;
+	 	float:left;
+	 }
+
+	 .main .articles article{
+	 	padding: 20px;
+	 	background: #fff;
+	 	margin-bottom: 20px;
+	 }
+	 .boton{
+	 	color:#424242;
+	 	background:#8A0829;
+	 }
+
+
+	 aside{
+	 	width:30%;
+	 	background: #D8D8D8;
+	 	float: left;
+	 	padding: 20px;
+	 	box-sizing: border-box;
+	 }
+
+	 footer {
+	 	background: #610B0B;
+	 	color:#D8D8D8;
+	 	clear:both;
+	 	padding:10px 0px;
+	 	text-align:center;
+	 }
+	  .main .map{
+	  	width: 90%;
+	  }
+
+	  header{
+	  	background:#e6e6e6;
+	  	width: 1012px;
+	  }
+
+	  p .aside{
+	  	text-align: justify;
+	  }
+
+	.myButton {
+	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background-color:#e4685d;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #b5041b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:15px;
+	padding:6px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #a6130c;
+	}
+
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+}
+.myButton:hover {
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+	</style>
+		
+	<style>
+		html,body {
+			height: 100%;
+        	margin: 0 auto;
+        	padding: 0;
+        } 
+      	#map{
+        width: 100%;
+        height: 500px;
+      	}
+    </style>
+	</head>
+
+	<body>
+		<font face="helvetica">
+<header>
+	<div class="logo">
+		<img src="logo.png">
+	</div>
+	<nav>
+		<ul>
+			<li><a href="index.php">Inicio</a></li>
+			<li><a href="index1.php">Histórico</a></li>
+			<li><a href="index2.php">Histórico 2</a></li>
+			<li><a href="index3.php">Acerca de Nosotros</a></li>
+		</ul>
+	</nav>
+</header>		
+<section class="main">
+<section class="articles">
+<article>
+	<h2>¿Donde ha estado mi vehículo?</h2>
+
+	</article>
+
+    <article>
+    <div id='map'> </div>
+	</article>
+ </section>
+
+<aside>
+
+<article>
+	
+		<h3>Consulta Histórico</h3>
+
+</article>
+	<br>
+	<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+	<title>Simple Tigra Calendar</title>
+
+	<!-- link calendar resources -->
+	<link rel="stylesheet" type="text/css" href="tcal.css" />
+	<script type="text/javascript" src="tcal.js"></script> 
+	
+	<!-- HORAS SRC LINK ETC -->
+	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
+	<style type="text/css">
+
+	.custom-date-style {
+		background-color: red !important;
+	}
+
+	.input{	
+	}
+	.input-wide{
+	width: 500px;
+	}
+
+</style>
+</head>
+<body>
+	<form>
+	     <!-- action="#" -->
+		<!-- add class="tcal" to your input field -->
+		<div > <h4>Fecha Inicial:</h4>
+				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
+		</div>
+				<br>
+		<div > <h4>Fecha Final:</h4>
+				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></center>
+		</div>
+				<br>
+		
+		<div > <h4>Hora Inicial: </h4>
+			<br><center><input type="text" runat ="server" value="" id="Desde" /></center>
+		</div>
+			<br>
+		<div > <h4>Hora Final:</h4> 
+			<br><center><input type="text" runat = "server" value="" id="Hasta" /></center>
+		</div>
+
+	    <br><center>
+	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
+	    <br>
+
+		
+
+
+	</form>
+	<p></p>
+</aside>
+
+
+
+             	<!-- <div id='map'> </div>					
+				<p>Diseño Electrónico</p>
+				<p><strong>Presentado por:</strong>
+				<br>Hernan Carrillo 
+				<br>Cristian Cepeda 
+				<br>Juan Diego Cotes
+				<br>Andrea Fontalvo 
+				<br>
+				<br><strong>Universidad del Norte
+				<br>2016 </strong></p>
+				<br></br>
+				</div>
+ -->
+ 
+</section>
+
+<footer>
+	<p class="foot"> Diseño Electrónico - Universidad del Norte - 2016</p>
+</footer>
+	<script src="js/realtime1.js"></script>	
+	</body>
+	<script src="./jquery.js"></script>
+<script src="build/jquery.datetimepicker.full.js"></script>
+<script>
+
+$.datetimepicker.setLocale('es');
+$("#Desde").datetimepicker({
+datepicker:false,
+format:'H:i'
+
+});
+$("#Hasta").datetimepicker({
+datepicker:false,
+format:'H:i'
+});
+
+</script>
+</html>
