@@ -2,18 +2,22 @@
 var intevalo1;
 var entro=0;
 var map2;
-var Tabla_MySql;
+//var Tabla_MySql;
  //intevalo1 = setInterval('mapa1()',11000);
 intevalo1 = setInterval(function(){mapa1()},5000);
         // mapa1();
 var markerArray =[],total=0;
 var routes2=[];
+var latold = 0;
+var longold = 0;
+var a = 0;
+
 
  function mapa1(){
      
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
-      Tabla_MySql = JSON.parse(respuesta);
+      //Tabla_MySql = JSON.parse(respuesta);
       
      	// console.log(Tabla_MySql[0].Fecha);
      	// console.log(Tabla_MySql[0].Hora);
@@ -26,7 +30,21 @@ var routes2=[];
               var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
               lat = parseFloat(prueba1[j].Latitud);
               lon = parseFloat(prueba1[j].Longitud);
-             }
+             
+           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+              routes2[a] = new google.maps.LatLng(lat,lon);
+              latold=lat;
+              longold=lon;
+              myLatLng = new google.maps.LatLng(lat,lon);
+              a = a + 1;
+              console.log(a);
+            }
+          
+           j=j+1;
+          }
+          a = 0;
+
+             
            if(entro==0)
            {
             map2 = new google.maps.Map(document.getElementById('map'), {

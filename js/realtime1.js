@@ -10,7 +10,7 @@ var routes2 = [];
 var j = 0;
 var tamaño;
 var verificar = 0;
-var patha = null;   // Evitar repintado
+// Evitar repintado
 var latold = 0;
 var longold = 0;
 var a = 0;
@@ -85,7 +85,7 @@ function initMap() {
        }
        a = 0;
        //console.log(routes2);
-       
+
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
