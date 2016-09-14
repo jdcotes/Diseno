@@ -195,7 +195,10 @@
 
 	    <br>
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
+	    <br>
 
+		<a href="#" class="myButton">light red</a>
+	
 	</form>
 	<p></p>
 </aside>
