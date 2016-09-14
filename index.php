@@ -65,7 +65,7 @@
                                         <span class="fa-font ">Histórico</span>
                                         <ul>
                                             <li>
-                                                <a href="Historico.php">Fecha y hora</a>
+                                                <a href="index1.php">Fecha y hora</a>
                                             </li>
                                            <!--  <li>
                                                 <a href="#">Lugar en específico</a>
