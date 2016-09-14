@@ -188,7 +188,12 @@
  </section>
 
 <aside>
-	<h3>Consulta Histórico</h3>
+
+<article>
+	
+		<h3>Consulta Histórico</h3>
+
+</article>
 	<br>
 	<head>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
@@ -242,11 +247,13 @@
 	    <br>
 
 		
-		
+
 
 	</form>
 	<p></p>
 </aside>
+
+
 
              	<!-- <div id='map'> </div>					
 				<p>Diseño Electrónico</p>
