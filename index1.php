@@ -102,49 +102,63 @@
 	  	text-align: justify;
 	  }
 
-	.myButton {
-	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#e4685d;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	border:1px solid #b5041b;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:15px;
-	padding:6px 37px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #a6130c;
-	}
-
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
+.flat-slider.ui-corner-all,
+.flat-slider .ui-corner-all {
+  border-radius: 0;
 }
 
-
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
+.flat-slider.ui-slider {
+  border: 0;
+  background: #a5a5a5;
+  border-radius: 48px;
 }
 
+.flat-slider.ui-slider-horizontal {
+  height: 8px;
 }
-.myButton:hover {
-	background-color:#eb675e;
+
+.flat-slider.ui-slider-vertical {
+  height: 15em;
+  width: 8px;
 }
-.myButton:active {
-	position:relative;
-	top:1px;
+
+.flat-slider .ui-slider-handle {
+  width: 15px;
+  height: 14px;
+  background: #cb2f2f;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-handle {
+  top: 50%;
+  margin-top: -7px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-handle {
+  left: 50%;
+  margin-left: -7.5px;
+}
+
+.flat-slider .ui-slider-handle:hover {
+  opacity: .8;
+}
+
+.flat-slider .ui-slider-range {
+  border: 0;
+  border-radius: 48;
+  background: #f99;
+}
+
+.flat-slider.ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 8px;
+}
+
+.flat-slider.ui-slider-vertical .ui-slider-range {
+  left: 0;
+  width: 8px;
 }
 	</style>
 		
@@ -169,9 +183,9 @@
 	</div>
 	<nav>
 		<ul>
-			<li><a href="index.php">Inicio</a></li>
+			 <li><a href="index.php">Inicio</a></li>
 			<li><a href="index1.php">Histórico</a></li>
-			<li><a href="index2.php">Histórico 2</a></li>
+			<!--<li><a href="index2.php">Histórico 2</a></li>-->
 			<li><a href="index3.php">Acerca de Nosotros</a></li>
 		</ul>
 	</nav>
@@ -246,16 +260,21 @@
 	    <br><center>
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
 	    <br>
-
-		
-
-
 	</form>
-	<p></p>
+
+<!-- slider-->
+<div class="flat-slider" id="flat-slider"></div>
+<script type="text/javascript">
+	
+	$('#flat-slider').slider({
+  orientation: 'horizontal',
+  range:       false,
+  value:      17
+});
+</script>	
+<!-- fin slider-->
+
 </aside>
-
-
-
              	<!-- <div id='map'> </div>					
 				<p>Diseño Electrónico</p>
 				<p><strong>Presentado por:</strong>
@@ -267,9 +286,7 @@
 				<br><strong>Universidad del Norte
 				<br>2016 </strong></p>
 				<br></br>
-				</div>
- -->
- 
+				</div>-->
 </section>
 
 <footer>

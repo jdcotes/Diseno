@@ -102,50 +102,6 @@
 	  	text-align: justify;
 	  }
 
-	.myButton {
-	-moz-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	-webkit-box-shadow:inset 0px 39px 0px -24px #e67a73;
-	box-shadow:inset 0px 39px 0px -24px #e67a73;
-	background-color:#e4685d;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
-	border:1px solid #b5041b;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Verdana;
-	font-size:15px;
-	padding:6px 37px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #a6130c;
-	}
-
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
-
-}
-.myButton:hover {
-	background-color:#eb675e;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
 	</style>
 		
 	<style>
@@ -169,9 +125,9 @@
 	</div>
 	<nav>
 		<ul>
-			<li><a href="index.php">Inicio</a></li>
+		 	<li><a href="index.php">Inicio</a></li>
 			<li><a href="index1.php">Histórico</a></li>
-			<li><a href="index2.php">Histórico 2</a></li>
+			<!--<li><a href="index2.php">Histórico 2</a></li>-->
 			<li><a href="index3.php">Acerca de Nosotros</a></li>
 		</ul>
 	</nav>

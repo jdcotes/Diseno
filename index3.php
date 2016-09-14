@@ -106,9 +106,9 @@
 	</div>
 	<nav>
 		<ul>
-		    <li><a href="index.php">Inicio</a></li>
+		 	<li><a href="index.php">Inicio</a></li>
 			<li><a href="index1.php">Histórico</a></li>
-			<li><a href="index2.php">Histórico 2</a></li>
+		<!--<li><a href="index2.php">Histórico 2</a></li>-->
 			<li><a href="index3.php">Acerca de Nosotros</a></li>
 		</ul>
 	</nav>
