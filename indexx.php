@@ -23,7 +23,7 @@
 	 }
 
 	 h4{
-	 	color:#8A0829;
+	 	color:#B40404;
 	 }
 	 
 	 header, .main, footer{
