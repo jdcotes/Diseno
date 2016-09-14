@@ -18,8 +18,12 @@
 	 	background:#e6e6e6;
 	 }
 
-	 h2, h3, h4{
+	 h2, h3{
 	 	color:#B40404;
+	 }
+
+	 h4{
+	 	color:#29088A;
 	 }
 	 
 	 header, .main, footer{
