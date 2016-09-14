@@ -14,10 +14,14 @@ var verificar = 0;
 var latold = 0;
 var longold = 0;
 var a = 0;
+
+
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
 
+          var scrol = slider.value;
+          console.log(scrol);
           var polyline = new google.maps.Polyline({
            path: routes2,
            map: map2, 
@@ -35,8 +39,7 @@ function initMap() {
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
-    var scrol = slider.value;
-    console.log(scrol);
+    
     //$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
     //  alert(respuesta);
     //});
