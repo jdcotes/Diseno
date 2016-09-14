@@ -123,8 +123,8 @@
 }
 
 .flat-slider .ui-slider-handle {
-  width: 15px;
-  height: 14px;
+  width: 14px;
+  height: 22px;
   background: #cb2f2f;
   border-radius: 50%;
   border: none;
@@ -133,12 +133,12 @@
 
 .flat-slider.ui-slider-horizontal .ui-slider-handle {
   top: 50%;
-  margin-top: -7px;
+  margin-top: -11px;
 }
 
 .flat-slider.ui-slider-vertical .ui-slider-handle {
   left: 50%;
-  margin-left: -7.5px;
+  margin-left: -7px;
 }
 
 .flat-slider .ui-slider-handle:hover {
@@ -265,7 +265,6 @@
 <!-- slider-->
 <div class="flat-slider" id="flat-slider"></div>
 <script type="text/javascript">
-	
 	$('#flat-slider').slider({
   orientation: 'horizontal',
   range:       false,
