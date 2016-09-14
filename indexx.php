@@ -68,6 +68,10 @@
 	 	background: #fff;
 	 	margin-bottom: 20px;
 	 }
+	 .boton{
+	 	color:#424242;
+	 	background:#8A0829;
+	 }
 
 
 	 aside{
@@ -172,19 +176,21 @@
 	<form>
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
-		<div > <h4>Fecha1:</h4>
+		<div > <h5>Fecha Inicial:</h5>
 				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
-
-				<br>	
-				</div>
-		<div > <h4>Fecha2:</h4>
+				<br></div>
+		<div > <h5>Fecha Final:</h5>
 				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></center>
-				<br>
-				</div>
+				<br></div>
 		
-		<div > Desde: <input type="text" runat ="server" value="" id="Desde" /></div>
-		<div > Hasta: <input type="text" runat = "server" value="" id="Hasta" /></div>
-	    <input id = "Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
+		<div > <h5>Hora Inicial: </h5>
+		<br><center><input type="text" runat ="server" value="" id="Desde" /></center></div>
+
+		<div > <h5>Hora Final:</h5> 
+		<br><center><input type="text" runat = "server" value="" id="Hasta" /></center></div>
+	    
+	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
+
 	</form>
 	<p></p>
 </aside>
