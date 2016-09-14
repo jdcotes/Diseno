@@ -263,15 +263,19 @@
 	</form>
 
 <!-- slider-->
-<div class="flat-slider" id="flat-slider"></div>
-
-<script type="text/javascript">
-	$('#flat-slider').slider({
-  orientation: 'horizontal',
-  range:       false,
-  value:      17
-});
-</script>	
+		<div class="slider"
+		        data-on-change="dropValueToInput"
+		        data-role="slider"
+		        data-max-value="1000"
+		        data-min-value="0"></div>
+		<div class="input-control text">
+		    <input id="slider_input" value="0">
+		</div>
+		<script>
+		    function dropValueToInput(value, slider){
+		        $("#slider_input").val(value);
+		    }
+		</script>
 <!-- fin slider-->
 
 </aside>
