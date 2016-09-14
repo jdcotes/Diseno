@@ -176,18 +176,22 @@
 	<form>
 	     <!-- action="#" -->
 		<!-- add class="tcal" to your input field -->
-		<div > <h5>Fecha Inicial:</h5>
+		<div > <h4>Fecha Inicial:</h4>
 				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
-				<br></div>
-		<div > <h5>Fecha Final:</h5>
+		</div>
+				<br>
+		<div > <h4>Fecha Final:</h4>
 				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></center>
-				<br></div>
+		</div>
+				<br>
 		
-		<div > <h5>Hora Inicial: </h5>
-		<br><center><input type="text" runat ="server" value="" id="Desde" /></center></div>
-
-		<div > <h5>Hora Final:</h5> 
-		<br><center><input type="text" runat = "server" value="" id="Hasta" /></center></div>
+		<div > <h4>Hora Inicial: </h4>
+			<br><center><input type="text" runat ="server" value="" id="Desde" /></center>
+		</div>
+			<br>
+		<div > <h4>Hora Final:</h4> 
+			<br><center><input type="text" runat = "server" value="" id="Hasta" /></center>
+		</div>
 	    
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> 
 
