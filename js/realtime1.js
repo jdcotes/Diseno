@@ -117,13 +117,14 @@ function initMap() {
     y.setAttribute("style","visibility: visible");  
  });
 }
+var routes3 = routes2;
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
-  for (var i = 0; i < markerArray.length; i++) {
-    markerArray[i].setMap(null);
+  for (var i = 0; i < routes3.length; i++) {
+    routes3[i].setMap(null);
   };
-  markerArray= [];
-  markerArray.push(marker);
+  routes3= [];
+  routes3.push(marker);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
