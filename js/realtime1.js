@@ -127,7 +127,7 @@ function initMap() {
       }  
         
       if (control == 0){
-        var x = document.querySelector("slider");
+        var x = document.querySelector("#slider");
         x.setAttribute("min","2");
         x.setAttribute("max","10");
         control =1;
