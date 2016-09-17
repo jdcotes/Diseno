@@ -123,8 +123,8 @@ function DrawMarker(){
   // for (var i = 0; i < routes3.length; i++) {
   //   routes3[i].setMap(null);
   // };
-  routes3= [slide];
-  routes3.push(marker);
+  marker = routes3[slide];
+  marker.setMap(null);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
