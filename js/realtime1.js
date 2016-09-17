@@ -7,6 +7,7 @@ var map;
 var total = 0;
 var markerArray = [];
 var routes2 = [];
+var markerdate = []
 var j = 0;
 var tamaño;
 var verificar = 0;
@@ -34,6 +35,7 @@ zoom: 15});
 function initMap() {
 
     routes2 = [];
+    markerdate = [];
     polyline.setMap(null);
     var date1 = fecha1.value;
     var date2 = fecha2.value;
@@ -59,6 +61,7 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
+           DateGps = (prueba[j].FechaGPS);
            //console.log(lat);
            //console.log(lon);
            //routes2[j] = new google.maps.LatLng(lat,lon);
@@ -68,6 +71,7 @@ function initMap() {
            //console.log(a);
           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
             routes2[a] = new google.maps.LatLng(lat,lon);
+            markerdate[a] = DateGps;
             latold=lat;
             longold=lon;
             myLatLng = new google.maps.LatLng(lat,lon);
@@ -77,7 +81,7 @@ function initMap() {
            j=j+1;
        }
        a = 0;
-       //console.log(routes2);
+       console.log(DateGps);
 
        // Condicional para cuando la consulta devuelve 0 datos //
 

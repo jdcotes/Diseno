@@ -17,7 +17,7 @@
   //echo $desde;
   //echo $dos;
   
-  $sql = "SELECT Latitud, Longitud FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$desde' AND  '$hasta';";
+  $sql = "SELECT Latitud, Longitud, FechaGPS FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$desde' AND  '$hasta';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
   
   $tabla=array();
