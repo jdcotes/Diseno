@@ -130,7 +130,7 @@ function initMap() {
         var x = document.createElement("slider");
         x.setAttribute("type","range");
         x.setAttribute("runat","server");
-        document.body.appendChild(x);
+        document.div.appendChild(x);
         control =1;
       }
       var slide = slider.value;
