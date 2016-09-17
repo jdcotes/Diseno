@@ -117,9 +117,10 @@ function initMap() {
     y.setAttribute("style","visibility: visible");  
  });
 }
-var routes3 = routes2;
+
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
+  var routes3 = routes2;
   for (var i = 0; i < routes3.length; i++) {
     routes3[i].setMap(null);
   };
