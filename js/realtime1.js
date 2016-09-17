@@ -15,7 +15,7 @@ var verificar = 0;
 var latold = 0;
 var longold = 0;
 var a = 0;
-
+var longitud
 
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
@@ -79,7 +79,7 @@ function initMap() {
     }
     a = 0;
        
-    var longitud = routes2.length; 
+    longitud = routes2.length; 
     console.log(longitud);
     // Condicional para cuando la consulta devuelve 0 datos //
 
