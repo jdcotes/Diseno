@@ -120,7 +120,8 @@ function initMap() {
       // markerArray= [];
       // markerArray.push(marker);
     }  
-        
+    var y = document.querySelector("#slider"); 
+    y.setAttribute("style","visibility: visible");  
     // if (control == 0){
     //   var x = document.querySelector("#slider");
     //   x.setAttribute("min","0");
@@ -135,7 +136,6 @@ function DrawMarker(){
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
-  x.setAttribute("style","visibility: visible");
   var slide = slider.value;
   console.log(slide); 
 
