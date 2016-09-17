@@ -72,8 +72,7 @@ function initMap() {
             longold=lon;
             myLatLng = new google.maps.LatLng(lat,lon);
             a = a + 1;
-            console.log(a);
-          }
+            }
           
            j=j+1;
        }
@@ -87,8 +86,6 @@ function initMap() {
           center:{lat: 11.01999, lng: -74.8509},
           zoom: 15});
           verificar=1;
-          console.log("hola");
-          
         }
 
        // Cargar una sola vez el mapa cuando se realiza la primera consulta //
@@ -97,7 +94,6 @@ function initMap() {
           map2 = new google.maps.Map(document.getElementById('map'), {
           center:myLatLng,
           zoom: 15});
-          console.log("aqui estoy");
           entro = 1;
           control = 0;
         }
@@ -130,7 +126,7 @@ function initMap() {
         var x = document.createElement("slider");
         x.setAttribute("min","2");
         x.setAttribute("max","10");
-        document.body.appendChild(x);
+        slider.appendChild(x);
         control =1;
       }
       var slide = slider.value;
