@@ -203,14 +203,14 @@
 
 <!-- slider-->
 
-<div >
+<!-- <div >
 	<input id="slider" />
-<div>
+<div> -->
 
-<!-- <div ><center>
+<div ><center>
 	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
 
-</div> -->
+</div>
 
 <script type="text/javascript">
 	$('#slider').slider({

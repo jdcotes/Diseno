@@ -128,9 +128,9 @@ function initMap() {
         
       if (control == 0){
         var x = document.createElement("slider");
-        x.setAttribute("type","range");
-        x.setAttribute("runat","server");
-        document.div.appendChild(x);
+        x.setAttribute("min","2");
+        x.setAttribute("max","10");
+        document.body.appendChild(x);
         control =1;
       }
       var slide = slider.value;
