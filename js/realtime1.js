@@ -119,8 +119,9 @@ function initMap() {
 }
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
-  var marker = []
-  marker.setMap(null);
+  var marker = new google.maps.Marker();
+  var markerarray = [];
+  markerarray.push(marker);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
