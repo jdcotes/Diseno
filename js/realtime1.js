@@ -83,6 +83,7 @@ function initMap() {
        a = 0;
        
        var longitud = routes2.length; 
+       console.log(longitud);
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
