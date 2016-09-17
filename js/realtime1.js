@@ -128,8 +128,8 @@ function initMap() {
         
       if (control == 0){
         var x = document.querySelector("#slider");
-        x.setAttribute("min","2");
-        x.setAttribute("max","10");
+        x.setAttribute("min","1");
+        x.setAttribute("max","longitud");
         control =1;
       }
       var slide = slider.value;
