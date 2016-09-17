@@ -205,6 +205,7 @@
 <<<<<<< HEAD
 <div >
 	<input id="slider" />
+<div>
 =======
 <div ><center>
 	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
