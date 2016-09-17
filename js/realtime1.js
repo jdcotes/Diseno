@@ -2,7 +2,6 @@
 var intevalo1;
 var entro=0;
 var map2;
-//intevalo1 = setInterval(function(){initMap()},5000);
 var map;
 var total = 0;
 var markerArray = [];
@@ -11,26 +10,24 @@ var markerdate = []
 var j = 0;
 var tamaño;
 var verificar = 0;
-// Evitar repintado
 var latold = 0;
 var longold = 0;
 var a = 0;
 var longitud
 
+//Mapa inicial al cargar pagina
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
-
-          var scrol = slider.value;
-          console.log(scrol);
-          var polyline = new google.maps.Polyline({
-           path: routes2,
-           map: map2, 
-           strokeColor: '#143254', 
-           strokeWeight: 5, 
-           strokeOpacity: 1, 
-           clickable: false
-          });
+//Inicio de polilinea en 0
+var polyline = new google.maps.Polyline({
+  path: routes2,
+  map: map2, 
+  strokeColor: '#143254', 
+  strokeWeight: 5, 
+  strokeOpacity: 1, 
+  clickable: false
+});
 
 function initMap() {
 
@@ -41,19 +38,14 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-  //$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
-  //  alert(respuesta);
-  //});
-  //$.post("server/vivoh")
+
   $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
     tamaño = prueba1.length
-    //console.log(tamaño);
     var lat, lon;
-    //console.log(prueba1);
+    
     // LLenado de vector prueba 1 con la consulta realizada //
-
     for (var j in prueba1) {
       //console.log(j);
       var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
@@ -119,24 +111,23 @@ function initMap() {
       // };
       // markerArray= [];
       // markerArray.push(marker);
-    }  
+    } 
+    // Hacer visble el slider 
     var y = document.querySelector("#slider"); 
     y.setAttribute("style","visibility: visible");  
-    // if (control == 0){
-    //   var x = document.querySelector("#slider");
-    //   x.setAttribute("min","0");
-    //   x.setAttribute("max",longitud - 1);
-    //   control =1;
-    // }
-    //   var slide = slider.value;
-    //   console.log(slide);      
  });
 }
 function DrawMarker(){
+  // Establecer atributos como maximo y minímo del slider
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
   var slide = slider.value;
   console.log(slide); 
+  var marker = new google.maps.Marker({
+    position: routes2[slide],
+    map: map2,
+    title: markerdate[slide]
+  });
 
 }
