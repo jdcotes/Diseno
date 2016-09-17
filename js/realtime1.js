@@ -130,7 +130,7 @@ function initMap() {
       if (control == 0){
         var x = document.querySelector("#slider");
         x.setAttribute("min","1");
-        x.setAttribute("max","longitud");
+        x.setAttribute("max",'longitud');
         control =1;
       }
       var slide = slider.value;
