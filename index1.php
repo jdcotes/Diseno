@@ -201,7 +201,7 @@
 	    <br> 
 
 	    <div ><center>
-	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
+	<input id="slider" min = "" max = "" runat = "server" type = "range"  /></center>
 
 </div>
 	</form>
