@@ -124,13 +124,14 @@ function initMap() {
           markerArray= [];
           markerArray.push(marker);
       }  
-             
-    });
-  var x = document.createElement("slider");
+       
+         var x = document.createElement("slider");
       x.setAttribute("type","range");
       x.setAttribute("runat","server");
       document.body.appendChild(x);
           var slide = slider.value;
-    console.log(slide);
+    console.log(slide);      
+    });
+
 
 }
