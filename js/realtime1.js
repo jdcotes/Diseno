@@ -135,7 +135,7 @@ function DrawMarker(){
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
-  x.setAttribute("visibility","visible");
+  x.setAttribute("style","visibility: hidden");
   var slide = slider.value;
   console.log(slide); 
 

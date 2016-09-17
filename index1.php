@@ -201,7 +201,7 @@
 	    <br> 
 
 	    <div ><center>
-	<input id="slider" min = "" max = "" runat = "server" type = "range" visibility = "hidden" onchange = "DrawMarker()" /></center>
+	<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" /></center>
 
 </div>
 	</form>
