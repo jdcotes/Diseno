@@ -113,12 +113,12 @@ function initMap() {
            clickable: false
           });
 
-         var marker = new google.maps.Marker({
-           position: myLatLng,
-           map: map2,
-           title: markerdate[longitud-1]
-          });
-           j=j+1;
+         // var marker = new google.maps.Marker({
+         //   position: myLatLng,
+         //   map: map2,
+         //   title: markerdate[longitud-1]
+         //  });
+         //   j=j+1;
           // for (var i = 0; i < markerArray.length; i++) {
           //    markerArray[i].setMap(null);
           // };
