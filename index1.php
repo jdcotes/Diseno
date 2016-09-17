@@ -202,15 +202,15 @@
 	</form>
 
 <!-- slider-->
-<<<<<<< HEAD
+
 <div >
 	<input id="slider" />
 <div>
-=======
-<div ><center>
+
+<!-- <div ><center>
 	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
->>>>>>> origin/master
-</div>
+
+</div> -->
 
 <script type="text/javascript">
 	$('#slider').slider({

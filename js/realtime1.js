@@ -98,7 +98,8 @@ function initMap() {
           center:myLatLng,
           zoom: 15});
           console.log("aqui estoy");
-          entro=1;
+          entro = 1;
+          control = 0;
         }
       // Pintado de polilinea y establecer ubicación de marcador //
             
@@ -124,11 +125,14 @@ function initMap() {
           markerArray= [];
           markerArray.push(marker);
       }  
-       
-         var x = document.createElement("slider");
-      x.setAttribute("type","range");
-      x.setAttribute("runat","server");
-      //document.body.appendChild(x);
+        
+      if (control == 0){
+        var x = document.createElement("slider");
+        x.setAttribute("type","range");
+        x.setAttribute("runat","server");
+        document.body.appendChild(x);
+        control =1;
+      }
       var slide = slider.value;
       console.log(slide);      
     });
