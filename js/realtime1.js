@@ -123,7 +123,7 @@ function DrawMarker(){
   // for (var i = 0; i < routes3.length; i++) {
   //   routes3[i].setMap(null);
   // };
-  routes3= [];
+  routes3= [slide];
   routes3.push(marker);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
