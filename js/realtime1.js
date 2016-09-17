@@ -82,7 +82,7 @@ function initMap() {
        }
        a = 0;
        console.log(markerdate);
-
+       var longitud = routes2.length 
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
@@ -116,7 +116,7 @@ function initMap() {
          var marker = new google.maps.Marker({
            position: myLatLng,
            map: map2,
-           title: 'You are here'
+           title: markerdate[longitud-1]
           });
            j=j+1;
           for (var i = 0; i < markerArray.length; i++) {
