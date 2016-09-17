@@ -39,24 +39,14 @@ function initMap() {
     var date2 = fecha2.value;
     var time1 = Desde.value;
     var time2 = Hasta.value;
-    
+    var slide = slider.value;
+    console.log(slide);
     //$.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta){
     //  alert(respuesta);
     //});
   //$.post("server/vivoh")
   $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
-     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
-     //Tabla_MySql = JSON.parse(respuesta);
-     //console.log(Tabla_MySql[0].Latitud);
-     //console.log(Tabla_MySql[0].Longitud);
-     // console.log(Tabla_MySql[0].Latitud);
-     // console.log(Tabla_MySql[0].Longitud);
-     // Exclusivo desarrollador //
-        //console.log(date1);
-        //console.log(date2);
-        //console.log(time1);
-        //console.log(time2);
-     // -----------------------//
+
        entro = 0;
        var prueba1 = JSON.parse(respuesta);
        tamaño = prueba1.length
@@ -138,4 +128,9 @@ function initMap() {
       }  
              
     });
+  var x = document.createElement("slider");
+      x.setAttribute("type","range");
+      x.setAttribute("runat","server");
+      document.body.appendChild(x);
+
 }

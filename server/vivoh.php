@@ -11,8 +11,8 @@
   $tres = $_POST['horita'];
   $cuatro = $_POST['horita2'];
 
-  $desde = $uno . $sapce . $tres;
-  $hasta = $dos . $sapce . $cuatro;
+  $desde = $uno.$sapce.$tres;
+  $hasta = $dos.$sapce.$cuatro;
   //echo $desde;
   //echo $dos;
   
