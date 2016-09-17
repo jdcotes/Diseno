@@ -199,6 +199,11 @@
 	    <br><center>
 	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
 	    <br> 
+
+	    <div ><center>
+	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
+
+</div>
 	</form>
 
 <!-- slider-->
@@ -206,11 +211,6 @@
 <!-- <div >
 	<input id="slider" />
 <div> -->
-
-<div ><center>
-	<input class="flat-slider" runat = "server" type = "range" id="slider" /></center>
-
-</div>
 
 <script type="text/javascript">
 	$('#slider').slider({
