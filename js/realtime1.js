@@ -83,8 +83,6 @@ function initMap() {
        a = 0;
        
        var longitud = routes2.length; 
-       var prueba3 = markerdate.length;
-       console.log(prueba3);
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
@@ -121,11 +119,11 @@ function initMap() {
            title: markerdate[longitud-1]
           });
            j=j+1;
-          for (var i = 0; i < markerArray.length; i++) {
-             markerArray[i].setMap(null);
-          };
-          markerArray= [];
-          markerArray.push(marker);
+          // for (var i = 0; i < markerArray.length; i++) {
+          //    markerArray[i].setMap(null);
+          // };
+          // markerArray= [];
+          // markerArray.push(marker);
       }  
         
       if (control == 0){
