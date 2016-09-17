@@ -189,11 +189,11 @@
 				<br>
 		
 		<div > <h4>Hora Inicial: </h4>
-			<br><center><input type="text" runat ="server" value="" id="Desde" /></center>
+			<br><center><input type="text" runat ="server" value="00:00" id="Desde" /></center>
 		</div>
 			<br>
 		<div > <h4>Hora Final:</h4> 
-			<br><center><input type="text" runat = "server" value="" id="Hasta" /></center>
+			<br><center><input type="text" runat = "server" value="23:00" id="Hasta" /></center>
 		</div>
 
 	    <br><center>
