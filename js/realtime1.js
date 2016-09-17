@@ -61,7 +61,7 @@ function initMap() {
            var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
            lat = parseFloat(prueba1[j].Latitud);
            lon = parseFloat(prueba1[j].Longitud);
-           DateGps = (prueba[j].FechaGPS);
+           DateGps = (prueba1[j].FechaGPS);
            //console.log(lat);
            //console.log(lon);
            //routes2[j] = new google.maps.LatLng(lat,lon);
