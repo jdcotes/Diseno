@@ -103,7 +103,6 @@ function initMap() {
         }
       // Pintado de polilinea y establecer ubicación de marcador //
             
-
       if(tamaño>0){
            polyline = new google.maps.Polyline({
            path: routes2,
