@@ -81,9 +81,10 @@ function initMap() {
            j=j+1;
        }
        a = 0;
-       console.log(markerdate);
-       var longitud = routes2.length 
-       console.log(longitud);
+       
+       var longitud = routes2.length; 
+       var prueba3 = markerdate.length;
+       console.log(prueba3);
        // Condicional para cuando la consulta devuelve 0 datos //
 
        if(verificar==0 && tamaño==0){
