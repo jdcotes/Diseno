@@ -14,6 +14,7 @@ var latold = 0;
 var longold = 0;
 var a = 0;
 var longitud
+var marker
 
 //Mapa inicial al cargar pagina
 map2 = new google.maps.Map(document.getElementById('map'), {
@@ -100,11 +101,11 @@ function initMap() {
       strokeWeight: 5, 
       strokeOpacity: 1, 
       clickable: false});  
-      // var marker = new google.maps.Marker({
-      //   position: myLatLng,
-      //   map: map2,
-      //   title: markerdate[longitud-1]
-      //  });
+      marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map2,
+        title: markerdate[longitud-1]
+       });
       //   j=j+1;
       // for (var i = 0; i < markerArray.length; i++) {
       //    markerArray[i].setMap(null);
@@ -130,7 +131,7 @@ function DrawMarker(){
   x.setAttribute("max",longitud - 1);
   var slide = slider.value;
   console.log(slide); 
-  var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
     position: routes2[slide],
     map: map2,
     title: markerdate[slide]
