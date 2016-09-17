@@ -81,7 +81,7 @@ function initMap() {
            j=j+1;
        }
        a = 0;
-       console.log(DateGps);
+       console.log(markerdate);
 
        // Condicional para cuando la consulta devuelve 0 datos //
 
