@@ -119,7 +119,11 @@ function initMap() {
 }
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
-  setMapOnAll(null);
+  for (var i = 0; i < markerArray.length; i++) {
+    markerArray[i].setMap(null);
+  };
+  markerArray= [];
+  markerArray.push(marker);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
