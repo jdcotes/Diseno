@@ -5,6 +5,7 @@
   $database = "disenouninorte";
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
+  
   $sapce = " ";
   $uno = $_POST['fechita'];
   $dos = $_POST['fechita2'];
