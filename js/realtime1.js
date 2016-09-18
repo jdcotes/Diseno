@@ -50,7 +50,7 @@ function initMap() {
     datesc=1;
   }
   if (date2 == ""){
-    date1=date2; 
+    date2=date1; 
   }
   if (date1 > date2){
     alert("Consulta no realizada. Verificar fechas ingresadas.");
