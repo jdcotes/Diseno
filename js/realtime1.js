@@ -17,7 +17,7 @@ var longitud
 var marker
 var dates = 0; //Variable control fecha 1 mayor fecha 2
 var times = 0; //Variabel control times 1 mayor que times 2
-
+var datesc =0; //Variable control cuando no se ingresan fechas
 //Mapa inicial al cargar página
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
@@ -44,6 +44,14 @@ function initMap() {
   var time2 = Hasta.value;
   dates=0;
   times=0;
+  datesc=0;
+  if (date1=="" && date2""){
+    alert("Necesario ingresar fechas para realizar la consulta");
+    datesc=1;
+  }
+  if (date2 == ""){
+    date1=date2; 
+  }
   if (date1 > date2){
     alert("Consulta no realizada. Verificar fechas ingresadas.");
     dates = 1;
@@ -54,10 +62,8 @@ function initMap() {
       times =1;
     }
   }
-  if (date2 == ""){
-    date1=date2; 
-  }
-  if (dates==0 && times ==0){
+
+  if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
