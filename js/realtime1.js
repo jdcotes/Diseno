@@ -40,6 +40,10 @@ function initMap() {
   var time1 = Desde.value;
   var time2 = Hasta.value;
 
+  if (date1 > date2){
+    console.log("entre");
+  }
+
   $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
@@ -48,18 +52,13 @@ function initMap() {
     
     // LLenado de vector prueba 1 con la consulta realizada //
     for (var j in prueba1) {
-      //console.log(j);
+
       var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
       lat = parseFloat(prueba1[j].Latitud);
       lon = parseFloat(prueba1[j].Longitud);
       DateGps = (prueba1[j].FechaGPS);
-      //console.log(lat);
-     //console.log(lon);
-      //routes2[j] = new google.maps.LatLng(lat,lon);
-      //var prueba = lat-latold;
-      //var hola = Math.abs(prueba)
-      //console.log(hola);
-      //console.log(a);
+
+     // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
       if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
         routes2[a] = new google.maps.LatLng(lat,lon);
         markerdate[a] = DateGps;
@@ -71,9 +70,8 @@ function initMap() {
       j=j+1;
     }
     a = 0;
-       
     longitud = routes2.length; 
-    console.log(longitud);
+
     // Condicional para cuando la consulta devuelve 0 datos //
 
     if(verificar==0 && tamaño==0){
@@ -81,6 +79,7 @@ function initMap() {
       center:{lat: 11.01999, lng: -74.8509},
       zoom: 15});
       verificar=1;
+      alert("No hay datos entre los límites establecidos");
     }
     // Cargar una sola vez el mapa cuando se realiza la primera consulta //
 
@@ -106,12 +105,6 @@ function initMap() {
         map: map2,
         title: markerdate[longitud-1]
        });
-      //   j=j+1;
-      // for (var i = 0; i < markerArray.length; i++) {
-      //    markerArray[i].setMap(null);
-      // };
-      // markerArray= [];
-      // markerArray.push(marker);
     } 
     // Hacer visble el slider 
     var y = document.querySelector("#slider"); 
@@ -121,10 +114,6 @@ function initMap() {
 var routes3 = routes2;
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
-  // for (var i = 0; i < routes3.length; i++) {
-  //   routes3[i].setMap(null);
-  // };
-  //marker = routes3[slide];
   marker.setMap(null);
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
