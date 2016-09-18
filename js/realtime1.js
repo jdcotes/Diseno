@@ -15,8 +15,10 @@ var longold = 0;
 var a = 0;
 var longitud
 var marker
+var dates = 0; //Variable control fecha 1 mayor fecha 2
+var times = 0; //Variabel control times 1 mayor que times 2
 
-//Mapa inicial al cargar pagina
+//Mapa inicial al cargar página
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
 zoom: 15});
@@ -35,16 +37,27 @@ function initMap() {
   routes2 = [];
   markerdate = [];
   polyline.setMap(null);
+  // Extraccion datos index1.php
   var date1 = fecha1.value;
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
 
   if (date1 > date2){
-    console.log("entre");
+    alert("Consulta no realizada. Verificar fechas ingresadas.");
+    dates = 1;
   }
-
-  $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
+  if (date1 == date2){
+    if (time1 > time2){
+      alert("Consulta no realizada. Hora inicial debe ocurrir antes.");
+      times =1;
+    }
+  }
+  if (date2 == ""){
+    date1=date2; 
+  }
+  if (dates==0 && times ==0){
+    $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
     tamaño = prueba1.length
@@ -71,7 +84,11 @@ function initMap() {
     }
     a = 0;
     longitud = routes2.length; 
-
+    
+     //Consulta con 0 resultados
+     if (longitud == 0){
+         alert("No hay datos entre los límites establecidos");
+     }
     // Condicional para cuando la consulta devuelve 0 datos //
 
     if(verificar==0 && tamaño==0){
@@ -79,7 +96,6 @@ function initMap() {
       center:{lat: 11.01999, lng: -74.8509},
       zoom: 15});
       verificar=1;
-      alert("No hay datos entre los límites establecidos");
     }
     // Cargar una sola vez el mapa cuando se realiza la primera consulta //
 
@@ -109,7 +125,8 @@ function initMap() {
     // Hacer visble el slider 
     var y = document.querySelector("#slider"); 
     y.setAttribute("style","visibility: visible");  
- });
+    });
+  }
 }
 var routes3 = routes2;
 function DrawMarker(){
