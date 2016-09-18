@@ -42,7 +42,8 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-
+  dates=0;
+  times=0;
   if (date1 > date2){
     alert("Consulta no realizada. Verificar fechas ingresadas.");
     dates = 1;
