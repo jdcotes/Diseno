@@ -45,7 +45,7 @@ function initMap() {
   dates=0;
   times=0;
   datesc=0;
-  if (date1=="" && date2""){
+  if (date1=="" && date2==""){
     alert("Necesario ingresar fechas para realizar la consulta");
     datesc=1;
   }
