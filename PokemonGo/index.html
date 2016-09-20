@@ -20,6 +20,10 @@ var intervalo;
 var map;
 var entro = 0;
 var myLatLng;
+var latold = 0;
+var lngold = 0;
+var control = 0;
+var marker;
 intevalo1 = setInterval(function(){CurrentPosition()},5000);
 function CurrentPosition(){
 navigator.geolocation.getCurrentPosition(onSuccessGeolocating, onErrorGeolocating,{enableHighAccuracy: true,maximumAge:5000,timeout:10000});
@@ -38,12 +42,24 @@ function onSuccessGeolocating(position){
     entro = 1;
   }
  var image = 'Marcadores/charmander.png';
- var marker = new google.maps.Marker({
+ if (latold != lat || lngold != lng){
+ 
+ marker = new google.maps.Marker({
  position: myLatLng,
  map: map,
  icon:image,
+ draggable:true,
  title: 'You are Here'
  });
+ if (control == 1){
+ marker.setMap(null);
+ console.log("Borrado");
+ }
+ latold=lat;
+ lngold=lng;
+ control = 1;
+ console.log("aqui estoy");
+ }
   initMap();
 }
 function onErrorGeolocating(position){
