@@ -104,24 +104,20 @@
                                 </div>
                                 <div class="panel-body">
                                Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.
+
+                                    <script type="text/javascript">
+                                        var auto_refresh = setInterval(
+                                        function ()
+                                        {
+                                        $('#FECHA').load('LLAMAR.php').fadeIn("slow");
+                                        }, 5000); // refresh every 5 seconds
+                                    </script>
+
                                 </div>
                             </div>
                             <!-- End recent Posts -->
                             <!-- About -->
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Datos</h3>
-                                </div>
-                                <div class="panel-body">
-                                    <script type="text/javascript">
-                                    var auto_refresh = setInterval(
-                                    function ()
-                                    {
-                                    $('#FECHA').load('LLAMAR.php').fadeIn("slow");
-                                    }, 5000); // refresh every 5 seconds
-                                    </script>
-                                </div>
-                            </div>
+
                             <!-- End About -->
                         </div>
                         <!-- End Side Column -->
