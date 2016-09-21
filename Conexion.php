@@ -26,7 +26,6 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
     	
         echo "Fecha: " . $row["FECHA"] . "<br>" . "Hora: " . $row["HORA"]. "<br>";
-        
     }
 } else {
     echo "0 results";
