@@ -128,7 +128,7 @@
                         <!-- Main Column -->
                         <div class="col-md-9">
                             <!-- Main Content -->
-                            <h2>Mapa Tiempo Real</h2>    
+                            <!--<h2>Mapa Tiempo Real</h2> -->
                             <article class="mapaa">
                                 <div id='map'> </div>
                             </article>           
