@@ -5,7 +5,7 @@
         <title>Ubica Tu Vehículo</title>
         <!-- Meta -->
          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
-         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+
 
 
          <script src="//code.jquery.com/jquery-1.10.2.js"></script>
