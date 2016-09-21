@@ -68,40 +68,16 @@ function initMap() {
   });
 }
 
- // var image = 'Marcadores/charmander.png';
- // var marker = new google.maps.Marker({
- // position: myLatLng,
- // map: map,
- // icon:image,
- // title: 'You are Here'
- // });
-//   var marker = new google.maps.Marker({
-//     position: {lat: 11.020972, lng: -74.849201},
-//     map: map,
-//     draggable:true,
-//     title: 'You are Here'
-//   });
-//     var marker = new google.maps.Marker({
-//     position: {lat: 11.017249, lng: -74.851759},
-//     map: map,
-//     draggable:true,
-//     title: 'You are Here'
-//   });
-//       var marker = new google.maps.Marker({
-//     position: {lat: 11.017249, lng: -74.849201},
-//     map: map,
-//     draggable:true,
-//     title: 'You are Here'
-//   });
-
 function drawmarker(){
-  console.log(marker);
+  var image = 'Marcadores/Pokemarker.png';
   marker.setMap(null);
   marker = new google.maps.Marker({
    position: myLatLng,
-   map: map2, //Idea colocar nombre ususario.
+   map: map2,
+   icon: image   //Idea colocar nombre ususario.
   });
 }
+
 </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk"
         async defer></script>
