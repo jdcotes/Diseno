@@ -104,7 +104,7 @@
                                     <h3 class="panel-title">Información</h3>
                                 </div>
                                 <div class="panel-body">
-                                <p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.
+                                <p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.   </p>
                                 <br>
                                     <script type="text/javascript">
                                         var auto_refresh = setInterval(
@@ -113,7 +113,7 @@
                                         $('#FECHA').load('LLAMAR.php').fadeIn("slow");
                                         }, 5000); // refresh every 5 seconds
                                     </script>
-                                </p>
+                             
                                 </div>
                             </div>
                             <!-- End recent Posts -->
