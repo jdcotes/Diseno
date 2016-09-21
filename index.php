@@ -113,6 +113,8 @@
                                         $('#FECHA').load('LLAMAR.php').fadeIn("slow");
                                         }, 5000); // refresh every 5 seconds
                                     </script>
+                                        <div id="FECHA"> </div>
+                                        <div id='Hora'> </div>
                              
                                 </div>
                             </div>
