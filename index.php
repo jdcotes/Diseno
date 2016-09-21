@@ -104,8 +104,7 @@
                                     <h3 class="panel-title">Información</h3>
                                 </div>
                                 <div class="panel-body">
-                                <p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.   </p>
-                                <br>
+                                <p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehiculo.</p>
                                     <script type="text/javascript">
                                         var auto_refresh = setInterval(
                                         function ()
