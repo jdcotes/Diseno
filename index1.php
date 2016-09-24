@@ -80,8 +80,7 @@
 							<section>
 							<br>
 								<h3>¿Donde ha estado mi Vehículo?</h3>
-								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
-                                   
+								<p>Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>                                  
 									<form>
 										    <div> Fecha Inicial:
 										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
