@@ -68,7 +68,7 @@
                                     
                                         <div id="FECHA"> </div>
                                         <div id='Hora'> </div>
-
+                                <br>
 								<ul class="actions">
 									<li><a href="index1.php" class="button alt">Revisar Histórico</a></li>
 								</ul>
