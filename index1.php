@@ -178,8 +178,7 @@
 </head>
 <body>
 	<form>
-	     <!-- action="#" -->
-		<!-- add class="tcal" to your input field -->
+	   
 		<div > <h4>Fecha Inicial:</h4>
 				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
 		</div>
@@ -207,12 +206,6 @@
 </div>
 	</form>
 
-<!-- slider-->
-
-<!-- <div >
-	<input id="slider" />
-<div> -->
-
 <script type="text/javascript">
 	$('#slider').slider({
   orientation: 'horizontal',
@@ -220,21 +213,10 @@
   value:      17
 });
 </script>	
-<!-- fin slider-->
+
 
 </aside>
-             	<!-- <div id='map'> </div>					
-				<p>Diseño Electrónico</p>
-				<p><strong>Presentado por:</strong>
-				<br>Hernan Carrillo 
-				<br>Cristian Cepeda 
-				<br>Juan Diego Cotes
-				<br>Andrea Fontalvo 
-				<br>
-				<br><strong>Universidad del Norte
-				<br>2016 </strong></p>
-				<br></br>
-				</div>-->
+
 </section>
 
 <footer>
