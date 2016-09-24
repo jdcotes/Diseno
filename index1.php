@@ -78,6 +78,7 @@
 					<div class="row">
 						<div class="4u">
 							<section>
+							<br>
 								<h3>¿Donde ha estado mi Vehículo?</h3>
 								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
                                    
