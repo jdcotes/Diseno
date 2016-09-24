@@ -59,8 +59,8 @@
 				<h1>Ubica Tu Vehículo</h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index.php" class="button special">Inicio</a></li>
-						<li><a href="index1.php">Histórico</a></li>
+						<li><a href="index.php">Inicio</a></li>
+						<li><a href="index1.php" class="button special">Histórico</a></li>
 <!-- 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
 						<li><a href="no-sidebar.html">No Sidebar</a></li>
 						<li><a href="#" class="button special">Sign Up</a></li> -->
