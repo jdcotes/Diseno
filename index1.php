@@ -1,157 +1,32 @@
+<!DOCTYPE HTML>
 <html class="no-js">
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Diseño Uninorte 201630</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
-	 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/
-		libs/jquery/1.3.0/jquery.min.js"></script>
-     <link rel="stylesheet">
-   
-	 <style type="text/css">
-	 *{
-	 	margin:0;
-	 	padding:0;
-	 }
-	 body{
-	 	background:#e6e6e6;
-	 }
-
-	 h2, h3{
-	 	color:#B40404;
-	 }
-
-	 h4{
-	 	color:#B40404;
-	 }
-	 
-	 header, .main, footer{
-	 	width: 90%;
-	 	margin:auto;
-	 	max-width: 1012px;
-	 	margin: 20px auto;
-	 }
-
-	 header nav{
-	 	background: #0B0B61;
-	 	overflow:hidden;
-	 }
-
-	 header nav ul{
-	 	list-style:none;
-	 }
-
-	 header nav ul li{
-	 	float:left;
-	 }
-
-	 header nav ul li a{
-	 	padding:10px 20px;
-	 	display:block;
-	 	color:#fff;
-	 	text-decoration:none;
-	 }
-
-	 header nav ul li a:hover{
-	 	background:#0431B4;
-	 }
-
-	 .main .articles{
-	 	width: 68.5%;
-	 	margin-right:1.5%;
-	 	float:left;
-	 }
-
-	 .main .articles article{
-	 	padding: 20px;
-	 	background: #fff;
-	 	margin-bottom: 20px;
-	 }
-	 .boton{
-	 	color:#424242;
-	 	background:#8A0829;
-	 }
-
-
-	 aside{
-	 	width:30%;
-	 	background: #D8D8D8;
-	 	float: left;
-	 	padding: 20px;
-	 	box-sizing: border-box;
-	 }
-
-	 footer {
-	 	background: #610B0B;
-	 	color:#D8D8D8;
-	 	clear:both;
-	 	padding:10px 0px;
-	 	text-align:center;
-	 }
-	  .main .map{
-	  	width: 90%;
-	  }
-
-	  header{
-	  	background:#e6e6e6;
-	  	width: 1012px;
-	  }
-
-	  p .aside{
-	  	text-align: justify;
-	  }
-
-
-	</style>
-		
-	<style>
-		html,body {
-			height: 100%;
-        	margin: 0 auto;
-        	padding: 0;
-        } 
-      	#map{
-        width: 100%;
-        height: 500px;
-      	}
-    </style>
-	</head>
-
-	<body>
-		<font face="helvetica">
-<header>
-	<div class="logo">
-		<img src="logo.png">
-	</div>
-	<nav>
-		<ul>
-			 <li><a href="index.php">Inicio</a></li>
-			<li><a href="index1.php">Histórico</a></li>
-			<li><a href="index3.php">Acerca de Nosotros</a></li>
-		</ul>
-	</nav>
-</header>		
-<section class="main">
-<section class="articles">
-<article>
-	<h2>¿Donde ha estado mi vehículo?</h2>
-</article>
-
-<article>
-    <div id='map'> </div>
-	</article>
-</section>
-
-<aside>
-<article>
-		<h3>Consulta Histórico</h3>
-</article>
-	<br>
 	<head>
-	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+		<title>Ubica Tu Vehículo</title>
+
+		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
+         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+
+    <style>
+        #map{
+        height: 500px;
+        }
+    </style>
+
+    	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<title>Simple Tigra Calendar</title>
 
 	<!-- link calendar resources -->
@@ -175,69 +50,116 @@
 	}
 
 </style>
-</head>
-<body>
-	<form>
-	   
-		<div > <h4>Fecha Inicial:</h4>
-				<br><center><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></center>
-		</div>
-				<br>
-		<div > <h4>Fecha Final:</h4>
-				<br><center><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></center>
-		</div>
-				<br>
-		
-		<div > <h4>Hora Inicial: </h4>
-			<br><center><input type="text" runat ="server" value="00:00" id="Desde" /></center>
-		</div>
-			<br>
-		<div > <h4>Hora Final:</h4> 
-			<br><center><input type="text" runat = "server" value="23:00" id="Hasta" /></center>
-		</div>
 
-	    <br><center>
-	    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
-	    <br> 
+	</head>
+	<body id="top">
 
-	    <div ><center>
-	<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" /></center>
+		<!-- Header -->
+			<header id="header" class="skel-layers-fixed">
+				<h1>Ubica Tu Vehículo</h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.php" class="button special">Inicio</a></li>
+						<li><a href="index1.php">Histórico</a></li>
+<!-- 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
+						<li><a href="no-sidebar.html">No Sidebar</a></li>
+						<li><a href="#" class="button special">Sign Up</a></li> -->
+					</ul>
+				</nav>
+			</header>
 
-</div>
-	</form>
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>Ubica Tu Vehículo</h2>
+					<p>Ubica, rastrea, haz seguimiento a Tu Vehículo en tiempo real</p>
+				</header>
+				<div class="container">
+					<div class="row">
+						<div class="4u">
+							<section>
+							<br>
+								<h3>¿Donde ha estado mi Vehículo?</h3>
+								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
+                                   
+									<form>
+										    <div> Fecha Inicial:
+										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
+											</div>
+											<br>
+											<div> Fecha Final:
+												   	<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" />
+											</div>
+											<br>														
+											<div> Hora Inicial: 
+										    		<input type="text" runat ="server" value="00:00" id="Desde" />
+											</div>
+											<br>
+											<div>Hora Final:
+													<input type="text" runat = "server" value="23:00" id="Hasta" />
+											</div>
+										    <br><center>
+										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
+										   
+										    <div ><center>
+												<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" /></center>
+											</div>
+									</form>
 
-<script type="text/javascript">
-	$('#slider').slider({
-  orientation: 'horizontal',
-  range:       true,
-  value:      17
-});
-</script>	
+									<script type="text/javascript">
+										$('#slider').slider({
+										  orientation: 'horizontal',
+										  range:       true,
+										  value:      17
+											});
+									</script>
+	                             
+							</section>
+							<hr />
+						</div>
+
+						<div class="8u skel-cell-important">
+							<section>					
+								<div id='map'>
+							</section>
+						</div>
+					</div>
+					
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+				
+					<ul class="copyright">
+						<li>Diseño Electrónico. Universidad del Norte. 2016</li>
+						<li>Desarrollado por: Juan Diego Cotes | Cristian Cepeda | Hernán Carrillo | Andrea Fontalvo</li>
+
+					</ul>
+				</div>
+			</footer>
 
 
-</aside>
+            <!-- MAPA -->
+			<script src="js/realtime1.js"></script>	
 
-</section>
-
-<footer>
-	<p class="foot"> Diseño Electrónico - Universidad del Norte - 2016</p>
-</footer>
-	<script src="js/realtime1.js"></script>	
 	</body>
-	<script src="./jquery.js"></script>
+
+<script src="./jquery.js"></script>
 <script src="build/jquery.datetimepicker.full.js"></script>
 <script>
 
-$.datetimepicker.setLocale('es');
-$("#Desde").datetimepicker({
-datepicker:false,
-format:'H:i'
+	$.datetimepicker.setLocale('es');
+	$("#Desde").datetimepicker({
+	datepicker:false,
+	format:'H:i'
 
-});
-$("#Hasta").datetimepicker({
-datepicker:false,
-format:'H:i'
-});
+	});
+	$("#Hasta").datetimepicker({
+	datepicker:false,
+	format:'H:i'
+	});
 
 </script>
+
 </html>
