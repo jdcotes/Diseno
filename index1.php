@@ -46,7 +46,7 @@
 	.input{	
 	}
 	.input-wide{
-	width: 700px;
+	width: 500px;
 	}
 
 </style>
