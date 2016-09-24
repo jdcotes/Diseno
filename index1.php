@@ -78,7 +78,6 @@
 					<div class="row">
 						<div class="4u">
 							<section>
-							<br>
 								<h3>¿Donde ha estado mi Vehículo?</h3>
 								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
                                    
@@ -100,7 +99,7 @@
 											</div>
 										    <br><center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
-										   
+										   <br>
 										    <div ><center>
 												<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" /></center>
 											</div>
