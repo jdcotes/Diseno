@@ -105,13 +105,13 @@
 											</div>
 									</form>
 
-									<script type="text/javascript">
+<!-- 									<script type="text/javascript">
 										$('#slider').slider({
 										  orientation: 'horizontal',
 										  range:       true,
 										  value:      17
 											});
-									</script>
+									</script> -->
 	                             
 							</section>
 							<hr />
