@@ -156,3 +156,16 @@ function DrawMarker(){
   });
 
 }
+function Forward(){
+var x = document.querySelector("#slider");
+var slide = slider.value;  
+x.setAttribute("value",slide+1);
+
+    
+}
+function Backward(){
+var x = document.querySelector("#slider");
+var slide = slider.value;  
+x.setAttribute("value",slide-1);
+    	
+}
