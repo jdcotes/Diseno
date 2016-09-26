@@ -134,7 +134,7 @@ function initMap() {
     w.setAttribute("style","visibility: visible");  
     var y = document.querySelector("#backward");
     y.setAttribute("style","visibility: visible"); 
-    var z = document.querySelector("#forward");
+    var z = document.querySelector("#fordward");
     z.setAttribute("style","visibility: visible"); 
     });
   }
