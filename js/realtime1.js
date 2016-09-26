@@ -131,11 +131,12 @@ function initMap() {
     } 
     // Hacer visble el slider 
     var w = document.querySelector("#slider"); 
-    w.setAttribute("style","visibility: visible");  
+    w.setAttribute("style","visibility: visible");
+    var z = document.querySelector("#fordward");
+    z.setAttribute("style","visibility: visible");   
     var y = document.querySelector("#backward");
     y.setAttribute("style","visibility: visible"); 
-    var z = document.querySelector("#fordward");
-    z.setAttribute("style","visibility: visible"); 
+    
     });
   }
 }
