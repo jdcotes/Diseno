@@ -100,18 +100,22 @@
 										    <br><center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
 										   <br>
-										    <div ><center>
-												<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" /></center>
+										    <div >
+										    	<center>
+													<input type=image src="images/left.png" id="backward">
+													<input id="slider" min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" />
+													<input type=image src="images/right.png" id="fordward">
+												</center>
 											</div>
 									</form>
 
-<!-- 									<script type="text/javascript">
+                                       <!--<script type="text/javascript">
 										$('#slider').slider({
 										  orientation: 'horizontal',
 										  range:       true,
 										  value:      17
 											});
-									</script> -->
+									    </script> -->
 	                             
 							</section>
 							<hr />
