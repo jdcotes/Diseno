@@ -131,7 +131,11 @@ function initMap() {
     } 
     // Hacer visble el slider 
     var w = document.querySelector("#slider"); 
-    y.setAttribute("style","visibility: visible");  
+    w.setAttribute("style","visibility: visible");  
+    var y = document.querySelector("#backward");
+    y.setAttribute("style","visibility: visible"); 
+    var z = document.querySelector("#forward");
+    z.setAttribute("style","visibility: visible"); 
     });
   }
 }
@@ -139,10 +143,6 @@ var routes3 = routes2;
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
   marker.setMap(null);
-  var y = document.querySelector("#backward");
-  y.setAttribute("style","visibility: visible"); 
-  var z = document.querySelector("#forward");
-  z.setAttribute("style","visibility: visible"); 
   var x = document.querySelector("#slider");
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
