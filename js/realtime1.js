@@ -163,7 +163,7 @@ var slide = slider.value;
 console.log("vamos"); 
 console.log(slide);
 u.setAttribute("value",slide+1);
-
+console.log(slide+1);
     
 }
 function Backward(){
