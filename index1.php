@@ -38,10 +38,6 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
 	<style type="text/css">
-    header{
-    background-image:"images/banner.jpg";	
-    }
-	
 
 	.custom-date-style {
 		background-color: red !important;
@@ -114,13 +110,13 @@
 											</div>
 									</form>
 
-                                       <!--<script type="text/javascript">
+                                       <script type="text/javascript">
 										$('#slider').slider({
 										  orientation: 'horizontal',
 										  range:       true,
 										  value:      17
 											});
-									    </script> -->
+									    </script> 
 	                             
 							</section>
 							<hr />
