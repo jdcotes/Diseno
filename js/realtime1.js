@@ -101,7 +101,7 @@ function initMap() {
     if(verificar==0 && tamaño==0){
       map2 = new google.maps.Map(document.getElementById('map'), {
       center:{lat: 11.01999, lng: -74.8509},
-      zoom: 15});
+      zoom: 18});
       verificar=1;
     }
     // Cargar una sola vez el mapa cuando se realiza la primera consulta //
@@ -109,7 +109,7 @@ function initMap() {
     if(entro==0 && tamaño>0){
       map2 = new google.maps.Map(document.getElementById('map'), {
       center:myLatLng,
-      zoom: 15});
+      zoom: 18});
       entro = 1;
       control = 0;
     }
