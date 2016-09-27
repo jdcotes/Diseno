@@ -55,7 +55,7 @@
 	<body id="top">
 
 		<!-- Header -->
-			<header id="header" class="skel-layers-fixed">
+			<header id="header" src="images/banner.jpg" class="skel-layers-fixed">
 				<h1>Ubica Tu Vehículo</h1>
 				<nav id="nav">
 					<ul>
