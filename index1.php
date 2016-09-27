@@ -98,13 +98,13 @@
 													<input type="text" runat = "server" value="23:00" id="Hasta" />
 											</div>
 										    <br><center>
-										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap()"/> </center>
+										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
 										   <br>
 										    <div >
 										    	<center>
-													<input type=image src="images/left.png" id="backward" style="visibility: hidden" onclick="Backward()"/>
-													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker()" />
-													<input type=image src="images/right.png" id="fordward" style="visibility: hidden" onclick="Forward()"/>
+													<input type=image src="images/left.png" id="backward" style="visibility: hidden" onclick="Backward();"/>
+													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
+													<input type=image src="images/right.png" id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div>
 									</form>
