@@ -148,8 +148,6 @@ function DrawMarker(){
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
   var slide = slider.value;
-  var hola = slide + 1;
-  console.log(hola); 
     marker = new google.maps.Marker({
     position: routes2[slide],
     map: map2,
@@ -160,15 +158,17 @@ function DrawMarker(){
 function Forward(){
 var u = document.querySelector("#slider");
 var slide = slider.value; 
+var now = parseInt(slide);
 console.log("vamos"); 
 console.log(slide);
-u.setAttribute("value",slide+1);
+u.setAttribute("value",now+1);
 console.log(slide+1);
     
 }
 function Backward(){
 var v = document.querySelector("#slider");
-var slide = slider.value;  
-v.setAttribute("value",slide-1);
+var slide = slider.value;
+var now = parseInt(slide);  
+v.setAttribute("value",now-1);
     	
 }

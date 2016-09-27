@@ -102,9 +102,9 @@
 										   <br>
 										    <div >
 										    	<center>
-													<input type=image src="images/left.png" id="backward" style="visibility: hidden" onclick="Backward();"/>
+													<input type= button value = "-" src="images/left.png" id="backward" style="visibility: hidden" onclick="Backward();"/>
 													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
-													<input type=button src="images/right.png" id="fordward" style="visibility: hidden" onclick="Forward();"/>
+													<input type= button value = "+" src="images/right.png" id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div>
 									</form>
