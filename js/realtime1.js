@@ -159,7 +159,8 @@ function DrawMarker(){
 }
 function Forward(){
 var x = document.querySelector("#slider");
-var slide = slider.value;  
+var slide = slider.value; 
+console.log("vamos"); 
 x.setAttribute("value",slide+1);
 
     
