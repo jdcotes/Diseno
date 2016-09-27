@@ -22,7 +22,7 @@
 
     <style>
         #map{
-        height: 2000px;
+        height: 1200px;
         }
     </style>
 
