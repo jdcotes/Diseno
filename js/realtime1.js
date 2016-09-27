@@ -159,10 +159,9 @@ function Forward(){
 var u = document.querySelector("#slider");
 var slide = slider.value; 
 var now = parseInt(slide);
-console.log("vamos"); 
-console.log(slide);
 u.setAttribute("value",now+1);
-console.log(slide+1);
+console.log(now+1);
+DrawMarker();
     
 }
 function Backward(){
@@ -170,5 +169,6 @@ var v = document.querySelector("#slider");
 var slide = slider.value;
 var now = parseInt(slide);  
 v.setAttribute("value",now-1);
+DrawMarker();
     	
 }
