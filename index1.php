@@ -108,7 +108,9 @@
 													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div>
-											<p id = "been"></p>
+											<center>
+												<p id = "been"></p>
+											</center>
 									</form>
 
                                        <!--<script type="text/javascript">
