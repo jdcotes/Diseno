@@ -158,16 +158,16 @@ function DrawMarker(){
 
 }
 function Forward(){
-var x = document.querySelector("#slider");
+var u = document.querySelector("#slider");
 var slide = slider.value; 
 console.log("vamos"); 
-x.setAttribute("value",slide+1);
+u.setAttribute("value",slide+1);
 
     
 }
 function Backward(){
-var x = document.querySelector("#slider");
+var v = document.querySelector("#slider");
 var slide = slider.value;  
-x.setAttribute("value",slide-1);
+v.setAttribute("value",slide-1);
     	
 }
