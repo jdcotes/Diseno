@@ -38,6 +38,10 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
 	<style type="text/css">
+    header{
+    background-image:"images/banner.jpg";	
+    }
+	
 
 	.custom-date-style {
 		background-color: red !important;
@@ -61,7 +65,7 @@
 					<ul>
 						<li><a href="index.php">Inicio</a></li>
 						<li><a href="index1.php" class="button special">Histórico</a></li>
-						<img src="images/banner.jpg">
+						
 <!-- 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
 						<li><a href="no-sidebar.html">No Sidebar</a></li>
 						<li><a href="#" class="button special">Sign Up</a></li> -->
