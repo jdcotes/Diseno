@@ -161,6 +161,7 @@ function Forward(){
 var u = document.querySelector("#slider");
 var slide = slider.value; 
 console.log("vamos"); 
+conosole.log(slide);
 u.setAttribute("value",slide+1);
 
     
