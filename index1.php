@@ -82,7 +82,7 @@
 							<br>
 								<h3>¿Donde ha estado mi Vehículo?</h3>
 								<p>Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>                                  
-									<form class="form-horizontal" role="form">
+									<form>
 										    <div> Fecha Inicial:
 										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
 											</div>
@@ -123,9 +123,9 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-							<section>					
+							<form>					
 								<div id='map'>
-							</section>
+							</form>
 						</div>
 					</div>
 					
