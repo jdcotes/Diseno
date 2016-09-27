@@ -104,19 +104,19 @@
 										    <div >
 										    	<center>
 													<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
-													<input id="slider"  min = "" max = "" runat = "server"  style="visibility: hidden" onchange = "DrawMarker();" />
+													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
 													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div>
 									</form>
 
-                                       <script type="text/javascript">
+                                       <!--<script type="text/javascript">
 										$('#slider').slider({
 										  orientation: 'horizontal',
 										  range:       true,
 										  value:      17
 											});
-									    </script> 
+									    </script> -->
 	                             
 							</section>
 							<hr />
