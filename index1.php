@@ -123,9 +123,9 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-							<form>					
+							<section>					
 								<div id='map'>
-							</form>
+							</section>
 						</div>
 					</div>
 					
