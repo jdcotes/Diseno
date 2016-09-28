@@ -108,10 +108,9 @@
 													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div>
-											<center>
-												<p></p>
-												<P> Su vehiculo estuvo aqui el: </P><p id = "beendate"></p><p>a las: </p><p id = "beentime"></p>
-											</center>
+											<br>
+											<P> Su vehiculo estuvo aqui el: </P><p id = "beendate"></p><p>a las: </p><p id = "beentime"></p>
+											
 									</form>
 
                                        <!--<script type="text/javascript">
