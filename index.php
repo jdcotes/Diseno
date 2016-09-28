@@ -20,13 +20,12 @@
 		</noscript>
 
     <style>
-
         #map{
         height: 500px;
         }
     </style>
-
 	</head>
+
 	<body id="top">
 
 		<!-- Header -->
@@ -40,12 +39,16 @@
 				</nav>
 			</header>
 
-		<!-- Main -->
-			<section id="main" class="wrapper style1">
-				<header class="major">
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
 					<h2>Ubica Tu Vehículo</h2>
 					<p>Ubica, rastrea, haz seguimiento a Tu Vehículo en tiempo real</p>
-				</header>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
 				<div class="container">
 					<div class="row">
 						<div class="4u">
