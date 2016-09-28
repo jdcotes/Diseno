@@ -150,6 +150,7 @@
 									<div id='map'>
 									<center>
 									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
+									</div>
 								</center>
 						
 						</div>
