@@ -21,7 +21,7 @@
 
     <style>
         #map{
-        height: 800px;
+        height: 500px;
         }
     </style>
 
@@ -77,14 +77,47 @@
 					<div class="row">
 						<div class="4u">
 							<section>
-							<br>
-								<h3>¿Donde ha estado mi Vehículo?</h3>
-								<p>Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>                                  
-									<form>
-										    <div> Fecha Inicial:
+								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
+								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
+							<form>							
+								<table>
+									  <tr>
+									    <td><center>Fecha Inicial</td>
+									    <td><center>Fecha Final</td> 
+									  </tr>
+									  <tr>
+									    <td><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></td>
+									    <td><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></td> 
+									  </tr>
+									  <tr>
+									    <td><center>Hora Inicial</td>
+									    <td><center>Hora Final</td> 
+									  </tr>
+									  <tr>
+									    <td><input type="text" runat ="server" value="00:00" id="Desde" /></td>
+									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td> 
+									  </tr>
+							  	</table>
+							</form>
+							  	 	<center>
+										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
+								    <br>
+										    <div >
+										    	<center>
+													<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
+													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
+													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
+												</center>
+											</div>
+								<center>
+									<p> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
+								</center>
+
+<!-- 									<form>
+										    <div> Fecha Inicial: 
 										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
 											</div>
-											<br>
+											
 											<div> Fecha Final:
 												   	<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" />
 											</div>
@@ -110,15 +143,14 @@
 											<center>
 												<p> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
 											</center>
-									</form>
+									</form> -->
                
 							</section>
-							<hr />
+							<hr/>
 						</div>
-
 						<div class="8u skel-cell-important">
-							<section>					
-								<div id='map'>
+							<section>		
+									<div id='map'>
 							</section>
 						</div>
 					</div>
