@@ -146,16 +146,13 @@
 							<hr/>
 						</div>
 						<div class="8u skel-cell-important">
-								    <form>
-									<div id='map'>Hola
-									<center>
+						    <div id='map'></div>
+							<div>
+								<center>
 									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
-
 								</center>
-						
+							</div>
 						</div>
-						</form>
-					</div>
 					
 			</section>
 
