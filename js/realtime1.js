@@ -137,8 +137,7 @@ function initMap() {
     z.setAttribute("style","visibility: visible");   
     var y = document.querySelector("#backward");
     y.setAttribute("style","visibility: visible"); 
-    var q = document.querySelector("#infor");
-    q.setAttribute("style","visibility: visible"); 
+
     
     });
   }
@@ -169,6 +168,8 @@ var slide = slider.value;
 var now = parseInt(slide);
 u.setAttribute("value",now+1);
 DrawMarker();
+var q = document.querySelector("#infor");
+q.setAttribute("style","visibility: visible"); 
     
 }
 // Disminuye valor slider al preisonar el boton menos. Mueve el slider
@@ -178,5 +179,6 @@ var slide = slider.value;
 var now = parseInt(slide);  
 v.setAttribute("value",now-1);
 DrawMarker();
-    	
+var q = document.querySelector("#infor");
+q.setAttribute("style","visibility: visible");     	
 }
