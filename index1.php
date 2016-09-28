@@ -76,7 +76,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="4u">
-							<section>
+							<section><br>
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
 								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
 							<form>							
