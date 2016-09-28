@@ -109,7 +109,7 @@
 												</center>
 											</div>
 											<br>
-											<P> Su vehiculo estuvo aqui el: </P><p id = "beendate"></p><p>a las: </p><p id = "beentime"></p>
+											<P> Su vehiculo estuvo aqui el: <a id = "beendate"></a>a las: <a id = "beentime"></a></P>
 											
 									</form>
 
