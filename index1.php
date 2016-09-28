@@ -102,15 +102,7 @@
 							  	 	<center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
 								    <br>
-										    <div >
-										    	<center>
-													<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
-													<input id="slider" value="0" min = "" max = "" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
-													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
-												</center>
-											</div><br>
-
-<!-- 									<form>
+                                   <!-- 									<form>
 										    <div> Fecha Inicial: 
 										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
 											</div>
@@ -146,6 +138,14 @@
 							<hr/>
 						</div>
 						<div class="8u skel-cell-important">
+							<div >
+						    	<center>
+									<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
+									<input id="slider" value="0" min = "" max = "" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
+									<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
+								</center>
+								<br>
+							</div>
 						    <div>
 								<center>
 									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
