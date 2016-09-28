@@ -132,11 +132,11 @@ function initMap() {
     } 
     // Hacer visble el slider y los botones disponibles para el desplazamiento
     var w = document.querySelector("#slider"); 
-    w.setAttribute("style","display: block");
+    w.setAttribute("style","display: inline");
     var z = document.querySelector("#fordward");
-    z.setAttribute("style","display: block");   
+    z.setAttribute("style","display: inline");   
     var y = document.querySelector("#backward");
-    y.setAttribute("style","display: block"); 
+    y.setAttribute("style","display: inline"); 
 
     
     });
