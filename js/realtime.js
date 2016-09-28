@@ -3,30 +3,26 @@ var intevalo1;
 var entro=0;
 var map2;
 var Tabla_MySql;
- //intevalo1 = setInterval('mapa1()',11000);
+
 intevalo1 = setInterval(function(){mapa1()},5000);
-        // mapa1();
+
 var markerArray =[],total=0;
 var routes2=[];
 var latold = 0;
 var longold = 0;
 var a = 0;
+var myLatLng;
 
  function mapa1(){
      
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
-      
-     	// console.log(Tabla_MySql[0].Fecha);
-     	// console.log(Tabla_MySql[0].Hora);
-     	// console.log(Tabla_MySql[0].Latitud);
-     	// console.log(Tabla_MySql[0].Longitud);
-
+ 
          var prueba1 = JSON.parse(respuesta);
          var lat, lon;
           for (var j in prueba1) {
-              var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
+              myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
               lat = parseFloat(prueba1[j].Latitud);
               lon = parseFloat(prueba1[j].Longitud);
              }
@@ -39,16 +35,15 @@ var a = 0;
             entro=1;
            }
            
-           if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+           if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
             routes2[a] = new google.maps.LatLng(lat,lon);
             latold=lat;
             longold=lon;
             myLatLng = new google.maps.LatLng(lat,lon);
             a = a + 1;
-            console.log(a);
+           
           }
-          
-                 
+                           
             //routes2[total] =  new google.maps.LatLng(lat,lon);
            //total=total+1;
            var polyline = new google.maps.Polyline({

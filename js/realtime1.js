@@ -80,7 +80,7 @@ function initMap() {
       DateGps = (prueba1[j].FechaGPS);
 
      // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
-      if ((Math.abs(lat-latold)>0.0003) || (Math.abs(lon-longold)>0.0003)){
+      if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
         routes2[a] = new google.maps.LatLng(lat,lon);
         markerdate[a] = DateGps;
         latold=lat;
@@ -137,7 +137,6 @@ function initMap() {
     z.setAttribute("style","display: inline");   
     var y = document.querySelector("#backward");
     y.setAttribute("style","display: inline"); 
-
     
     });
   }
