@@ -169,7 +169,7 @@ var now = parseInt(slide);
 u.setAttribute("value",now+1);
 DrawMarker();
 var q = document.querySelector("#infor");
-q.setAttribute("style","visibility: visible"); 
+q.setAttribute("style","display: block"); 
     
 }
 // Disminuye valor slider al preisonar el boton menos. Mueve el slider
@@ -180,5 +180,5 @@ var now = parseInt(slide);
 v.setAttribute("value",now-1);
 DrawMarker();
 var q = document.querySelector("#infor");
-q.setAttribute("style","visibility: visible");     	
+q.setAttribute("style","display: block");     	
 }
