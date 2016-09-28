@@ -147,7 +147,7 @@
 						</div>
 						<div class="8u skel-cell-important">
 								    <form>
-									<div id='map'>
+									<div id='map'>Hola
 									<center>
 									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
 
