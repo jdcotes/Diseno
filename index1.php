@@ -109,9 +109,6 @@
 													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
 											</div><br>
-								<center>
-									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
-								</center>
 
 <!-- 									<form>
 										    <div> Fecha Inicial: 
@@ -151,6 +148,9 @@
 						<div class="8u skel-cell-important">
 							<section>		
 									<div id='map'>
+									<center>
+									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
+								</center>
 							</section>
 						</div>
 					</div>
