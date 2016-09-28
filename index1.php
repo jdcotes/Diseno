@@ -109,6 +109,7 @@
 												</center>
 											</div>
 											<center>
+												<P> Su vehiculo estuvo aqui el: </P>
 												<p id = "been"></p>
 											</center>
 									</form>
