@@ -9,7 +9,6 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
@@ -37,9 +36,6 @@
 					<ul>
 						<li><a href="index.php" class="button special">Inicio</a></li>
 						<li><a href="index1.php">Histórico</a></li>
-<!-- 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>
-						<li><a href="#" class="button special">Sign Up</a></li> -->
 					</ul>
 				</nav>
 			</header>

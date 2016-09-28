@@ -3,13 +3,12 @@
 	<head>
 		<title>Ubica Tu Vehículo</title>
 
-		 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
-         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsFelqvBHeiBZ9KEmCJ31cVXQjdo0aASk" async defer></script>
+	    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
 
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
@@ -34,7 +33,6 @@
 	<script type="text/javascript" src="tcal.js"></script> 
 	
 	<!-- HORAS SRC LINK ETC -->
-	
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
 	<style type="text/css">
@@ -61,10 +59,6 @@
 					<ul>
 						<li><a href="index.php">Inicio</a></li>
 						<li><a href="index1.php" class="button special">Histórico</a></li>
-						
-<!-- 						<li><a href="right-sidebar.html">Right Sidebar</a></li>
-						<li><a href="no-sidebar.html">No Sidebar</a></li>
-						<li><a href="#" class="button special">Sign Up</a></li> -->
 					</ul>
 				</nav>
 			</header>
@@ -113,15 +107,7 @@
 												<p> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
 											</center>
 									</form>
-
-                                       <!--<script type="text/javascript">
-										$('#slider').slider({
-										  orientation: 'horizontal',
-										  range:       true,
-										  value:      17
-											});
-									    </script> -->
-	                             
+               
 							</section>
 							<hr />
 						</div>

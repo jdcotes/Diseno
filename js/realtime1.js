@@ -37,7 +37,7 @@ function initMap() {
   routes2 = [];
   markerdate = [];
   polyline.setMap(null);
-  // Extraccion datos index1.php
+  // Extraccion datos pagina históricos
   var date1 = fecha1.value;
   var date2 = fecha2.value;
   var time1 = Desde.value;
@@ -45,6 +45,7 @@ function initMap() {
   dates=0;
   times=0;
   datesc=0;
+  //Alertas posibles errores de ingreso de datos 
   if (date1=="" && date2==""){
     alert("Necesario ingresar fechas para realizar la consulta");
     datesc=1;
@@ -62,7 +63,7 @@ function initMap() {
       times =1;
     }
   }
-
+   //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
@@ -129,7 +130,7 @@ function initMap() {
         title: markerdate[longitud-1]
        });
     } 
-    // Hacer visble el slider 
+    // Hacer visble el slider y los botones disponibles para el desplazamiento
     var w = document.querySelector("#slider"); 
     w.setAttribute("style","visibility: visible");
     var z = document.querySelector("#fordward");
@@ -141,6 +142,7 @@ function initMap() {
   }
 }
 var routes3 = routes2;
+//Dibuja el marcador en la posicion indicada por el slider
 function DrawMarker(){
   // Establecer atributos como maximo y minímo del slider
   marker.setMap(null);
@@ -155,18 +157,19 @@ function DrawMarker(){
     position: routes2[slide],
     map: map2,
     title: markerdate[slide]
-  });
+});
 
 }
+//Aumenta valor slider al presionar el boton mas. Muev eel slider
 function Forward(){
 var u = document.querySelector("#slider");
 var slide = slider.value; 
 var now = parseInt(slide);
 u.setAttribute("value",now+1);
-console.log(now+1);
 DrawMarker();
     
 }
+// Disminuye valor slider al preisonar el boton menos. Mueve el slider
 function Backward(){
 var v = document.querySelector("#slider");
 var slide = slider.value;
