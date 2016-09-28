@@ -137,6 +137,8 @@ function initMap() {
     z.setAttribute("style","visibility: visible");   
     var y = document.querySelector("#backward");
     y.setAttribute("style","visibility: visible"); 
+    var q = document.querySelector("#infor");
+    q.setAttribute("style","visibility: visible"); 
     
     });
   }

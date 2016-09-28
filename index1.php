@@ -108,9 +108,9 @@
 													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
 													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
 												</center>
-											</div>
+											</div><br>
 								<center>
-									<p> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
+									<p id="infor" style="visibility: hidden"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
 								</center>
 
 <!-- 									<form>
