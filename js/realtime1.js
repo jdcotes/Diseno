@@ -165,10 +165,8 @@ function DrawMarker(){
 function Forward(){
 var u = document.querySelector("#slider");
 var slide = slider.value; 
-console.log(slide);
 var now = parseInt(slide);
 u.setAttribute("value",now+1);
-console.log(now);
 DrawMarker();
 var q = document.querySelector("#infor");
 q.setAttribute("style","display: block"); 
@@ -178,10 +176,8 @@ q.setAttribute("style","display: block");
 function Backward(){
 var v = document.querySelector("#slider");
 var slide = slider.value;
-console.log(slide);
 var now = parseInt(slide);  
 v.setAttribute("value",now-1);
-console.log(now);
 DrawMarker();
 var q = document.querySelector("#infor");
 q.setAttribute("style","display: block");     	
