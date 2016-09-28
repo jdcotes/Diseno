@@ -148,6 +148,8 @@ function DrawMarker(){
   x.setAttribute("min","0");
   x.setAttribute("max",longitud - 1);
   var slide = slider.value;
+  var label = markerdate[slide].split(" ");
+  console.log(label(1));
   document.getElementById("been").innerHTML = markerdate[slide];
     marker = new google.maps.Marker({
     position: routes2[slide],
