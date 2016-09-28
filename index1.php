@@ -140,9 +140,9 @@
 						<div class="8u skel-cell-important">
 							<div >
 						    	<center>
-									<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
-									<input id="slider" value="0" min = "" max = "" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
-									<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
+									<input type= button value = "-" id="backward" style="display: none" onclick="Backward();"/>
+									<input id="slider" value="0" min = "" max = "" type = "range" style="display: none" onchange = "DrawMarker();" />
+									<input type= button value = "+"  id="fordward" style="display: none" onclick="Forward();"/>
 								</center>
 								<br>
 							</div>
