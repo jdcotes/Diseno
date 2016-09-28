@@ -151,6 +151,7 @@ function DrawMarker(){
   var label = markerdate[slide].split(" ");
   document.getElementById("beendate").innerHTML = label[1];
   document.getElementById("beentime").innerHTML = label[2];
+  console.log(label[2]);
     marker = new google.maps.Marker({
     position: routes2[slide],
     map: map2,
