@@ -80,12 +80,16 @@
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
 								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
 							
-							<form action="">							 
-								  <center>Elija vehículo: <input type="number" id="Carro" value="1" min="1" max="2"></center>
+
+							<table>
+							<form action="">						 
+								  <tr>
+									    <td>Elija Vehículo: </td>
+									    <td><center><input type="number" id="Carro" value="1" min="1" max="2"></td> 
+								  </tr>
 							</form>
-               
+							        							
 							<form action="">							
-								<table>
 									  <tr>
 									    <td><center>Fecha Inicial</td>
 									    <td><center>Fecha Final</td> 
