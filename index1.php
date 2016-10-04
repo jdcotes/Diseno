@@ -84,7 +84,6 @@
 								  <center>Elija vehículo: <input type="number" id="Carro" value="1" min="1" max="2"></center>
 							</form>
                
-
 							<form action="">							
 								<table>
 									  <tr>
@@ -104,8 +103,6 @@
 									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td> 
 									  </tr>
 									  <tr>
-									    
-									  </tr>
 							  	</table>
 <!-- 							  	<input type="checkbox" runat ="server" value="1" id="Carro1" Checked/>
 								<input type="radio" runat ="server" value="2" id="Carro2" /> -->

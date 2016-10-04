@@ -38,12 +38,12 @@ function initMap() {
   markerdate = [];
   polyline.setMap(null);
   // Extraccion datos pagina históricos
+  var car = Carro.value; // Se determina que vehiculo se uqiere visualizar
   var date1 = fecha1.value;
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-  var car1 = Carro.value;
-  console.log(car1);
+  
   dates=0;
   times=0;
   datesc=0;
@@ -67,83 +67,166 @@ function initMap() {
   }
   // REALIZAR IF PARA DETERMINAR EL VALOR DE LOS RADIOS
    //Consulta base de datos para procesar datos.
-  if (dates== 0 && times == 0 && datesc == 0){
-    $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
-    entro = 0;
-    var prueba1 = JSON.parse(respuesta);
-    tamaño = prueba1.length
-    var lat, lon;
-    
-    // LLenado de vector prueba 1 con la consulta realizada //
-    for (var j in prueba1) {
+  if (car==1){
+    console.log("entro carro 1");
+    if (dates== 0 && times == 0 && datesc == 0){
+      $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
+      entro = 0;
+      var prueba1 = JSON.parse(respuesta);
+      tamaño = prueba1.length
+      var lat, lon;
+      
+      // LLenado de vector prueba 1 con la consulta realizada //
+      for (var j in prueba1) {
 
-      var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
-      lat = parseFloat(prueba1[j].Latitud);
-      lon = parseFloat(prueba1[j].Longitud);
-      DateGps = (prueba1[j].FechaGPS);
+        var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
+        lat = parseFloat(prueba1[j].Latitud);
+        lon = parseFloat(prueba1[j].Longitud);
+        DateGps = (prueba1[j].FechaGPS);
 
-     // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
-      if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
-        routes2[a] = new google.maps.LatLng(lat,lon);
-        markerdate[a] = DateGps;
-        latold=lat;
-        longold=lon;
-        myLatLng = new google.maps.LatLng(lat,lon);
-        a = a + 1;
+       // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
+        if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
+          routes2[a] = new google.maps.LatLng(lat,lon);
+          markerdate[a] = DateGps;
+          latold=lat;
+          longold=lon;
+          myLatLng = new google.maps.LatLng(lat,lon);
+          a = a + 1;
+        }
+        j=j+1;
       }
-      j=j+1;
-    }
-    a = 0;
-    longitud = routes2.length; 
-    
-     //Consulta con 0 resultados
-     if (longitud == 0){
-         alert("No hay datos entre los límites establecidos");
-     }
-    // Condicional para cuando la consulta devuelve 0 datos //
+      a = 0;
+      longitud = routes2.length; 
+      
+       //Consulta con 0 resultados
+       if (longitud == 0){
+           alert("No hay datos entre los límites establecidos");
+       }
+      // Condicional para cuando la consulta devuelve 0 datos //
 
-    if(verificar==0 && tamaño==0){
-      map2 = new google.maps.Map(document.getElementById('map'), {
-      center:{lat: 11.01999, lng: -74.8509},
-      zoom: 13});
-      verificar=1;
-    }
-    // Cargar una sola vez el mapa cuando se realiza la primera consulta //
+      if(verificar==0 && tamaño==0){
+        map2 = new google.maps.Map(document.getElementById('map'), {
+        center:{lat: 11.01999, lng: -74.8509},
+        zoom: 13});
+        verificar=1;
+      }
+      // Cargar una sola vez el mapa cuando se realiza la primera consulta //
 
-    if(entro==0 && tamaño>0){
-      map2 = new google.maps.Map(document.getElementById('map'), {
-      center:myLatLng,
-      zoom: 13});
-      entro = 1;
-      control = 0;
+      if(entro==0 && tamaño>0){
+        map2 = new google.maps.Map(document.getElementById('map'), {
+        center:myLatLng,
+        zoom: 13});
+        entro = 1;
+        control = 0;
+      }
+      // Pintado de polilinea y establecer ubicación de marcador //
+              
+      if(tamaño>0){
+        polyline = new google.maps.Polyline({
+        path: routes2,
+        map: map2, 
+        strokeColor: '#33CCCC', 
+        strokeWeight: 5, 
+        strokeOpacity: 1, 
+        clickable: false});  
+        marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map2,
+          title: markerdate[longitud-1]
+         });
+      } 
+      // Hacer visble el slider y los botones disponibles para el desplazamiento
+      var w = document.querySelector("#slider"); 
+      w.setAttribute("style","display: inline");
+      var z = document.querySelector("#fordward");
+      z.setAttribute("style","display: inline");   
+      var y = document.querySelector("#backward");
+      y.setAttribute("style","display: inline"); 
+      
+      });
     }
-    // Pintado de polilinea y establecer ubicación de marcador //
-            
-    if(tamaño>0){
-      polyline = new google.maps.Polyline({
-      path: routes2,
-      map: map2, 
-      strokeColor: '#33CCCC', 
-      strokeWeight: 5, 
-      strokeOpacity: 1, 
-      clickable: false});  
-      marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map2,
-        title: markerdate[longitud-1]
-       });
-    } 
-    // Hacer visble el slider y los botones disponibles para el desplazamiento
-    var w = document.querySelector("#slider"); 
-    w.setAttribute("style","display: inline");
-    var z = document.querySelector("#fordward");
-    z.setAttribute("style","display: inline");   
-    var y = document.querySelector("#backward");
-    y.setAttribute("style","display: inline"); 
-    
-    });
+    }
   }
-}
+  if (car==2){
+    console.log("entro carro 2");
+    if (dates== 0 && times == 0 && datesc == 0){
+      $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
+      entro = 0;
+      var prueba1 = JSON.parse(respuesta);
+      tamaño = prueba1.length
+      var lat, lon;
+      
+      // LLenado de vector prueba 1 con la consulta realizada //
+      for (var j in prueba1) {
+
+        var myLatLng = {lat: parseFloat(prueba1[j].Latitud), lng: parseFloat(prueba1[j].Longitud)};
+        lat = parseFloat(prueba1[j].Latitud);
+        lon = parseFloat(prueba1[j].Longitud);
+        DateGps = (prueba1[j].FechaGPS);
+
+       // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
+        if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
+          routes2[a] = new google.maps.LatLng(lat,lon);
+          markerdate[a] = DateGps;
+          latold=lat;
+          longold=lon;
+          myLatLng = new google.maps.LatLng(lat,lon);
+          a = a + 1;
+        }
+        j=j+1;
+      }
+      a = 0;
+      longitud = routes2.length; 
+      
+       //Consulta con 0 resultados
+       if (longitud == 0){
+           alert("No hay datos entre los límites establecidos");
+       }
+      // Condicional para cuando la consulta devuelve 0 datos //
+
+      if(verificar==0 && tamaño==0){
+        map2 = new google.maps.Map(document.getElementById('map'), {
+        center:{lat: 11.01999, lng: -74.8509},
+        zoom: 13});
+        verificar=1;
+      }
+      // Cargar una sola vez el mapa cuando se realiza la primera consulta //
+
+      if(entro==0 && tamaño>0){
+        map2 = new google.maps.Map(document.getElementById('map'), {
+        center:myLatLng,
+        zoom: 13});
+        entro = 1;
+        control = 0;
+      }
+      // Pintado de polilinea y establecer ubicación de marcador //
+              
+      if(tamaño>0){
+        polyline = new google.maps.Polyline({
+        path: routes2,
+        map: map2, 
+        strokeColor: '#33CCCC', 
+        strokeWeight: 5, 
+        strokeOpacity: 1, 
+        clickable: false});  
+        marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map2,
+          title: markerdate[longitud-1]
+         });
+      } 
+      // Hacer visble el slider y los botones disponibles para el desplazamiento
+      var w = document.querySelector("#slider"); 
+      w.setAttribute("style","display: inline");
+      var z = document.querySelector("#fordward");
+      z.setAttribute("style","display: inline");   
+      var y = document.querySelector("#backward");
+      y.setAttribute("style","display: inline"); 
+      
+      });
+    }
+    }
+  }
 var routes3 = routes2;
 //Dibuja el marcador en la posicion indicada por el slider
 function DrawMarker(){
