@@ -109,7 +109,7 @@
 							</form>
 
 								<form action="">							 
-								  <input type="number" id="Carro" value="1" min="1" max="2">
+								  <center>Elija vehículo: <input type="number" id="Carro" value="1" min="1" max="2"></center>
 								</form>
                
 							</section>
