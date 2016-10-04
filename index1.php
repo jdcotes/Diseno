@@ -79,6 +79,12 @@
 							<section><br>
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
 								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
+							
+							<form action="">							 
+								  <center>Elija vehículo: <input type="number" id="Carro" value="1" min="1" max="2"></center>
+							</form>
+               
+
 							<form action="">							
 								<table>
 									  <tr>
@@ -107,10 +113,7 @@
 								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
 							</form>
 
-								<form action="">							 
-								  <center>Elija vehículo: <input type="number" id="Carro" value="1" min="1" max="2"></center>
-								</form>
-               
+
 							</section>
 							<hr/>
 						</div>
