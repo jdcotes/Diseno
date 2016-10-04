@@ -109,6 +109,11 @@
 								    <br>
 							</form>
 
+							<form action="">
+							 
+							  <input type="number" name="quantity" min="1" max="5">
+							  <input type="submit">
+							</form>
 
                
 							</section>
