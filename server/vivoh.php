@@ -7,6 +7,7 @@
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
   
   $sapce = " ";
+  $cero = $_POST['auto'];
   $uno = $_POST['fechita'];
   $dos = $_POST['fechita2'];
   $tres = $_POST['horita'];
@@ -14,7 +15,7 @@
 
   $desde = $uno.$sapce.$tres;
   $hasta = $dos.$sapce.$cuatro;
-  //echo $desde;
+  echo $cero;
   //echo $dos;
   
   $sql = "SELECT Latitud, Longitud, FechaGPS FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$desde' AND  '$hasta';";

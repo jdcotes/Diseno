@@ -18,6 +18,9 @@ var marker
 var dates = 0; //Variable control fecha 1 mayor fecha 2
 var times = 0; //Variabel control times 1 mayor que times 2
 var datesc =0; //Variable control cuando no se ingresan fechas
+
+//COLOR #33cc33 verde 
+
 //Mapa inicial al cargar página
 map2 = new google.maps.Map(document.getElementById('map'), {
 center:{lat: 11.01999, lng: -74.8509},
@@ -68,7 +71,7 @@ function initMap() {
   // REALIZAR IF PARA DETERMINAR EL VALOR DE LOS RADIOS
    //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
-    $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
+    $.post("server/vivoh.php",{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
     tamaño = prueba1.length
