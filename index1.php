@@ -97,42 +97,17 @@
 									    <td><input type="text" runat ="server" value="00:00" id="Desde" /></td>
 									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td> 
 									  </tr>
+									  <tr>
+									    <td><input type="radio" runat ="server" value="1" id="Carro1" Checked/></td>
+									    <td><input type="radio" runat = "server" value="2" id="Carro2" /></td> 
+									  </tr>
 							  	</table>
+							  	
 							</form>
 							  	 	<center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
 								    <br>
-                                   <!-- 									<form>
-										    <div> Fecha Inicial: 
-										           	<input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" />
-											</div>
-											
-											<div> Fecha Final:
-												   	<input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" />
-											</div>
-											<br>														
-											<div> Hora Inicial: 
-										    		<input type="text" runat ="server" value="00:00" id="Desde" />
-											</div>
-											<br>
-											<div>Hora Final:
-													<input type="text" runat = "server" value="23:00" id="Hasta" />
-											</div>
-										    <br><center>
-										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
-										   <br>
-										    <div >
-										    	<center>
-													<input type= button value = "-" id="backward" style="visibility: hidden" onclick="Backward();"/>
-													<input id="slider"  min = "" max = "" runat = "server" type = "range" style="visibility: hidden" onchange = "DrawMarker();" />
-													<input type= button value = "+"  id="fordward" style="visibility: hidden" onclick="Forward();"/>
-												</center>
-											</div>
-											<br>
-											<center>
-												<p> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
-											</center>
-									</form> -->
+
                
 							</section>
 							<hr/>

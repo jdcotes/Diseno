@@ -42,6 +42,10 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
+  var car1 = Carro1.value;
+  var car2 = Carro2.value;
+  console.log(car1);
+  console.log(car2);
   dates=0;
   times=0;
   datesc=0;
@@ -63,6 +67,7 @@ function initMap() {
       times =1;
     }
   }
+  // REALIZAR IF PARA DETERMINAR EL VALOR DE LOS RADIOS
    //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
