@@ -105,7 +105,6 @@
 								<input type="radio" runat ="server" value="2" id="Carro2" /> -->
 						  	 	<center>
 								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
-							    <br>
 							</form>
 
 								<form action="">							 
