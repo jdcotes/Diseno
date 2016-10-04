@@ -50,7 +50,9 @@ function initMap() {
   if (car==2){
     cor="#33CCCC";
   }
-  
+  else {
+    var cor ="#33cc33";
+  }
   dates=0;
   times=0;
   datesc=0;
