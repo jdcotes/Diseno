@@ -83,7 +83,7 @@
 							<table>
 							<form action="">						 
 								  <tr>
-									    <td><center><b>Elija Vehículo</b></center></td>
+									    <td><center><h3>Elija Vehículo</h3></center></td>
 									    <td><center><input type="number" id="Carro" value="1" min="1" max="2" length="10" ></td> 
 								  </tr>
 							</form>
