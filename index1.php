@@ -98,11 +98,11 @@
 									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td> 
 									  </tr>
 									  <tr>
-									    <td><input type="radio" runat ="server" value="1" id="Carro1" Checked/></td>
-									    <td><input type="radio" runat = "server" value="2" id="Carro2" /></td> 
+									    
 									  </tr>
 							  	</table>
-							  	
+							  	<input type="radio" runat ="server" value="1" id="Carro1" Checked/>
+								<input type="radio" runat ="server" value="2" id="Carro2" />
 							</form>
 							  	 	<center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
