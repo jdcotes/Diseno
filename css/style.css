@@ -211,6 +211,7 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="number"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -233,6 +234,8 @@
 		input[type="text"]:invalid,
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
+		input[type="number"],
+
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -241,6 +244,8 @@
 		input[type="text"]:focus,
 		input[type="password"]:focus,
 		input[type="email"]:focus,
+		input[type="number"],
+
 		select:focus,
 		textarea:focus {
 			border-color: #629DD1;
@@ -283,6 +288,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="number"],
+
 	select {
 		height: 2.75em;
 	}
@@ -681,6 +688,10 @@
 			}
 
 /* Button */
+
+	input[type="number"] {
+	   width: 100%;
+	}
 
 	input[type="submit"],
 	input[type="reset"],
