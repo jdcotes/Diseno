@@ -75,6 +75,7 @@ function initMap() {
   if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
+    console.log(respuesta);
     var prueba1 = JSON.parse(respuesta);
     tamaño = prueba1.length
     var lat, lon;
