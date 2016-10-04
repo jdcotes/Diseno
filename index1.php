@@ -79,7 +79,7 @@
 							<section><br>
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
 								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
-							<form>							
+							<form action="">							
 								<table>
 									  <tr>
 									    <td><center>Fecha Inicial</td>
@@ -104,9 +104,9 @@
 							  	<input type="checkbox" runat ="server" value="1" id="Carro1" Checked/>
 								<input type="radio" runat ="server" value="2" id="Carro2" />
 
-															  	 	<center>
-										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
-								    <br>
+						  	 	<center>
+								    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
+							    <br>
 							</form>
 
 							<form action="">
