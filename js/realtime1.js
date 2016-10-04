@@ -46,10 +46,11 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-  console.log(car);
+
   if (car==2){
     cor="#33CCCC";
   }
+  
   dates=0;
   times=0;
   datesc=0;
@@ -75,7 +76,6 @@ function initMap() {
   if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
-    console.log(respuesta);
     var prueba1 = JSON.parse(respuesta);
     tamaño = prueba1.length
     var lat, lon;
