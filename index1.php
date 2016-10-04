@@ -103,10 +103,12 @@
 							  	</table>
 							  	<input type="checkbox" runat ="server" value="1" id="Carro1" Checked/>
 								<input type="radio" runat ="server" value="2" id="Carro2" />
-							</form>
-							  	 	<center>
+
+															  	 	<center>
 										    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
 								    <br>
+							</form>
+
 
                
 							</section>
