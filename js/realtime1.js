@@ -18,7 +18,7 @@ var marker
 var dates = 0; //Variable control fecha 1 mayor fecha 2
 var times = 0; //Variabel control times 1 mayor que times 2
 var datesc =0; //Variable control cuando no se ingresan fechas
-
+var cor ="#33cc33";
 //COLOR #33cc33 verde 
 
 //Mapa inicial al cargar página
@@ -46,7 +46,10 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-  
+
+  if (car==2){
+    cor="#33CCCC";
+  }
   dates=0;
   times=0;
   datesc=0;
@@ -68,8 +71,7 @@ function initMap() {
       times =1;
     }
   }
-  // REALIZAR IF PARA DETERMINAR EL VALOR DE LOS RADIOS
-   //Consulta base de datos para procesar datos.
+    //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
     $.post("server/vivoh.php",{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
@@ -126,7 +128,7 @@ function initMap() {
       polyline = new google.maps.Polyline({
       path: routes2,
       map: map2, 
-      strokeColor: "#33CCCC", 
+      strokeColor: cor, 
       strokeWeight: 5, 
       strokeOpacity: 1, 
       clickable: false});  
