@@ -78,17 +78,16 @@
 						<div class="4u">
 							<section><br>
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
-								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
-							
+								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>							
 
 							<table>
 							<form action="">						 
 								  <tr>
-									    <td>Elija Vehículo: </td>
-									    <td><center><input type="number" id="Carro" value="1" min="1" max="2"></td> 
+									    <td><center>Elija Vehículo: </center></td>
+									    <td><center><input type="number" id="Carro" value="1" min="1" max="2" size="15"></td> 
 								  </tr>
 							</form>
-							        							
+
 							<form action="">							
 									  <tr>
 									    <td><center>Fecha Inicial</td>
