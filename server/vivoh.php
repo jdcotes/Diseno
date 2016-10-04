@@ -15,7 +15,7 @@
 
   $desde = $uno.$sapce.$tres;
   $hasta = $dos.$sapce.$cuatro;
-  //echo $cero;
+  echo $cero;
   //echo $dos;
   
   $sql = "SELECT Latitud, Longitud, FechaGPS FROM  `coordenadas` WHERE FechaGPS BETWEEN  '$desde' AND  '$hasta';";
