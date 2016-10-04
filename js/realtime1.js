@@ -46,7 +46,7 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-
+  console.log(car);
   if (car==2){
     cor="#33CCCC";
   }
