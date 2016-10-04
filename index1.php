@@ -101,20 +101,16 @@
 									    
 									  </tr>
 							  	</table>
-							  	<input type="checkbox" runat ="server" value="1" id="Carro1" Checked/>
-								<input type="radio" runat ="server" value="2" id="Carro2" />
-
+<!-- 							  	<input type="checkbox" runat ="server" value="1" id="Carro1" Checked/>
+								<input type="radio" runat ="server" value="2" id="Carro2" /> -->
 						  	 	<center>
-								    <input id="Boton" type = "button" value = "Consultar historial" onclick = "initMap();"/> </center>
+								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
 							    <br>
 							</form>
 
-							<form action="">
-							 
-							  <input type="number" name="quantity" min="1" max="5">
-							  <input type="submit">
-							</form>
-
+								<form action="">							 
+								  <input type="number" id="Carro" value="1" min="1" max="2">
+								</form>
                
 							</section>
 							<hr/>

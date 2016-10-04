@@ -42,10 +42,8 @@ function initMap() {
   var date2 = fecha2.value;
   var time1 = Desde.value;
   var time2 = Hasta.value;
-  var car1 = Carro1.value;
-  var car2 = Carro2.value;
+  var car1 = Carro.value;
   console.log(car1);
-  console.log(car2);
   dates=0;
   times=0;
   datesc=0;
