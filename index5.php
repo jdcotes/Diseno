@@ -1,4 +1,6 @@
 <!DOCTYPE HTML>
 <html class = "no-js">
-HOLA, SI FUNCIONE
+<input id = "marca">
+<input id = "referencia">
+<input id = "modelo">
 </html>

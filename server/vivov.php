@@ -11,7 +11,7 @@
   $cero = $_POST['auto'];
 
   
-  $sql = "INSERT INTO registro (IDvehiculo, Marca, Referencia, Modelo) VALUES ('4','Mazda','6','2016')";
+  $sql = "INSERT INTO registro (Marca, Referencia, Modelo) VALUES (Mazda','6','2016')";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
 
