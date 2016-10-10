@@ -102,12 +102,26 @@
             <!-- MAPA -->
             <script src="js/realtime.js"></script>
             <script type="text/javascript">
-		  //   	var radioInput = document.createElement("input");
-				// radioInput.setAttribute("type", "radio");
-				// document.body.appendChild(radioInput);
+
+            	var tamano;
+            	var vehi = [];
+
 				$.post("server/vivoi.php",function(respuesta) {
-					console.log(respuesta);
+					
+					var prueba = JSON.parse(respuesta);
+                    tamano = prueba.length
+
+                    for (var j in prueba1) {
+
+		      		vehi = prueba[j].IDvehiculo;
+			      
+			      	j=j+1;
+			    	}
+
+			    	console.log(tamano);
+			    	console.log(vehi);
 				});
+				
 				function radiocreate(){  
 
 		        var node = document.createElement('div');        
