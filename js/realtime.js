@@ -13,10 +13,12 @@ var longold = 0;
 var a = 0;
 var myLatLng;
 
-var slide = check1.value;
-console.log(slide);
+
 
  function mapa1(){
+
+     var slide = check1.value;
+console.log(slide);
      
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
