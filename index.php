@@ -68,7 +68,7 @@
                                     
                                         <div id="FECHA"> </div>
                                         <div id='Hora'> </div>
-                                        <div id="vehiculos"></div>
+                                        <form id="vehiculos"></form>
                                 <br>
 								<ul class="actions">
 									<li><a href="index1.php" class="button alt">Revisar Histórico</a></li>
@@ -121,9 +121,10 @@
 
 				});
 				
-				function radiocreate(){  
+				function radiocreate(){ 
+				console.log("no entro"); 
 				for (i = 0; i == tamano; i++){
-					console.log("creado");
+				console.log("creado");
 		        var node = document.createElement('div');        
 		        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+ vehi[i]+'</label>';       
 		        document.getElementById('vehiculos').appendChild(node);
