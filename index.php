@@ -105,7 +105,7 @@
 
             	var tamano;
             	var vehi = [];
-            	var i = 1;
+            	var i;
 
 				$.post("server/vivoi.php",function(respuesta) {
 					
@@ -123,7 +123,7 @@
 				
 				function radiocreate(){ 
 				console.log("no entro"); 
-				for (i = 0; i == tamano; i++){
+				for ( var i = 0; i == tamano; i++){
 				console.log("creado");
 		        var node = document.createElement('div');        
 		        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+ vehi[i]+'</label>';       
