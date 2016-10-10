@@ -193,3 +193,15 @@ DrawMarker();
 var q = document.querySelector("#infor");
 q.setAttribute("style","display: block");     	
 }
+
+function Registrar(){
+ var a = document.querySelector("#marca");
+var marca = marca.value;
+var b = document.querySelector("#referencia");
+var referencia = reerencia.value;
+var c = document.querySelector("#modelo");
+var modelo = modelo.value;
+console.log(marca);
+console.log(referencia);
+console.log(modelo); 
+}
