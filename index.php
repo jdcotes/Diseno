@@ -114,7 +114,7 @@
 
                     for (var j in prueba) {
 
-		      		vehi[j] = prueba[j].IDvehiculo;
+		      		vehi[j] = parseFloat(prueba[j].IDvehiculo);
 			      
 			      	j=j+1;
 			    	}
