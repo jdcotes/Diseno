@@ -26,7 +26,7 @@
     </style>
 	</head>
 
-	<body id="top" onload = "radiocreate();">
+	<body id="top" ">
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
@@ -121,16 +121,16 @@
 
 				});
 				
-				function radiocreate(){ 
+				//function radiocreate(){ 
 				console.log("no entro"); 
-				for ( var i = 0; i == tamano; i++){
-				console.log("creado");
-		        var node = document.createElement('div');        
-		        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+ vehi[i]+'</label>';       
-		        document.getElementById('vehiculos').appendChild(node);
+					for ( var i = 0; i == tamano; i++){
+					console.log("creado");
+			        var node = document.createElement('div');        
+			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+ vehi[i]+'</label>';       
+			        document.getElementById('vehiculos').appendChild(node);
 
-	        	}
-				}
+		        	}
+				//}
 				
 		    </script>
 
