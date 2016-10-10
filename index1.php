@@ -162,13 +162,10 @@
 										// radioInput.setAttribute("type", "radio");
 										// document.body.appendChild(radioInput);
 										function radiocreate(){  
-										var checkbox = document.createElement("input");
-										checkbox.type = "checkbox";
-										checkbox.name = "name";
-										checkbox.value = "value";
-										checkbox.id = "id";
-										 document.getElementById("radios").appendChild(checkbox);
-										console.log("hi");
+
+        var node = document.createElement('div');        
+        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check"></label>';       
+        document.getElementById('radios').appendChild(node);
 										}
 										
 								    </script>
