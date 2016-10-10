@@ -113,7 +113,7 @@
 
                     for (var j in prueba) {
 
-		      		vehi = prueba[j].IDvehiculo;
+		      		vehi[j] = prueba[j].IDvehiculo;
 			      
 			      	j=j+1;
 			    	}
