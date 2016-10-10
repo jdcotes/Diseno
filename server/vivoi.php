@@ -24,8 +24,7 @@
     }
 
   echo json_encode($tabla);
-  echo($index);
-  mysql_free_result($ejecutar_sql1);
+  echo json_encode($index);
   mysql_close($con);
 
 ?>
