@@ -50,7 +50,7 @@
 </style>
 
 	</head>
-	<body id="top" onload="radiocreate();">
+	<body id="top">
 
 		<!-- Header -->
 			<header id="header"  class="skel-layers-fixed">

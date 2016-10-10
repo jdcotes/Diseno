@@ -26,7 +26,7 @@
     </style>
 	</head>
 
-	<body id="top">
+	<body id="top" onload = "radiocreate();">
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
