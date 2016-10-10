@@ -120,7 +120,7 @@
 										// radioInput.setAttribute("type", "radio");
 										// document.body.appendChild(radioInput);
 										function radiocreate(){  
-										    var radio = document.createElement("inputt");
+										    var radio = document.createElement("input");
 										    radio.setAttribute("type","checkbox");
 										    document.getElementById("radios").appendChild(radio);
 										console.log("hi");
