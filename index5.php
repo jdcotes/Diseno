@@ -5,7 +5,7 @@
 	<center>
 		<table>
 	        <tr>
-			<td>Marca: <input type = "text" id = "marca" value = ""></td>
+			<td>Marca: <input type = "text" id = "marca" value = "hola"></td>
 			</tr>
 			<tr>
 			<td>Referencia: <input type = "text" id = "referencia" value = ""></td>
