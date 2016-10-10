@@ -117,6 +117,7 @@
 										radioInput.setAttribute("type", "radio");
 										radioInput.setAttribute("name", name);
 										document.body.appendChild(radioInput);
+										console.log("hi");
 
 										
 								    </script>
