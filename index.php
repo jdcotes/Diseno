@@ -35,6 +35,7 @@
 					<ul>
 						<li><a href="index.php" class="button special">Inicio</a></li>
 						<li><a href="index1.php">Histórico</a></li>
+						<li><a href="index5.php">Registro</a></li>
 					</ul>
 				</nav>
 			</header>
