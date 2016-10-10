@@ -1,6 +1,12 @@
 <!DOCTYPE HTML>
 <html class = "no-js">
-<input id = "marca">
-<input id = "referencia">
-<input id = "modelo">
+	<table>
+
+		Marca: <input id = "marca">
+	
+		Referencia: <input id = "referencia">
+	
+		Modelo:  <input id = "modelo">
+	
+	</table>
 </html>
