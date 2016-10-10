@@ -18,7 +18,7 @@
 	</center>
 	<script type="text/javascript">
 		function Registrar(){
-			 var a = document.querySelector("#marca");
+			var a = document.querySelector("#marca");
 			var marca1 = marca.value;
 			var b = document.querySelector("#referencia");
 			var referencia1 = referencia.value;
@@ -26,7 +26,8 @@
 			var modelo1 = modelo.value;
 			console.log(marca1);
 			console.log(referencia1);
-			console.log(modelo1); 
+			console.log(modelo1);
+			$.post("server/vivov.php",{mark: marca1,refrence: referencia1,model: modelo1}, function (respuesta){console.log(respuesta)});
 		}
 	</script>
 </html>

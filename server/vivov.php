@@ -6,15 +6,16 @@
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
   mysql_select_db($database,$con)or die("No se encontró la base de datos");
   
-  // variables que voy a necesitar
-  $sapce = " ";
-  $cero = $_POST['auto'];
+
+  $um = $_POST['mark'];
+  $dois =$_POST['reference'];
+  $treis =$_POST['model'];
 
   
-  $sql = "INSERT INTO registro (Marca, Referencia, Modelo) VALUES (Mazda','6','2016')";
+  $sql = "INSERT INTO registro (Marca, Referencia, Modelo) VALUES ('$um','$dois','$treis')";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
-
+  echo("Registro exitoso");
   mysql_close($con);
 
 ?>
