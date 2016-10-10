@@ -13,7 +13,7 @@
   $sql1 = "SELECT COUNT(IDvehiculo) FROM registro;";
   $ejecutar_sql2 =mysql_query($sql1) or die("Problemas en consulta: ".mysql_error());
   
-  $index=mysql_escape_string($ejecutar_sql2);
+  $index=mysql_fetch_lengths($ejecutar_sql1);
 
   $tabla=array();
   $i=0;
