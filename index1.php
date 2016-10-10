@@ -112,14 +112,16 @@
 								<input type="radio" runat ="server" value="2" id="Carro2" /> -->
 						  	 	<center>
 								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
-								    <form id = "radios" ></form>
+								    <form id = "radios" >
+								    	
+								    </form>
 								    <script type="text/javascript">
 								  //   	var radioInput = document.createElement("input");
 										// radioInput.setAttribute("type", "radio");
 										// document.body.appendChild(radioInput);
 										   
 										    var radio = document.createElement("INPUT");
-										    radio.setAttribute("type","radio");
+										    //radio.setAttribute("type","radio");
 										    document.getElementById("radios").appendChild(radio);
 										console.log("hi");
 
