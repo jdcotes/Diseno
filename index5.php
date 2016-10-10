@@ -2,6 +2,7 @@
 <html class = "no-js">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
 	<script src="js/realtime1.js"></script>	
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<center>
 		<table>
 	        <tr>
