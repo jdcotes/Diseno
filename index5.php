@@ -2,13 +2,13 @@
 <html class = "no-js">
 	<table>
         <tr>
-		Marca: <input id = "marca">
+		<td>Marca: <input id = "marca"></td>
 		</tr>
 		<tr>
-		Referencia: <input id = "referencia">
+		<td>Referencia: <input id = "referencia"></td>
 		</tr>
 		<tr>
-		Modelo:  <input id = "modelo">
+		<td>Modelo:  <input id = "modelo"></td>
 		</tr>
 	</table>
 </html>
