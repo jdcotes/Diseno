@@ -26,7 +26,7 @@
     </style>
 	</head>
 
-	<body id="top" ">
+	<body id="top" onload = "radiocreate();">
 
 		<!-- Header -->
 			<header id="header" class="skel-layers-fixed">
@@ -103,8 +103,34 @@
             <script src="js/realtime.js"></script>
             <script type="text/javascript">
 
+            	var tamano;
+            	var vehi = [];
+            	var i=0;
 
-				//}
+				$.post("server/vivoi.php",function(respuesta) {
+					
+					var prueba = JSON.parse(respuesta);
+                    tamano = prueba.length
+
+                    for (var j in prueba) {
+
+		      		vehi[j] = parseFloat(prueba[j].IDvehiculo);
+			      
+			      	j=j+1;
+			    	}
+
+				});
+				
+				function radiocreate(){ 
+				console.log("no entro"); 
+					while ( i < tamano){
+					console.log("creado");
+			        var node = document.createElement('div');        
+			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+ vehi[i]+'</label>';       
+			        document.getElementById('vehiculos').appendChild(node);
+                    i=i+1;
+		        	}
+				}
 				
 		    </script>
 
