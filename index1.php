@@ -50,7 +50,7 @@
 </style>
 
 	</head>
-	<body id="top">
+	<body id="top" onload="radiocreate();">
 
 		<!-- Header -->
 			<header id="header"  class="skel-layers-fixed">
@@ -119,12 +119,12 @@
 								  //   	var radioInput = document.createElement("input");
 										// radioInput.setAttribute("type", "radio");
 										// document.body.appendChild(radioInput);
-										   
-										    var radio = document.createElement("button");
-										    radio.setAttribute("value","1");
+										function radiocreate(){  
+										    var radio = document.createElement("inputt");
+										    radio.setAttribute("type","checkbox");
 										    document.getElementById("radios").appendChild(radio);
 										console.log("hi");
-
+										}
 										
 								    </script>
 							</form>
