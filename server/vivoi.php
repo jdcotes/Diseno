@@ -10,11 +10,6 @@
   $sql = "SELECT IDvehiculo FROM  `registro` ";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
-  $sql1 = "SELECT COUNT(IDvehiculo) FROM registro;";
-  $ejecutar_sql2 =mysql_query($sql1) or die("Problemas en consulta: ".mysql_error());
-  
-  $index=mysql_fetch_lengths($ejecutar_sql1);
-
   $tabla=array();
   $i=0;
 
@@ -24,7 +19,7 @@
     }
 
   echo json_encode($tabla);
-  echo json_encode($index);
+  mysql_free_result($ejecutar_sql1);
   mysql_close($con);
 
 ?>

@@ -105,9 +105,8 @@
 		  //   	var radioInput = document.createElement("input");
 				// radioInput.setAttribute("type", "radio");
 				// document.body.appendChild(radioInput);
-				$.post("server/vivoi.php",function(respuesta,respuesta1) {
+				$.post("server/vivoi.php",function(respuesta) {
 					console.log(respuesta);
-					console.log(respuesta1);
 				});
 				function radiocreate(){  
 
