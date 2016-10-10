@@ -157,18 +157,19 @@
 
             <!-- MAPA -->
 			<script src="js/realtime1.js"></script>	
-											    <script type="text/javascript">
-								  //   	var radioInput = document.createElement("input");
-										// radioInput.setAttribute("type", "radio");
-										// document.body.appendChild(radioInput);
-										function radiocreate(){  
+			<script type="text/javascript">
+		  //   	var radioInput = document.createElement("input");
+				// radioInput.setAttribute("type", "radio");
+				// document.body.appendChild(radioInput);
+				function radiocreate(){  
 
-        var node = document.createElement('div');        
-        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check"></label>';       
-        document.getElementById('radios').appendChild(node);
-										}
-										
-								    </script>
+		        var node = document.createElement('div');        
+		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
+		        document.body.appendChild(node);
+
+				}
+				
+		    </script>
 
 	</body>
 
