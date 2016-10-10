@@ -121,7 +121,7 @@
 										// document.body.appendChild(radioInput);
 										   
 										    var radio = document.createElement("button");
-										    //radio.setAttribute("type","radio");
+										    radio.setAttribute("value","1");
 										    document.getElementById("radios").appendChild(radio);
 										console.log("hi");
 
