@@ -3,18 +3,20 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<center>
-		<table>
-	        <tr>
-			<td>Marca: <input type = "text" runat = "server" id = "marca" ></td>
-			</tr>
-			<tr>
-			<td>Referencia: <input type = "text" id = "referencia" ></td>
-			</tr>
-			<tr>
-			<td>Modelo:  <input type = "text" id = "modelo" ></td>
-			</tr>
-		</table>
-		<input type="button" value = "Registrar Vehiculo" onclick = "Registrar();">
+		<section id="formulario">
+			<table>
+		        <tr>
+				<td>Marca: <input type = "text" runat = "server" id = "marca" ></td>
+				</tr>
+				<tr>
+				<td>Referencia: <input type = "text" id = "referencia" ></td>
+				</tr>
+				<tr>
+				<td>Modelo:  <input type = "text" id = "modelo" ></td>
+				</tr>
+			</table>
+			<input type="button" value = "Registrar Vehiculo" onclick = "Registrar();">
+		</section>
 		<section id = "Mensaje" style = "display: none">
 			<p>Registro realizado con éxito</p>
 		</section>
@@ -32,12 +34,8 @@
 			console.log(modelo1);
 			$.post("server/vivov.php",{mark: marca1,refrence: referencia1,model: modelo1}, function (respuesta){
 
-		    	var y = document.querySelector("#marca");
-    			y.setAttribute("value"," ");
-    			var x = document.querySelector("#referencia");
-    			x.setAttribute("value"," ");
-    		    var z = document.querySelector("#modelo");
-    			z.setAttribute("value"," ");
+		    	var y = document.querySelector("#formulario");
+    			y.setAttribute("style","display:none");
     			var zz = document.querySelector("#Mensaje");
     			zz.setAttribute("style","display: inline");
 
