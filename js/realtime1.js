@@ -35,6 +35,10 @@ var polyline = new google.maps.Polyline({
   clickable: false
 });
 
+var radioInput = document.createElement('input');
+radioInput.setAttribute('type', 'radio');
+radioInput.setAttribute('name', name);
+
 function initMap() {
 
   routes2 = [];

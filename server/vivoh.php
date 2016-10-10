@@ -15,8 +15,6 @@
 
   $desde = $uno.$sapce.$tres;
   $hasta = $dos.$sapce.$cuatro;
-  //echo $cero;
-  //echo $dos;
   
   $sql = "SELECT Latitud, Longitud, FechaGPS FROM  `coordenadas` WHERE IDvehiculo = '$cero' AND FechaGPS BETWEEN  '$desde' AND  '$hasta';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
