@@ -19,14 +19,14 @@
 	<script type="text/javascript">
 		function Registrar(){
 			 var a = document.querySelector("#marca");
-			var marca = marca.value;
+			var marca1 = marca.value;
 			var b = document.querySelector("#referencia");
-			var referencia = reerencia.value;
+			var referencia1 = reerencia.value;
 			var c = document.querySelector("#modelo");
-			var modelo = modelo.value;
-			console.log(marca);
-			console.log(referencia);
-			console.log(modelo); 
+			var modelo1 = modelo.value;
+			console.log(marca1);
+			console.log(referencia1);
+			console.log(modelo1); 
 		}
 	</script>
 </html>
