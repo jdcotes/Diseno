@@ -100,6 +100,19 @@
 
             <!-- MAPA -->
             <script src="js/realtime.js"></script>
+            <script type="text/javascript">
+		  //   	var radioInput = document.createElement("input");
+				// radioInput.setAttribute("type", "radio");
+				// document.body.appendChild(radioInput);
+				function radiocreate(){  
+
+		        var node = document.createElement('div');        
+		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
+		        document.getElementbyId('main').appendChild(node);
+
+				}
+				
+		    </script>
 
 	</body>
 </html>

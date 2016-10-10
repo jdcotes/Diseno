@@ -112,9 +112,6 @@
 								<input type="radio" runat ="server" value="2" id="Carro2" /> -->
 						  	 	<center>
 								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
-								    <form id = "radios" >
-								    	
-								    </form>
 
 							</form>
 
@@ -157,19 +154,7 @@
 
             <!-- MAPA -->
 			<script src="js/realtime1.js"></script>	
-			<script type="text/javascript">
-		  //   	var radioInput = document.createElement("input");
-				// radioInput.setAttribute("type", "radio");
-				// document.body.appendChild(radioInput);
-				function radiocreate(){  
 
-		        var node = document.createElement('div');        
-		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
-		        document.body.appendChild(node);
-
-				}
-				
-		    </script>
 
 	</body>
 
