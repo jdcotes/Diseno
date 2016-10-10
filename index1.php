@@ -115,21 +115,7 @@
 								    <form id = "radios" >
 								    	
 								    </form>
-								    <script type="text/javascript">
-								  //   	var radioInput = document.createElement("input");
-										// radioInput.setAttribute("type", "radio");
-										// document.body.appendChild(radioInput);
-										function radiocreate(){  
-										var checkbox = document.createElement("input");
-										checkbox.type = "checkbox";
-										checkbox.name = "name";
-										checkbox.value = "value";
-										checkbox.id = "id";
-										 document.getElementById("radios").appendChild(checkbox);
-										console.log("hi");
-										}
-										
-								    </script>
+
 							</form>
 
 
@@ -171,6 +157,21 @@
 
             <!-- MAPA -->
 			<script src="js/realtime1.js"></script>	
+											    <script type="text/javascript">
+								  //   	var radioInput = document.createElement("input");
+										// radioInput.setAttribute("type", "radio");
+										// document.body.appendChild(radioInput);
+										function radiocreate(){  
+										var checkbox = document.createElement("input");
+										checkbox.type = "checkbox";
+										checkbox.name = "name";
+										checkbox.value = "value";
+										checkbox.id = "id";
+										 document.getElementById("radios").appendChild(checkbox);
+										console.log("hi");
+										}
+										
+								    </script>
 
 	</body>
 
