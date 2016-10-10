@@ -111,7 +111,7 @@
 					var prueba = JSON.parse(respuesta);
                     tamano = prueba.length
 
-                    for (var j in prueba1) {
+                    for (var j in prueba) {
 
 		      		vehi = prueba[j].IDvehiculo;
 			      
