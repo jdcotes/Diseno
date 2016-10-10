@@ -105,7 +105,7 @@
 
             	var tamano;
             	var vehi = [];
-            	var i;
+            	var i = 1;
 
 				$.post("server/vivoi.php",function(respuesta) {
 					
