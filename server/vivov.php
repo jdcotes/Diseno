@@ -8,7 +8,7 @@
   
 
   $um = $_POST['mark'];
-  $dois =$_POST['reference'];
+  $dois =$_POST['refrence'];
   $treis =$_POST['model'];
 
   
