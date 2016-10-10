@@ -108,7 +108,7 @@
 
 		        var node = document.createElement('div');        
 		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
-		        document.getElementbyId('main').appendChild(node);
+		        document.getElementById('main').appendChild(node);
 
 				}
 				
