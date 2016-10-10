@@ -5,16 +5,19 @@
 	<center>
 		<table>
 	        <tr>
-			<td>Marca: <input type = "text" runat = "server" id = "marca" value = "hola"></td>
+			<td>Marca: <input type = "text" runat = "server" id = "marca" ></td>
 			</tr>
 			<tr>
-			<td>Referencia: <input type = "text" id = "referencia" value = ""></td>
+			<td>Referencia: <input type = "text" id = "referencia" ></td>
 			</tr>
 			<tr>
-			<td>Modelo:  <input type = "text" id = "modelo" value = ""></td>
+			<td>Modelo:  <input type = "text" id = "modelo" ></td>
 			</tr>
 		</table>
 		<input type="button" value = "Registrar Vehiculo" onclick = "Registrar();">
+		<section id = "Mensaje" style = "display: none">
+			<p>Registro realizado con éxito</p>
+		</section>
 	</center>
 	<script type="text/javascript">
 		function Registrar(){
@@ -27,7 +30,18 @@
 			console.log(marca1);
 			console.log(referencia1);
 			console.log(modelo1);
-			$.post("server/vivov.php",{mark: marca1,refrence: referencia1,model: modelo1}, function (respuesta){console.log(respuesta)});
+			$.post("server/vivov.php",{mark: marca1,refrence: referencia1,model: modelo1}, function (respuesta){
+
+		    	var y = document.querySelector("#marca");
+    			y.setAttribute("value","");
+    			var x = document.querySelector("#referencia");
+    			x.setAttribute("value","");
+    		    var z = document.querySelector("#modelo");
+    			z.setAttribute("value","");
+    			var zz = document.querySelector("#Mensaje");
+    			zz.setAttribute("style","display: inline");
+
+			});
 		}
 	</script>
 </html>
