@@ -33,11 +33,11 @@
 			$.post("server/vivov.php",{mark: marca1,refrence: referencia1,model: modelo1}, function (respuesta){
 
 		    	var y = document.querySelector("#marca");
-    			y.setAttribute("value","");
+    			y.setAttribute("value"," ");
     			var x = document.querySelector("#referencia");
-    			x.setAttribute("value","");
+    			x.setAttribute("value"," ");
     		    var z = document.querySelector("#modelo");
-    			z.setAttribute("value","");
+    			z.setAttribute("value"," ");
     			var zz = document.querySelector("#Mensaje");
     			zz.setAttribute("style","display: inline");
 
