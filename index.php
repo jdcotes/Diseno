@@ -105,6 +105,7 @@
 
             	var tamano;
             	var vehi = [];
+            	var i;
 
 				$.post("server/vivoi.php",function(respuesta) {
 					
@@ -118,16 +119,14 @@
 			      	j=j+1;
 			    	}
 
-			    	console.log(tamano);
-			    	console.log(vehi);
 				});
 				
 				function radiocreate(){  
-
+				for (i = 1; i == tamano; i++){
 		        var node = document.createElement('div');        
-		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
+		        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo'+vehi[i]+'</label>';       
 		        document.getElementById('vehiculos').appendChild(node);
-
+	        	}
 				}
 				
 		    </script>
