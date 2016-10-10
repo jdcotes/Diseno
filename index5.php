@@ -21,7 +21,7 @@
 			 var a = document.querySelector("#marca");
 			var marca1 = marca.value;
 			var b = document.querySelector("#referencia");
-			var referencia1 = reerencia.value;
+			var referencia1 = referencia.value;
 			var c = document.querySelector("#modelo");
 			var modelo1 = modelo.value;
 			console.log(marca1);
