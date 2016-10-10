@@ -105,11 +105,12 @@
 		  //   	var radioInput = document.createElement("input");
 				// radioInput.setAttribute("type", "radio");
 				// document.body.appendChild(radioInput);
+				$.post("server/vivoi.php",function(respuesta,respuesta1) {
+					console.log(respuesta);
+					console.log(respuesta1);
+				});
 				function radiocreate(){  
 
-		        var node = document.createElement('div');        
-		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
-		        document.getElementById('vehiculos').appendChild(node);
 		        var node = document.createElement('div');        
 		        node.innerHTML = '<input type="checkbox" id="check" name="check"><label for="check">si sirvo</label>';       
 		        document.getElementById('vehiculos').appendChild(node);
