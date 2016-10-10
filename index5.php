@@ -5,13 +5,13 @@
 	<center>
 		<table>
 	        <tr>
-			<td>Marca: <input type = "text" id = "marca"></td>
+			<td>Marca: <input type = "text" id = "marca" value = ""></td>
 			</tr>
 			<tr>
-			<td>Referencia: <input type = "text" id = "referencia"></td>
+			<td>Referencia: <input type = "text" id = "referencia" value = ""></td>
 			</tr>
 			<tr>
-			<td>Modelo:  <input type = "text" id = "modelo"></td>
+			<td>Modelo:  <input type = "text" id = "modelo" value = ""></td>
 			</tr>
 		</table>
 		<input type="button" value = "Registrar Vehiculo" onclick = "Registrar();">
