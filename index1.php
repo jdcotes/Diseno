@@ -113,9 +113,13 @@
 						  	 	<center>
 								    <input id="Boton" type ="button" value = "Consultar historial" onclick = "initMap();"/> </center>
 								    <script type="text/javascript">
-								    	var radioInput = document.createElement("input");
-										radioInput.setAttribute("type", "radio");
-										document.body.appendChild(radioInput);
+								  //   	var radioInput = document.createElement("input");
+										// radioInput.setAttribute("type", "radio");
+										// document.body.appendChild(radioInput);
+										    var btn = document.createElement("BUTTON");
+										    var t = document.createTextNode("CLICK ME");
+										    btn.appendChild(t);
+										    document.body.appendChild(btn);
 										console.log("hi");
 
 										
