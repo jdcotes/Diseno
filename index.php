@@ -131,7 +131,6 @@
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
-		        	timestamp();
 				}
                 i=0;
                 var auto_refresh = setInterval(function (){
