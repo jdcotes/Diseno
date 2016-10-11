@@ -63,7 +63,7 @@
                                          function ()
                                         {
                                         // $('#FECHA').load('LLAMAR.php').fadeIn("slow");
-                                        $('#FECHA').load('Conexion.php',{id:1}).fadeIn("slow");
+                                        $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
                                          }, 5000); // refresh every 5 seconds
                                     </script>
                                     
