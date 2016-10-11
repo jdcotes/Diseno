@@ -59,11 +59,12 @@
 								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
                                    
                                     <script type="text/javascript">
-                                        // var auto_refresh = setInterval(
-                                        // function ()
-                                        // {
+                                       var auto_refresh = setInterval(
+                                         function ()
+                                        {
                                         // $('#FECHA').load('LLAMAR.php').fadeIn("slow");
-                                        // }, 5000); // refresh every 5 seconds
+                                        $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
+                                         }, 5000); // refresh every 5 seconds
                                     </script>
                                     
                                         <!--<div id="FECHA"> </div>-->
@@ -133,7 +134,7 @@
 				}
 				 //function timestamp(){
 
-                 $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
+                 //$('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
                  // }, 5000); // refresh every 5 seconds
 				 //}				
 		    </script>
