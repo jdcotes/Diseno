@@ -137,7 +137,7 @@
                 var auto_refresh = setInterval(function (){
                 
                 	while (i<tamano){
-                   	$('#FECHA').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
+                   	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
                  	}
                  	}, 5000);
                 }				
