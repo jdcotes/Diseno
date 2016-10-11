@@ -13,13 +13,18 @@ var longold = 0;
 var a = 0;
 var myLatLng;
 
-
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
  function mapa1(){
 
-     var slide = check1.value;
-console.log(slide);
-     
+    
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
