@@ -133,7 +133,6 @@
 		        	}
 		        	timestamp();
 				}
-				 function timestamp(){
                 i=0;
                 var auto_refresh = setInterval(function (){
                 
@@ -143,7 +142,7 @@
                    	i=i+1;
                  	}
                  	}, 5000);
-                }				
+				
 		    </script>
 
 	</body>
