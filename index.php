@@ -67,7 +67,7 @@
                                     </script>
                                     
                                         <div id="FECHA"> </div>
-                                        <div id='Hora'> </div>
+                                        <!-- <div id='Hora'> </div> -->
                                         <form id="vehiculos"></form>
                                 <br>
 								<ul class="actions">
