@@ -3,13 +3,14 @@ var intevalo1;
 var entro=0;
 var map2;
 var Tabla_MySql;
-var markerArray =[],total=0;
-var routes2=[];
+var markerArray = [], total = 0;
+var routes2 = [];
 var latold = 0;
 var longold = 0;
 var a = 0;
 var myLatLng;
-var polycolor;
+var polycolor = [];
+var vehi = [];
 
 intevalo1 = setInterval(function(){mapa1()},5000);
 
@@ -24,9 +25,19 @@ function getRandomColor() {
     return color;
 }
 
-polycolor = getRandomColor();
-console.log(polycolor);
+  $.post("server/vivoi.php",function(respuesta) {
+    
+    var prueba = JSON.parse(respuesta);
+    tamano = prueba.length
 
+    for (var j in prueba) {
+      polycolor[j]= getRandomColor();
+      vehi[j] = parseFloat(prueba[j].IDvehiculo);
+      j=j+1;
+    }
+  });
+  console.log(polycolor);
+  console.log(vehi);
 
  function mapa1(){
 
