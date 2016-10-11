@@ -131,18 +131,21 @@
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
-		        	                i=0;
-                var auto_refresh = setInterval(function (){
+                i=0;
                 
-                	while (i<tamano){
+                var auto_refresh = setInterval(function(){timestamp()},5000);
+                }
+
+				function timestamp(){
+
+					while (i<tamano){
                     console.log("cuantas veces me ejecuto");
                    	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
                    	i=i+1;
                  	}
-                 	}, 5000);
-				}
+                 	
 
-				
+				}
 		    </script>
 
 	</body>
