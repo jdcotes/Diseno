@@ -59,11 +59,11 @@
 								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
                                    
                                     <script type="text/javascript">
-                                        var auto_refresh = setInterval(
-                                        function ()
-                                        {
-                                        $('#FECHA').load('LLAMAR.php').fadeIn("slow");
-                                        }, 5000); // refresh every 5 seconds
+                                        // var auto_refresh = setInterval(
+                                        // function ()
+                                        // {
+                                        // $('#FECHA').load('LLAMAR.php').fadeIn("slow");
+                                        // }, 5000); // refresh every 5 seconds
                                     </script>
                                     
                                         <!--<div id="FECHA"> </div>-->
@@ -126,12 +126,16 @@
 					while ( i < tamano){
 					console.log("creado");
 			        var node = document.createElement('div');        
-			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label><div id="FECHA"></div>';       
+			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label><div id="FECHA'+i+'"></div>';       
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
 				}
-				
+				 //function timestamp(){
+
+                 $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
+                 // }, 5000); // refresh every 5 seconds
+				 //}				
 		    </script>
 
 	</body>
