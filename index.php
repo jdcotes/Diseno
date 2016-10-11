@@ -131,6 +131,7 @@
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
+		        	timestamp();
 				}
 				 function timestamp(){
                 i=0;
