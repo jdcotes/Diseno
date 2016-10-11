@@ -3,15 +3,17 @@ var intevalo1;
 var entro=0;
 var map2;
 var Tabla_MySql;
-
-intevalo1 = setInterval(function(){mapa1()},5000);
-
 var markerArray =[],total=0;
 var routes2=[];
 var latold = 0;
 var longold = 0;
 var a = 0;
 var myLatLng;
+var polycolor;
+
+intevalo1 = setInterval(function(){mapa1()},5000);
+
+
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -21,6 +23,10 @@ function getRandomColor() {
     }
     return color;
 }
+
+polycolor = getRandomColor();
+console.log(polycolor);
+
 
  function mapa1(){
 
