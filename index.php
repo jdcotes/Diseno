@@ -143,7 +143,7 @@
                    	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
                    	i=i+1;
                  	}
-                 	
+                 	console.log("salidelwileh");
 
 				}
 		    </script>
