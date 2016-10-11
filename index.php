@@ -66,7 +66,7 @@
                                         }, 5000); // refresh every 5 seconds
                                     </script>
                                     
-                                        <div id="FECHA"> </div>
+                                        <!--<div id="FECHA"> </div>-->
                                         <!-- <div id='Hora'> </div> -->
                                         <form id="vehiculos"></form>
                                 <br>
@@ -126,7 +126,7 @@
 					while ( i < tamano){
 					console.log("creado");
 			        var node = document.createElement('div');        
-			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label><div>Prueba</div>';       
+			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label><div id="FECHA"></div>';       
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
