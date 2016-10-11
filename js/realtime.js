@@ -30,7 +30,7 @@ function getRandomColor() {
     var prueba = JSON.parse(respuesta);
     tamano = prueba.length
 
-    for (var j in prueba) {
+    for (var j = 0 in prueba) {
       polycolor[j]= getRandomColor();
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
