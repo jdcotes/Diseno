@@ -131,8 +131,7 @@
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
-				}
-                i=0;
+		        	                i=0;
                 var auto_refresh = setInterval(function (){
                 
                 	while (i<tamano){
@@ -141,6 +140,8 @@
                    	i=i+1;
                  	}
                  	}, 5000);
+				}
+
 				
 		    </script>
 
