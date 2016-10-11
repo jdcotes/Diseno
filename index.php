@@ -127,7 +127,7 @@
 					while ( i < tamano){
 					console.log("creado");
 			        var node = document.createElement('div');        
-			        node.innerHTML = '<input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label><div id="FECHA'+i+'"></div>';       
+			        node.innerHTML = '<div id="FECHA'+i+'"><input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label></div>';       
 			        document.getElementById('vehiculos').appendChild(node);
                     i=i+1;
 		        	}
