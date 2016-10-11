@@ -140,6 +140,7 @@
                 	while (i<tamano){
                     console.log("cuantas veces me ejecuto");
                    	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
+                   	i=i+1;
                  	}
                  	}, 5000);
                 }				
