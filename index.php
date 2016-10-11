@@ -132,11 +132,15 @@
                     i=i+1;
 		        	}
 				}
-				 //function timestamp(){
-
-                 //$('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
-                 // }, 5000); // refresh every 5 seconds
-				 //}				
+				 function timestamp(){
+                i=0;
+                var auto_refresh = setInterval(function (){
+                
+                	while (i<tamano){
+                   	$('#FECHA').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
+                 	}
+                 	}, 5000);
+                }				
 		    </script>
 
 	</body>
