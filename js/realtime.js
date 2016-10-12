@@ -13,7 +13,7 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
-var prueba;
+var prueba3;
 //intevalo1 = setInterval(function(){mapa1()},5000);
 caronmap();
 
@@ -32,7 +32,7 @@ function getRandomColor() {
     var prueba = JSON.parse(respuesta);
     tamano = prueba.length
 
-    for (var j  in prueba) {
+    for (var j  in prueba3) {
       polycolor[j]= getRandomColor();
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
@@ -41,7 +41,7 @@ function getRandomColor() {
   });
 function caronmap(){
 
-  for (var j in prueba){
+  for (var j in prueba3){
     color = polycolor[j];
     id = vehi[j];
     j=j+1;
