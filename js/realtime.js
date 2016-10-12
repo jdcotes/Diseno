@@ -81,7 +81,6 @@ function caronmap(){
             a = a + 1;
            
           }
-                           
             //routes2[total] =  new google.maps.LatLng(lat,lon);
            //total=total+1;
            var polyline = new google.maps.Polyline({
