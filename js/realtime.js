@@ -13,8 +13,7 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
-var prueba;
-intevalo1 = setInterval(function(){caronmap()},5000);
+intevalo1 = setInterval(function(){mapa1()},5000);
 
 
 
@@ -46,7 +45,6 @@ function caronmap(){
   for (var j in prueba){
     color = polycolor[j];
     id = vehi[j];
-    mapa1(); 
     j=j+1;
   }
 
@@ -55,7 +53,7 @@ function caronmap(){
  function mapa1(){
 
     //RECUERDA AGREGAR ID AQUI Y EL ID EN VIVO.PHP
-    // RECUERDALOOOOOOOOO
+    // RECUERDALOOOOOOOOO#
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
@@ -90,7 +88,7 @@ function caronmap(){
            var polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
-            , strokeColor: color
+            , strokeColor: '#ff0000'
             , strokeWeight: 5
             , strokeOpacity: 1
             , clickable: false
@@ -98,7 +96,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: id
+            title: 'You are here'
           });
            
            for (var i = 0; i < markerArray.length; i++) {
