@@ -11,8 +11,9 @@ var a = 0;
 var myLatLng;
 var polycolor = [];
 var vehi = [];
-
-intevalo1 = setInterval(function(){mapa1()},5000);
+var color;
+var id;
+intevalo1 = setInterval(function(){caronmap()},5000);
 
 
 
@@ -34,16 +35,26 @@ function getRandomColor() {
       polycolor[j]= getRandomColor();
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
-        console.log(polycolor);
-  console.log(vehi);
+      console.log(polycolor);
+      console.log(vehi);
     }
 
   });
+function caronmap(){
 
+  for (var j in prueba){
+    color = polycolor[j];
+    id = vehi[j];
+    mapa1(); 
+    j=j+1;
+  }
+
+}
 
  function mapa1(){
 
-    
+    //RECUERDA AGREGAR ID AQUI Y EL ID EN VIVO.PHP
+    // RECUERDALOOOOOOOOO
      $.post("server/vivo.php",function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
@@ -78,7 +89,7 @@ function getRandomColor() {
            var polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
-            , strokeColor: '#ff0000'
+            , strokeColor: color
             , strokeWeight: 5
             , strokeOpacity: 1
             , clickable: false
@@ -86,7 +97,7 @@ function getRandomColor() {
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: 'You are here'
+            title: id
           });
            
            for (var i = 0; i < markerArray.length; i++) {
