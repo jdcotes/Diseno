@@ -30,14 +30,16 @@ function getRandomColor() {
     var prueba = JSON.parse(respuesta);
     tamano = prueba.length
 
-    for (var j = 0 in prueba) {
+    for (var j  in prueba) {
       polycolor[j]= getRandomColor();
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
-    }
-  });
-  console.log(polycolor);
+        console.log(polycolor);
   console.log(vehi);
+    }
+
+  });
+
 
  function mapa1(){
 
