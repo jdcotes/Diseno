@@ -13,6 +13,7 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
+var prueba;
 //intevalo1 = setInterval(function(){mapa1()},5000);
 caronmap();
 
