@@ -13,9 +13,8 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
-var prueba3;
-//intevalo1 = setInterval(function(){mapa1()},5000);
-caronmap();
+intevalo1 = setInterval(function(){mapa1()},5000);
+
 
 
 function getRandomColor() {
@@ -32,20 +31,21 @@ function getRandomColor() {
     var prueba = JSON.parse(respuesta);
     tamano = prueba.length
 
-    for (var j  in prueba3) {
+    for (var j  in prueba) {
       polycolor[j]= getRandomColor();
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
+      console.log(polycolor);
+      console.log(vehi);
     }
 
   });
 function caronmap(){
 
-  for (var j in prueba3){
+  for (var j in prueba){
     color = polycolor[j];
     id = vehi[j];
     j=j+1;
-    mapa1();
   }
 
 }
@@ -82,12 +82,13 @@ function caronmap(){
             a = a + 1;
            
           }
+                           
             //routes2[total] =  new google.maps.LatLng(lat,lon);
            //total=total+1;
            var polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
-            , strokeColor: color
+            , strokeColor: '#ff0000'
             , strokeWeight: 5
             , strokeOpacity: 1
             , clickable: false
@@ -95,7 +96,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: id
+            title: 'You are here'
           });
            
            for (var i = 0; i < markerArray.length; i++) {
