@@ -137,7 +137,6 @@
                 }
 
 				function timestamp(){
-
 					while (i<tamano){
                     console.log("cuantas veces me ejecuto");
                    	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");

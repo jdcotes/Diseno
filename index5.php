@@ -96,6 +96,30 @@
 						</div>
 
 						<div class="8u skel-cell-important">
+
+						<?php 
+
+						  $server = "localhost";
+						  $username = "root";
+						  $password = "1234";
+						  $database = "disenouninorte";
+						  $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
+						  mysql_select_db($database,$con)or die("No se encontró la base de datos");
+
+							$result = mysql_query("SELECT * FROM `registro`", $con); 
+							
+							echo "<table> \n"; 
+
+							echo "<tr><td>Id Vehículo</td><td>Marca</td><td>Referencia</td><td>Modelo</td></tr> \n"; 
+							
+							while ($row = mysql_fetch_row($result)){ 
+							       echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td><td>$row[3]</td></tr> \n"; 
+							}
+
+							echo "</table> \n";
+
+						?> 
+
 						</div>
 					
 			</section>
@@ -112,13 +136,10 @@
 				</div>
 			</footer>
 
-
             <!-- MAPA -->
 			<script src="js/realtime1.js"></script>	
 
-
 	</body>
-
 <script src="./jquery.js"></script>
 <script src="build/jquery.datetimepicker.full.js"></script>
 <script type="text/javascript">

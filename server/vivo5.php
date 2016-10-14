@@ -4,10 +4,9 @@
   $password = "1234";
   $database = "disenouninorte";
   $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
-  mysql_select_db($database,$con)or die("No se encontr óla base de datos");
+  mysql_select_db($database,$con)or die("No se encontró la base de datos");
   
-  
-  $sql = "SELECT IDvehiculo FROM  `registro` ";
+  $sql = "SELECT * FROM  `registro`";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
   $tabla=array();
