@@ -103,25 +103,15 @@ $records=mysql_query($sql);
 						</div>
 
 						<div class="8u skel-cell-important">
-							<table>
-							<tr>
-							<th>Id Vehículo</th>
-							<th>Marca</th>
-							<th>Referencia</th>
-							<th>Modelo</th>
-							<tr>
+	
 
 							<?php
 							while($hola=mysql_fetch_assoc($records)){
 
-								echo "<tr>";
-
-								echo "<td>".$hola['IDvehiculo']."</td>";
-								echo "<td>".$hola['Marca']."</td>";
-								echo "<td>".$hola['Referencia']."</td>";
-								echo "<td>".$hola['Modelo']."</td>";
-
-								echo "</tr>";
+								echo  $hola['IDvehiculo'];
+								echo  $hola['Marca'];
+								echo  $hola['Referencia'];
+								echo  $hola['Modelo'];
 
 							}
 
