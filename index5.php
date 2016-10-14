@@ -1,4 +1,4 @@
-
+<!DOCTYPE HTML>
 <html class="no-js">
 	<head>
 		<title>Ubica Tu Vehículo</title>
@@ -96,9 +96,6 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-	
-				
-
 						</div>
 					
 			</section>
