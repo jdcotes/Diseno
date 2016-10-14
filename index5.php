@@ -1,4 +1,11 @@
-<!DOCTYPE HTML>
+<?php
+mysql_connect('localhost','root','1234');
+mysql_select_db('registro');
+$sql="select * from registro";
+$records=mysql_query($sql);
+
+?>
+
 <html class="no-js">
 	<head>
 		<title>Ubica Tu Vehículo</title>
@@ -96,6 +103,32 @@
 						</div>
 
 						<div class="8u skel-cell-important">
+							<table>
+							<tr>
+							<th>Id Vehículo</th>
+							<th>Marca</th>
+							<th>Referencia</th>
+							<th>Modelo</th>
+							<tr>
+
+							<?php
+							while($hola=mysql_fetch_assoc($records)){
+
+								echo "<tr>";
+
+								echo "<td>".$hola['IDvehiculo']."</td>";
+								echo "<td>".$hola['Marca']."</td>";
+								echo "<td>".$hola['Referencia']."</td>";
+								echo "<td>".$hola['Modelo']."</td>";
+
+								echo "</tr>";
+
+							}
+
+							?>
+
+							</table>
+
 						</div>
 					
 			</section>
