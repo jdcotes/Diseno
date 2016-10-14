@@ -97,26 +97,7 @@
 
 						<div class="8u skel-cell-important">
 	
-
-							<?php
-
-							mysql_connect('localhost','root','1234');
-							mysql_select_db('registro');
-							$sql="select * from registro";
-							$records=mysql_query($sql);
-
-							while($hola=mysql_fetch_assoc($records)){
-
-								echo  $hola['IDvehiculo'];
-								echo  $hola['Marca'];
-								echo  $hola['Referencia'];
-								echo  $hola['Modelo'];
-
-							}
-
-							?>
-
-							
+				
 
 						</div>
 					
