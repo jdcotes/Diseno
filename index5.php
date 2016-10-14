@@ -1,10 +1,3 @@
-<?php
-mysql_connect('localhost','root','1234');
-mysql_select_db('registro');
-$sql="select * from registro";
-$records=mysql_query($sql);
-
-?>
 
 <html class="no-js">
 	<head>
@@ -106,6 +99,12 @@ $records=mysql_query($sql);
 	
 
 							<?php
+
+							mysql_connect('localhost','root','1234');
+							mysql_select_db('registro');
+							$sql="select * from registro";
+							$records=mysql_query($sql);
+
 							while($hola=mysql_fetch_assoc($records)){
 
 								echo  $hola['IDvehiculo'];
