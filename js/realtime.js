@@ -89,7 +89,7 @@ function caronmap(){
            var polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
-            , strokeColor: '#ff0000'
+            , strokeColor: color
             , strokeWeight: 5
             , strokeOpacity: 1
             , clickable: false
@@ -97,7 +97,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: 'You are here'
+            title: id
           });
            
            for (var i = 0; i < markerArray.length; i++) {
