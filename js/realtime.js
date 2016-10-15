@@ -17,6 +17,9 @@ var color;
 var id;
 var prueba;
 var h;
+var latold1 = 0;
+var longold1 = 0;
+var b = 0;
 //intevalo1 = setInterval(function(){mapa1()},5000);
 
 
@@ -116,9 +119,7 @@ function caronmap(){
        });
   }
  function mapa2(){
-   var latold = 0;
-   var longold = 0;
-   var a = 0;
+
    $.post("server/vivo.php",{movil: id},function(respuesta) {
     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
     Tabla_MySql = JSON.parse(respuesta);
@@ -131,12 +132,12 @@ function caronmap(){
             lon = parseFloat(prueba2[j].Longitud);
            }
          
-         if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
-          routes3[a] = new google.maps.LatLng(lat,lon);
-          latold=lat;
-          longold=lon;
+         if ((Math.abs(lat-latold1)>0.00001) || (Math.abs(lon-longold1)>0.00001)){
+          routes3[b] = new google.maps.LatLng(lat,lon);
+          latold1=lat;
+          longold1=lon;
           myLatLng = new google.maps.LatLng(lat,lon);
-          a = a + 1;
+          b = b + 1;
          
         }
                          
