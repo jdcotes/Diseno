@@ -16,6 +16,7 @@ var vehi = [];
 var color;
 var id;
 var prueba;
+var h;
 //intevalo1 = setInterval(function(){mapa1()},5000);
 
 
@@ -43,17 +44,17 @@ function getRandomColor() {
   });
 function caronmap(){
 
-  for (var j in prueba){
-    color = polycolor[j];
-    id = vehi[j];
+  for ( h in prueba){
+    color = polycolor[h];
+    id = vehi[h];
 
-    if (j==0){
+    if (h==0){
       mapa1();
     }
-    if (j==1){
+    if (h==1){
       mapa2();
     }
-    j=j+1;
+    h=h+1;
   }
 
 }
