@@ -156,7 +156,7 @@ function caronmap(){
           title: id.toString()
         });
          
-         for (var i = 0; i < markerArray.length; i++) {
+         for (var i = 0; i < markerArray2.length; i++) {
            markerArray2[i].setMap(null);
          };
         markerArray2= [];
