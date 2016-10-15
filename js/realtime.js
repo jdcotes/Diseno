@@ -20,7 +20,7 @@ var h;
 var latold1 = 0;
 var longold1 = 0;
 var b = 0;
-//intevalo1 = setInterval(function(){mapa1()},5000);
+intevalo1 = setInterval(function(){caronmap()},5000);
 
 
 
