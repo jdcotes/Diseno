@@ -13,7 +13,7 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
-intevalo1 = setInterval(function(){mapa1()},5000);
+//intevalo1 = setInterval(function(){mapa1()},5000);
 
 
 
@@ -45,6 +45,7 @@ function caronmap(){
   for (var j in prueba){
     color = polycolor[j];
     id = vehi[j];
+    mapa1();
     j=j+1;
   }
 
@@ -54,7 +55,7 @@ function caronmap(){
 
     //RECUERDA AGREGAR ID AQUI Y EL ID EN VIVO.PHP
     // RECUERDALOOOOOOOOO#
-     $.post("server/vivo.php",function(respuesta) {
+     $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
  
