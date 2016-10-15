@@ -6,6 +6,7 @@ var Tabla_MySql;
 var markerArray = [], total = 0;
 var markerArray2 = []
 var routes2 = [];
+var routes3 =[];
 var latold = 0;
 var longold = 0;
 var a = 0;
@@ -133,7 +134,7 @@ function caronmap(){
          }
          
          if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
-          var routes3[a] = new google.maps.LatLng(lat,lon);
+          routes3[a] = new google.maps.LatLng(lat,lon);
           latold=lat;
           longold=lon;
           myLatLng = new google.maps.LatLng(lat,lon);
