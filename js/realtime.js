@@ -15,6 +15,8 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
+var color1;
+var id1;
 var prueba;
 var h;
 var latold1 = 0;
@@ -52,12 +54,14 @@ function caronmap(){
 
     if (h==0){
     color = polycolor[h];
+    console.log(color);
     id = vehi[h];
       mapa1();
     }
     if (h==1){
-    color = polycolor[h];
-    id = vehi[h];
+    color1 = polycolor[h];
+    console.log(color1);
+    id1 = vehi[h];
       mapa2();
     }
     h=h+1;
@@ -144,7 +148,7 @@ function caronmap(){
         var polyline = new google.maps.Polyline({
           path: routes3
           , map: map2
-          , strokeColor: color
+          , strokeColor: color1
           , strokeWeight: 5
           , strokeOpacity: 1
           , clickable: false
@@ -152,7 +156,7 @@ function caronmap(){
           var marker = new google.maps.Marker({
           position: myLatLng,
           map: map2,
-          title: id.toString()
+          title: id1.toString()
         });
          
          for (var i = 0; i < markerArray2.length; i++) {
