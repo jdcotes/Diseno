@@ -98,7 +98,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: id.toString();
+            title: id.toString()
           });
            
            for (var i = 0; i < markerArray.length; i++) {
