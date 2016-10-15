@@ -127,7 +127,7 @@ function caronmap(){
    $.post("server/vivo.php",{movil: id1},function(respuesta) {
     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
     Tabla_MySql = JSON.parse(respuesta);
-        console.log("hola");
+        console.log("hola1");
        var prueba2 = JSON.parse(respuesta);
        var lat, lon;
         for (var j in prueba2) {
