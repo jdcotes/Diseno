@@ -116,7 +116,9 @@ function caronmap(){
        });
   }
  function mapa2(){
-
+   var latold = 0;
+   var longold = 0;
+   var a = 0;
    $.post("server/vivo.php",{movil: id},function(respuesta) {
     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
     Tabla_MySql = JSON.parse(respuesta);
@@ -128,14 +130,6 @@ function caronmap(){
             lat = parseFloat(prueba2[j].Latitud);
             lon = parseFloat(prueba2[j].Longitud);
            }
-         if(entro==0)
-         {
-          map2 = new google.maps.Map(document.getElementById('map'), {
-         zoom: 15,
-         center: myLatLng
-          });
-          entro=1;
-         }
          
          if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
           routes3[a] = new google.maps.LatLng(lat,lon);
