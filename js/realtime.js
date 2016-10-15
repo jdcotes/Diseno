@@ -45,13 +45,16 @@ function getRandomColor() {
 function caronmap(){
 
   for ( h in prueba){
-    color = polycolor[h];
-    id = vehi[h];
+    
 
     if (h==0){
+    color = polycolor[h];
+    id = vehi[h];
       mapa1();
     }
     if (h==1){
+    color = polycolor[h];
+    id = vehi[h];
       mapa2();
     }
     h=h+1;
@@ -101,7 +104,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: id[h].toString()
+            title: id.toString()
           });
            
            for (var i = 0; i < markerArray.length; i++) {
@@ -154,7 +157,7 @@ function caronmap(){
           var marker = new google.maps.Marker({
           position: myLatLng,
           map: map2,
-          title: id[h].toString()
+          title: id.toString()
         });
          
          for (var i = 0; i < markerArray2.length; i++) {
