@@ -38,7 +38,7 @@ function getRandomColor() {
       console.log(polycolor);
       console.log(vehi);
     }
-
+    caronmap();
   });
 function caronmap(){
 
