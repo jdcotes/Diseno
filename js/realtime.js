@@ -101,7 +101,7 @@ function caronmap(){
             var marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
-            title: id.toString()
+            title: id[h].toString()
           });
            
            for (var i = 0; i < markerArray.length; i++) {
@@ -154,7 +154,7 @@ function caronmap(){
           var marker = new google.maps.Marker({
           position: myLatLng,
           map: map2,
-          title: id.toString()
+          title: id[h].toString()
         });
          
          for (var i = 0; i < markerArray2.length; i++) {
