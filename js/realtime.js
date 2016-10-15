@@ -13,6 +13,7 @@ var polycolor = [];
 var vehi = [];
 var color;
 var id;
+var prueba;
 //intevalo1 = setInterval(function(){mapa1()},5000);
 
 
@@ -28,7 +29,7 @@ function getRandomColor() {
 
   $.post("server/vivoi.php",function(respuesta) {
     
-    var prueba = JSON.parse(respuesta);
+    prueba = JSON.parse(respuesta);
     tamano = prueba.length
 
     for (var j  in prueba) {
