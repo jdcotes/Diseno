@@ -46,7 +46,7 @@ function caronmap(){
   for (var j in prueba){
     color = polycolor[j];
     id = vehi[j];
-    mapa1();
+
     if (j==0){
       mapa1();
     }
