@@ -1,19 +1,20 @@
 <?php
 
-$file = fopen("archivo.txt","a") // "a" es para crear nuevo archivo o escribir debajo
-or die("problemas al crear archivo");
+$server = "localhost";
+  $username = "root";
+  $password = "1234";
+  $database = "disenouninorte";
+  $con = @mysql_connect($server,$username,$password) or die("No se encontró el servidor");
+  mysql_select_db($database,$con)or die("No se encontró la base de datos");
 
-fwrite($file,"Datos\n");
-fwrite($file,"\n");
-fwrite($file,'$_POST[Id_vehiculo]');
-fwrite($file,"\r\n");
-fwrite($file,"comentario");
-fwrite($file,"\n");
-fwrite($file,"----------- \n\n");
+date_default_timezone_set('America/Bogota');
+$fecha_servidor = date('Y-m-d H:i:s');
 
-fclose($file);
 
-echo "Datos guardados satisfactoriamente";
+$consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES($_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
 
+
+mysql_free_result($consulta);
+mysql_close($con);
 
 ?>
