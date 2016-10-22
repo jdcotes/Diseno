@@ -42,39 +42,34 @@ while True:
         if len(Secs) < 2:
             Secs = "0%s" % Secs
 
-       lat = str(float(data[19:26])/100000)
-       titud=float(data[20:26])/100000           
-    #    titud=float(data[19:26])/100000
-    #    lat=str(titud)
-       longt = str(float(data[28:35])/-100000) 
-       gtitud=float(data[28:35])/-100000
-    #    gtitud=float(data[28:35])/-100000
-    #    longt=str(gtitud)
+   #    lat = str(float(data[19:26])/100000)
+   #    titud=float(data[20:26])/100000           
+        titud=float(data[19:26])/100000
+        lat=str(titud)
+    #   long = str(float(data[28:35])/-100000) 
+    #   gtitud=float(data[28:35])/-100000
+        gtitud=float(data[28:35])/-100000
+        long=str(gtitud)
 
 
         f= 'Y-%m-%d %H:%M%S'
-    #    numweeks= float(data[7:11])
-       numweeks= float(data[6:10]) 
-    #    dayofweek=float(data[11])
-       dayweeks= float(data[10])    
+        numweeks= float(data[7:11])
+        dayofweek=float(data[11])
         ref= datetime.datetime(1980, 1, 6)
         delta= datetime.timedelta(weeks=numweeks, days= dayofweek )
         actualdate=ref + delta
-    #    secsincemidnight= float(data[11:16])
-      secsincemidnight= float(data[10:15])     
+        secsincemidnight= float(data[11:16])
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
         tsql= t.strftime(f)
         
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
-        t2= fecha_db + hora_db
-        tserver=t2.strftime(f)
         
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
         if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 :
-              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('%s','%s','%s','%s')" % (1,tsql,tserver,lat,longt))
+              cursor.execute("INSERT INTO coordenadas (Fecha,Hora,Latitud,Longitud) VALUES('%s','%s','%s','%s')" % (fecha_db,hora_db,lat,long))
               latnew=titud
               longnew=gtitud
               minnew=minutes
