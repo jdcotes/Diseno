@@ -22,7 +22,7 @@ var h;
 var latold1 = 0;
 var longold1 = 0;
 var b = 0;
-intevalo1 = setInterval(function(){caronmap()},5000);
+
 
 function funciona(){
 	console.log("Prueba exitosa, segunda");
@@ -47,7 +47,7 @@ function getRandomColor() {
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
     }
-    caronmap();
+    intevalo1 = setInterval(function(){caronmap()},5000);
   });
 function caronmap(){
 
