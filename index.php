@@ -137,7 +137,7 @@
 								 				checking1();
 								     }
 										 if ( document.getElementById('check0').checked === false ) {
-												clear1();
+												clearInterval(intevalo1);
 										 }
 
 								 }
