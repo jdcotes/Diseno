@@ -25,7 +25,7 @@ var longold1 = 0;
 var b = 0;
 
 map2 = new google.maps.Map(document.getElementById('map'), {
-zoom: 10,
+zoom: 13,
 center: {lat: 10.963889, lng: -74.796389}});
 
 
