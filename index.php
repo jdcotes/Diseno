@@ -136,10 +136,17 @@
 								     if ( document.getElementById('check0').checked === true ) {
 								 				checking1();
 								     }
+										 if ( document.getElementById('check0').checked === false ) {
+												clearInterval(Intevalo1);
+										 }
+
 								 }
 								 document.getElementById('check1').onchange = function() {
 										 if ( document.getElementById('check1').checked === true ) {
 												checking2();
+										 }
+										 if ( document.getElementById('check1').checked === false ) {
+												clearinterval(Intevalo2);
 										 }
 								 }
                 }
