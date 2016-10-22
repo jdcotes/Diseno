@@ -24,10 +24,10 @@ var latold1 = 0;
 var longold1 = 0;
 var b = 0;
 
+//Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
 zoom: 13,
 center: {lat: 10.963889, lng: -74.796389}});
-
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -105,7 +105,7 @@ function car2onmap(){
              markerArray[i].setMap(null);
            };
           markerArray= [];
-          markerArray.push(marker );
+          markerArray.push(marker);
 
        });
   }
@@ -132,7 +132,7 @@ function car2onmap(){
 
         }
 
-        var polyline = new google.maps.Polyline({
+        var polyline1 = new google.maps.Polyline({
           path: routes3
           , map: map2
           , strokeColor: color1
@@ -140,7 +140,7 @@ function car2onmap(){
           , strokeOpacity: 1
           , clickable: false
         });
-          var marker = new google.maps.Marker({
+          var marker1 = new google.maps.Marker({
           position: myLatLng,
           map: map2,
           title: id1.toString()

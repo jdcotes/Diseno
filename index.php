@@ -139,6 +139,7 @@
 								     }
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
+												marker.setMap(null);
 										 }
 
 								 }
@@ -149,6 +150,7 @@
 										 }
 										 if ( document.getElementById('check1').checked === false ) {
 												clearInterval(intevalo2);
+												marker1.setMap(null);
 										 }
 								 }
                 }
