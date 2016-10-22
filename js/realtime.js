@@ -24,12 +24,6 @@ var longold1 = 0;
 var b = 0;
 intevalo1 = setInterval(function(){caronmap()},5000);
 
-// document.getElementById('check0').onchange = function() {
-//     if ( document.getElementById('check0').checked === true ) {
-//         //planhide();
-// 				console.log("Prueba exitosa");
-//     }
-// }
 function prueba(){
 	console.log("Prueba exitosa, segunda");
 }
