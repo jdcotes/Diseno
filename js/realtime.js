@@ -23,6 +23,8 @@ var h;
 var latold1 = 0;
 var longold1 = 0;
 var b = 0;
+var marker;
+var marker1;
 
 //Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
@@ -95,7 +97,7 @@ function car2onmap(){
             , strokeOpacity: 1
             , clickable: false
           });
-            var marker = new google.maps.Marker({
+            marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
             title: id.toString()
@@ -140,7 +142,7 @@ function car2onmap(){
           , strokeOpacity: 1
           , clickable: false
         });
-          var marker1 = new google.maps.Marker({
+          marker1 = new google.maps.Marker({
           position: myLatLng,
           map: map2,
           title: id1.toString()
