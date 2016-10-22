@@ -29,7 +29,7 @@ document.getElementById('check0').onchange = function() {
         //planhide();
 				console.log("Prueba exitosa");
     }
-};​
+}
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
