@@ -132,6 +132,12 @@
                 i=0;
 
                 var auto_refresh = setInterval(function(){timestamp()},5000);
+								 document.getElementById('check0').onchange = function() {
+								     if ( document.getElementById('check0').checked === true ) {
+								         //planhide();
+								 				console.log("Prueba exitosa");
+								     }
+								 }
                 }
 
 				function timestamp(){
