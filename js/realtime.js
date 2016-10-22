@@ -24,7 +24,9 @@ var latold1 = 0;
 var longold1 = 0;
 var b = 0;
 
-
+map2 = new google.maps.Map(document.getElementById('map'), {
+zoom: 15,
+center: {lat: 10.963889, lng: -74.796389}});
 
 
 function getRandomColor() {
@@ -65,7 +67,7 @@ function car1onmap(){
 		mapa1();
 }
 
-function car2map(){
+function car2onmap(){
 	color1 = polycolor[1];
 	console.log(color1);
 	id1 = vehi[1];
