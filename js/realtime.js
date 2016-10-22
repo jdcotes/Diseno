@@ -1,5 +1,6 @@
 
 var intevalo1;
+var intevalo2;
 var entro=0;
 var map2;
 var Tabla_MySql;
@@ -45,27 +46,29 @@ function getRandomColor() {
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
     }
-    intevalo1 = setInterval(function(){caronmap()},5000);
+    //intevalo1 = setInterval(function(){caronmap()},5000);
   });
 
 	function checking1(){
 		car1onmap();
+		intevalo1 = setInterval(function(){car1onmap()},5000);
 	}
 	function checking2(){
 		car2onmap();
+		intevalo2 = setInterval(function(){car2onmap()},5000);
 	}
 
 function car1onmap(){
 	color = polycolor[0];
 	console.log(color);
-	id = vehi[h];
+	id = vehi[0];
 		mapa1();
 }
 
 function car2map(){
 	color1 = polycolor[1];
 	console.log(color1);
-	id1 = vehi[h];
+	id1 = vehi[1];
 		mapa2();
 }
 // function caronmap(){
