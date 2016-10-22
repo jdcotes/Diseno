@@ -107,7 +107,8 @@ function car2onmap(){
             a = a + 1;
 
           }
-
+          console.log(routes2);
+          console.log(polyline);
           polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
