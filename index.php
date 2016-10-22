@@ -135,7 +135,7 @@
 								 document.getElementById('check0').onchange = function() {
 								     if ( document.getElementById('check0').checked === true ) {
 								         //planhide();
-								 				console.log("Prueba exitosa");
+								 				prueba();
 								     }
 								 }
                 }

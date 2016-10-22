@@ -30,6 +30,9 @@ intevalo1 = setInterval(function(){caronmap()},5000);
 // 				console.log("Prueba exitosa");
 //     }
 // }
+function prueba(){
+	console.log("Prueba exitosa, segunda");
+}
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
