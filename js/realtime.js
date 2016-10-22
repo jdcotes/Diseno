@@ -108,14 +108,14 @@ function car2onmap(){
               lat = parseFloat(prueba1[j].Latitud);
               lon = parseFloat(prueba1[j].Longitud);
              }
-           if(entro==0)
-           {
-            map2 = new google.maps.Map(document.getElementById('map'), {
-           zoom: 15,
-           center: myLatLng
-            });
-            entro=1;
-           }
+          //  if(entro==0)
+          //  {
+          //   map2 = new google.maps.Map(document.getElementById('map'), {
+          //  zoom: 15,
+          //  center: myLatLng
+          //   });
+          //   entro=1;
+          //  }
 
            if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
             routes2[a] = new google.maps.LatLng(lat,lon);
