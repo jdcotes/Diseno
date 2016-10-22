@@ -57,7 +57,7 @@
 							<br>
 								<h3>Información de Tu Vehículo</h3>
 								<p>Los siguientes datos corresponden a la ultima ubicación registrada de tu vehículo</p>
-                                   
+
                                     <script type="text/javascript">
                                        var auto_refresh = setInterval(
                                          function ()
@@ -66,7 +66,7 @@
                                         $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
                                          }, 5000); // refresh every 5 seconds
                                     </script>
-                                    
+
                                         <!--<div id="FECHA"> </div>-->
                                         <!-- <div id='Hora'> </div> -->
                                         <form id="vehiculos"></form>
@@ -79,18 +79,18 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-							<section>					
+							<section>
 								<div id='map'>
 							</section>
 						</div>
 					</div>
-					
+
 			</section>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-				
+
 					<ul class="copyright">
 						<li>Diseño Electrónico. Universidad del Norte. 2016</li>
 						<li>Desarrollado por: Juan Diego Cotes | Cristian Cepeda | Hernán Carrillo | Andrea Fontalvo</li>
@@ -109,36 +109,33 @@
             	var i=0;
 
 				$.post("server/vivoi.php",function(respuesta) {
-					
+
 					var prueba = JSON.parse(respuesta);
                     tamano = prueba.length
 
                     for (var j in prueba) {
 
 		      		vehi[j] = parseFloat(prueba[j].IDvehiculo);
-			      
+
 			      	j=j+1;
 			    	}
 
 				});
-				
-				function radiocreate(){ 
-				console.log("no entro"); 
+
+				function radiocreate(){
 					while ( i < tamano){
-					console.log("creado");
-			        var node = document.createElement('div');        
-			        node.innerHTML = '<div id="FECHA'+i+'"></div><input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label>';       
+					    var node = document.createElement('div');
+			        node.innerHTML = '<div id="FECHA'+i+'"></div><input type="checkbox" id="check'+i+'" name="check'+i+'"><label for="check'+i+'"> Vehiculo '+ vehi[i]+'</label>';
 			        document.getElementById('vehiculos').appendChild(node);
-                    i=i+1;
-		        	}
+              i=i+1;
+		      }
                 i=0;
-                
+
                 var auto_refresh = setInterval(function(){timestamp()},5000);
                 }
 
 				function timestamp(){
 					while (i<tamano){
-                    console.log("cuantas veces me ejecuto");
                    	$('#FECHA'+i+'').load('LLAMAR.php',{id:vehi[i]}).fadeIn("slow");
                    	i=i+1;
                  	}
