@@ -152,7 +152,7 @@ function car2onmap(){
            markerArray2[i].setMap(null);
          };
         markerArray2= [];
-        markerArray2.push(marker );
+        markerArray2.push(marker1);
 
      });
  }
