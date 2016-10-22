@@ -25,6 +25,8 @@ var longold1 = 0;
 var b = 0;
 var marker;
 var marker1;
+var polyline;
+var polyline1;
 
 //Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
@@ -89,7 +91,7 @@ function car2onmap(){
 
           }
 
-          var polyline = new google.maps.Polyline({
+          polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
             , strokeColor: color
@@ -134,7 +136,7 @@ function car2onmap(){
 
         }
 
-        var polyline1 = new google.maps.Polyline({
+        polyline1 = new google.maps.Polyline({
           path: routes3
           , map: map2
           , strokeColor: color1

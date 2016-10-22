@@ -140,6 +140,8 @@
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
 												marker.setMap(null);
+												polyline.setMap(null);
+												routes2=[];
 										 }
 
 								 }
@@ -151,6 +153,8 @@
 										 if ( document.getElementById('check1').checked === false ) {
 												clearInterval(intevalo2);
 												marker1.setMap(null);
+												polyline1.setMap(null);
+												routes3=[];
 										 }
 								 }
                 }
