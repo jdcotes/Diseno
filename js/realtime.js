@@ -24,9 +24,7 @@ var longold1 = 0;
 var b = 0;
 
 
-function funciona(){
-	console.log("Prueba exitosa, segunda");
-}
+
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -49,27 +47,48 @@ function getRandomColor() {
     }
     intevalo1 = setInterval(function(){caronmap()},5000);
   });
-function caronmap(){
 
-  for ( h in prueba){
+	function checking1(){
+		car1onmap();
+	}
+	function checking2(){
+		car2onmap();
+	}
 
-
-    if (h==0){
-    color = polycolor[h];
-    console.log(color);
-    id = vehi[h];
-      mapa1();
-    }
-    if (h==1){
-    color1 = polycolor[h];
-    console.log(color1);
-    id1 = vehi[h];
-      mapa2();
-    }
-    h=h+1;
-  }
-
+function car1onmap(){
+	color = polycolor[0];
+	console.log(color);
+	id = vehi[h];
+		mapa1();
 }
+
+function car2map(){
+	color1 = polycolor[1];
+	console.log(color1);
+	id1 = vehi[h];
+		mapa2();
+}
+// function caronmap(){
+//
+//   for ( h in prueba){
+//
+//
+//     if (h==0){
+//     color = polycolor[h];
+//     console.log(color);
+//     id = vehi[h];
+//       mapa1();
+//     }
+//     if (h==1){
+//     color1 = polycolor[h];
+//     console.log(color1);
+//     id1 = vehi[h];
+//       mapa2();
+//     }
+//     h=h+1;
+//   }
+//
+// }
 
  function mapa1(){
 

@@ -134,8 +134,13 @@
                 var auto_refresh = setInterval(function(){timestamp()},5000);
 								 document.getElementById('check0').onchange = function() {
 								     if ( document.getElementById('check0').checked === true ) {
-								 				funciona();
+								 				checking1();
 								     }
+								 }
+								 document.getElementById('check1').onchange = function() {
+										 if ( document.getElementById('check1').checked === true ) {
+												checking2();
+										 }
 								 }
                 }
 
