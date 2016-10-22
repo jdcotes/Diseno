@@ -50,7 +50,13 @@ function getRandomColor() {
     }
     //intevalo1 = setInterval(function(){caronmap()},5000);
   });
+function clear1(){
+  clearInterval(Intevalo1);
+}
 
+function clear2(){
+  clearInterval(Intevalo2);
+}
 	function checking1(){
 		car1onmap();
 		intevalo1 = setInterval(function(){car1onmap()},5000);
