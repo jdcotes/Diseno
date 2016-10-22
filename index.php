@@ -134,7 +134,7 @@
                 var auto_refresh = setInterval(function(){timestamp()},5000);
 								 document.getElementById('check0').onchange = function() {
 								     if ( document.getElementById('check0').checked === true ) {
-								 				prueba();
+								 				funciona();
 								     }
 								 }
                 }

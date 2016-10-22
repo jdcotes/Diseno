@@ -24,7 +24,7 @@ var longold1 = 0;
 var b = 0;
 intevalo1 = setInterval(function(){caronmap()},5000);
 
-function prueba(){
+function funciona(){
 	console.log("Prueba exitosa, segunda");
 }
 
