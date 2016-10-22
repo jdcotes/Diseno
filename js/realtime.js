@@ -41,7 +41,7 @@ var polyline1 = new google.maps.Polyline({
   path: routes2,
   map: map2,
   strokeColor: '#143254',
-  strokeWeight: 5, 
+  strokeWeight: 5,
   strokeOpacity: 1,
   clickable: false
 });
@@ -86,7 +86,7 @@ function car2onmap(){
 }
 
  function mapa1(){
-      polyline.SetMap(null);
+      polyline.setMap(null);
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
