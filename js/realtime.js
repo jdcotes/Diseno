@@ -69,7 +69,7 @@ function car2onmap(){
 }
 
  function mapa1(){
-
+      polyline.SetMap(null);
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
@@ -114,7 +114,7 @@ function car2onmap(){
        });
   }
  function mapa2(){
-
+   polyline1.setMap(null);
    $.post("server/vivo.php",{movil: id1},function(respuesta) {
     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
     Tabla_MySql = JSON.parse(respuesta);
