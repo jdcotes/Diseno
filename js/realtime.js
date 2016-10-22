@@ -38,7 +38,7 @@ var polyline = new google.maps.Polyline({
 });
 //Inicio de polilinea en 0
 var polyline1 = new google.maps.Polyline({
-  path: routes2,
+  path: routes3,
   map: map2,
   strokeColor: '#143254',
   strokeWeight: 5,
