@@ -48,17 +48,7 @@ function getRandomColor() {
       vehi[j] = parseFloat(prueba[j].IDvehiculo);
       j=j+1;
     }
-    //intevalo1 = setInterval(function(){caronmap()},5000);
   });
-  //
-	// function checking1(){
-	// 	car1onmap();
-	// 	intevalo1 = setInterval(function(){car1onmap()},5000);
-	// }
-	function checking2(){
-		car2onmap();
-		intevalo2 = setInterval(function(){car2onmap()},5000);
-	}
 
 function car1onmap(){
 	color = polycolor[0];
@@ -73,27 +63,6 @@ function car2onmap(){
 	id1 = vehi[1];
 		mapa2();
 }
-// function caronmap(){
-//
-//   for ( h in prueba){
-//
-//
-//     if (h==0){
-//     color = polycolor[h];
-//     console.log(color);
-//     id = vehi[h];
-//       mapa1();
-//     }
-//     if (h==1){
-//     color1 = polycolor[h];
-//     console.log(color1);
-//     id1 = vehi[h];
-//       mapa2();
-//     }
-//     h=h+1;
-//   }
-//
-// }
 
  function mapa1(){
 
@@ -108,14 +77,6 @@ function car2onmap(){
               lat = parseFloat(prueba1[j].Latitud);
               lon = parseFloat(prueba1[j].Longitud);
              }
-          //  if(entro==0)
-          //  {
-          //   map2 = new google.maps.Map(document.getElementById('map'), {
-          //  zoom: 15,
-          //  center: myLatLng
-          //   });
-          //   entro=1;
-          //  }
 
            if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
             routes2[a] = new google.maps.LatLng(lat,lon);
