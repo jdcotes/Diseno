@@ -134,6 +134,8 @@
                 var auto_refresh = setInterval(function(){timestamp()},5000);
 								 document.getElementById('check0').onchange = function() {
 								     if ( document.getElementById('check0').checked === true ) {
+											 latold = 0;
+											 longold = 0;
 												car1onmap();
 												intevalo1 = setInterval(function(){car1onmap()},5000);
 								     }
@@ -147,6 +149,8 @@
 								 }
 								 document.getElementById('check1').onchange = function() {
 										 if ( document.getElementById('check1').checked === true ) {
+											 latold1 = 0;
+											 longold1 = 0;
 											 car2onmap();
 											 intevalo2 = setInterval(function(){car2onmap()},5000);
 										 }
