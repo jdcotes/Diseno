@@ -42,17 +42,17 @@ while True:
         if len(Secs) < 2:
             Secs = "0%s" % Secs
 
-       lat = str(float(data[19:26])/100000)
+    #   lat = str(float(data[19:26])/100000)
        titud=float(data[20:26])/100000           
     #    titud=float(data[19:26])/100000
-    #    lat=str(titud)
-       longt = str(float(data[28:35])/-100000) 
+        lat=str(titud)
+    #   longt = str(float(data[28:35])/-100000) 
        gtitud=float(data[28:35])/-100000
     #    gtitud=float(data[28:35])/-100000
-    #    longt=str(gtitud)
+        longt=str(gtitud)
 
 
-        f= 'Y-%m-%d %H:%M%S'
+        f= '%Y-%m-%d %H:%M%S'
     #    numweeks= float(data[7:11])
        numweeks= float(data[6:10]) 
     #    dayofweek=float(data[11])
