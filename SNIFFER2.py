@@ -41,7 +41,7 @@ while True:
         Secs = str(Fecha_captura.second)
         if len(Secs) < 2:
             Secs = "0%s" % Secs
-
+            
    #    lat = str(float(data[19:26])/100000)
    #    titud=float(data[20:26])/100000           
         titud=float(data[19:26])/100000
@@ -65,11 +65,15 @@ while True:
         
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
+        t2= fecha_db + hora_db
+        
+        
+            
         
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
         if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 :
-              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('%i','%s','%s','%s','%s')" % (1,fecha_db,hora_db,lat,long))
+              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('%i','%s','%s','%s','%s')" % (1,t2,tsql,lat,long))
               latnew=titud
               longnew=gtitud
               minnew=minutes
