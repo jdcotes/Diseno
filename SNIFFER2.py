@@ -56,9 +56,9 @@ while True:
         numweeks= float(data[5:9])
         dayofweek=float(data[9])
         ref= datetime.datetime(1980, 1, 6)
-        delta= datetime.timedelta(weeks=numweeks, days= dayofweek )
+        delta= datetime.timedelta(weeks=numweeks, days=dayofweek )
         actualdate=ref + delta
-        secsincemidnight= float(data[11:16])
+        secsincemidnight= float(data[9:14])
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
         tsql= t.strftime(f)
