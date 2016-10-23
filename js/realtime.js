@@ -161,7 +161,6 @@ function car2onmap(){
 
    polyline1=[];
    $.post("server/vivo.php",{movil: id1},function(respuesta) {
-    /*bueno para que accedan a cada una de las filas de las tablas es así:*/
     Tabla_MySql = JSON.parse(respuesta);
         console.log("hola1");
        var prueba2 = JSON.parse(respuesta);
@@ -180,7 +179,6 @@ function car2onmap(){
           b = b + 1;
 
         }
-
         polyline1 = new google.maps.Polyline({
           path: routes3
           , map: map2
