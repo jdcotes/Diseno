@@ -43,12 +43,12 @@ while True:
             Secs = "0%s" % Secs
             
    #    lat = str(float(data[19:26])/100000)
-   #    titud=float(data[20:26])/100000           
-        titud=float(data[19:26])/100000
+        titud=float(data[20:26])/100000           
+   #     titud=float(data[19:26])/100000
         lat=str(titud)
     #   long = str(float(data[28:35])/-100000) 
+       gtitud=float(data[28:35])/-100000
     #   gtitud=float(data[28:35])/-100000
-        gtitud=float(data[28:35])/-100000
         long=str(gtitud)
 
 
