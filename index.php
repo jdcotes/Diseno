@@ -152,7 +152,7 @@
 										 if ( document.getElementById('check1').checked === true ) {
 											 latold1 = 0;
 											 longold1 = 0;
-											 a=0;
+											 b=0;
 											 car2onmap();
 											 intevalo2 = setInterval(function(){car2onmap()},5000);
 										 }
