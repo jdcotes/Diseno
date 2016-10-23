@@ -53,12 +53,12 @@ while True:
 
 
         f= '%Y-%m-%d %H:%M:%S'
-        numweeks= float(data[5:9])
-        dayofweek=float(data[9])
+        numweeks= float(data[6:10])
+        dayofweek=float(data[10])
         ref= datetime.datetime(1980, 1, 6)
         delta= datetime.timedelta(weeks=numweeks, days=dayofweek )
         actualdate=ref + delta
-        secsincemidnight= float(data[9:14])
+        secsincemidnight= float(data[11:16])
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
         tsql= t.strftime(f)
