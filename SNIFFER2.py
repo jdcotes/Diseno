@@ -52,7 +52,7 @@ while True:
         long=str(gtitud)
 
 
-        f= '%Y-%m-%d %H:%M%S'
+        f= '%Y-%m-%d %H:%M:%S'
         numweeks= float(data[7:11])
         dayofweek=float(data[11])
         ref= datetime.datetime(1980, 1, 6)
@@ -74,7 +74,7 @@ while True:
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
         if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 :
-              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('%i','%s','%s','%s','%s')" % (1,t2,tsql,lat,long))
+              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('%i','%s','%s','%s','%s')" % (1,tsql,t2,lat,long))
               latnew=titud
               longnew=gtitud
               minnew=minutes
