@@ -136,8 +136,9 @@
 								     if ( document.getElementById('check0').checked === true ) {
 											 latold = 0;
 											 longold = 0;
-												car1onmap();
-												intevalo1 = setInterval(function(){car1onmap()},5000);
+											 a=0;
+											 car1onmap();
+											 intevalo1 = setInterval(function(){car1onmap()},5000);
 								     }
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
@@ -151,6 +152,7 @@
 										 if ( document.getElementById('check1').checked === true ) {
 											 latold1 = 0;
 											 longold1 = 0;
+											 a=0;
 											 car2onmap();
 											 intevalo2 = setInterval(function(){car2onmap()},5000);
 										 }
