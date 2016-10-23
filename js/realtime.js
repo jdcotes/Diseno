@@ -98,7 +98,7 @@ function car2onmap(){
 }
 
  function mapa1(){
-      polylineold.setMap(null);
+
       polyline =[];
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -130,6 +130,7 @@ function car2onmap(){
             , strokeOpacity: 1
             , clickable: false
           });
+          polylineold.setMap(null);
           polylineold=polyline;
             marker = new google.maps.Marker({
             position: myLatLng,
