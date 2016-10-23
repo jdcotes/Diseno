@@ -17,7 +17,7 @@ while True:
     data,addr=sock.recvfrom(1024)
     Fecha_captura = datetime.datetime.now()
 
-print(data)
+    print(data)
     
     if len(data) == 63:
         
