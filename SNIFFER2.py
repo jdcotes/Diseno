@@ -53,8 +53,8 @@ while True:
 
 
         f= '%Y-%m-%d %H:%M:%S'
-        numweeks= float(data[7:11])
-        dayofweek=float(data[11])
+        numweeks= float(data[5:9])
+        dayofweek=float(data[9])
         ref= datetime.datetime(1980, 1, 6)
         delta= datetime.timedelta(weeks=numweeks, days= dayofweek )
         actualdate=ref + delta
