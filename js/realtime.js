@@ -57,6 +57,16 @@ var polyline1 = new google.maps.Polyline({
   strokeOpacity: 1,
   clickable: false
 });
+//Inicio de polilinea en 0
+var polyline1old = new google.maps.Polyline({
+  path: routes2,
+  map: map2,
+  strokeColor: '#143254',
+  strokeWeight: 5,
+  strokeOpacity: 1,
+  clickable: false
+});
+
 //Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
 zoom: 13,
@@ -148,7 +158,7 @@ function car2onmap(){
 
   }
  function mapa2(){
-   polyline1.setMap(null);
+
    polyline1=[];
    $.post("server/vivo.php",{movil: id1},function(respuesta) {
     /*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -179,6 +189,8 @@ function car2onmap(){
           , strokeOpacity: 1
           , clickable: false
         });
+        polyline1.setMap(null);
+        polyline1old=polyline1;
           marker1 = new google.maps.Marker({
           position: myLatLng,
           map: map2,
