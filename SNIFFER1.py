@@ -68,8 +68,8 @@ while True:
         
         fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
-        t2= fecha_db + hora_db
-        tserver=t2.strftime(f)
+        tserver= fecha_db + hora_db
+        
         
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
