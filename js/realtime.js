@@ -132,9 +132,9 @@ function car2onmap(){
            };
           markerArray= [];
           markerArray.push(marker);
-
+          polylineold.setMap(null);
        });
-       polylineold.setMap(null);
+
   }
  function mapa2(){
    polyline1.setMap(null);
