@@ -17,7 +17,7 @@ while True:
     data,addr=sock.recvfrom(1024)
     Fecha_captura = datetime.datetime.now()
 
-
+print(data)
     
     if len(data) == 63:
         
@@ -62,12 +62,12 @@ while True:
         actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
         t= actualdate + actualtime
         tsql= t.strftime(f)
-        print(tsql)
+        
         
         fecha_db="%s-%s-%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
         t2= fecha_db +" "+ hora_db
-        print(t2)
+        
         
             
         
