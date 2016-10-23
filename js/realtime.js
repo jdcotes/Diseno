@@ -26,7 +26,9 @@ var b = 0;
 var marker;
 var marker1;
 var polyline;
+var polylineold;
 var polyline1;
+var polyline1old;
 //Inicio de polilinea en 0
 var polyline = new google.maps.Polyline({
   path: routes2,
@@ -86,7 +88,7 @@ function car2onmap(){
 }
 
  function mapa1(){
-      //polyline.setMap(null);
+
       polyline =[];
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
@@ -118,6 +120,7 @@ function car2onmap(){
             , strokeOpacity: 1
             , clickable: false
           });
+          polylineold=polyline;
             marker = new google.maps.Marker({
             position: myLatLng,
             map: map2,
@@ -131,6 +134,7 @@ function car2onmap(){
           markerArray.push(marker);
 
        });
+       polylineold.setMap(null);
   }
  function mapa2(){
    polyline1.setMap(null);
