@@ -86,7 +86,7 @@ function car2onmap(){
 }
 
  function mapa1(){
-      polyline.setMap(null);
+      //polyline.setMap(null);
       polyline =[];
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
