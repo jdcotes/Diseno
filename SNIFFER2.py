@@ -52,7 +52,7 @@ while True:
         long=str(gtitud)
 
 
-        f= 'Y-%m-%d %H:%M%S'
+        f= '%Y-%m-%d %H:%M%S'
         numweeks= float(data[7:11])
         dayofweek=float(data[11])
         ref= datetime.datetime(1980, 1, 6)
@@ -64,9 +64,9 @@ while True:
         tsql= t.strftime(f)
         print(tsql)
         
-        fecha_db="%s/%s/%s" %(Anio,Mes,Dia)
+        fecha_db="%s-%s-%s" %(Anio,Mes,Dia)
         hora_db="%s:%s:%s" %(Hora, Mins, Secs)
-        t2= fecha_db + hora_db
+        t2= fecha_db +" "+ hora_db
         print(t2)
         
             
