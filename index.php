@@ -80,7 +80,16 @@
 
 						<div class="8u skel-cell-important">
 							<section>
-								<div>hola hola</div>
+                                    
+                                    <script type="text/javascript">
+                                        var auto_refresh = setInterval(
+                                        function ()
+                                        {
+                                        $('#medicion').load('LLAMAR1.php').fadeIn("slow");
+                                        }, 5000); // refresh every 5 seconds
+                                    </script>
+
+								<div id="medicion"><center>Mediciones</center></div>
 								<div id='map'>
 							</section>
 						</div>
@@ -95,11 +104,9 @@
 					<ul class="copyright">
 						<li>Diseño Electrónico. Universidad del Norte. 2016</li>
 						<li>Desarrollado por: Juan Diego Cotes | Cristian Cepeda | Hernán Carrillo | Andrea Fontalvo</li>
-
 					</ul>
 				</div>
 			</footer>
-
 
             <!-- MAPA -->
             <script src="js/realtime.js"></script>
