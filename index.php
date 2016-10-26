@@ -80,6 +80,7 @@
 
 						<div class="8u skel-cell-important">
 							<section>
+								<div>hola hola</div>
 								<div id='map'>
 							</section>
 						</div>
