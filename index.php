@@ -89,7 +89,7 @@
                                         }, 5000); // refresh every 5 seconds
                                     </script>
 
-								<div id="medicion"></div>
+								<div>La velocidad del vehículo es: <div id="medicion"></div></div>
 								<div id='map'>
 							</section>
 						</div>
