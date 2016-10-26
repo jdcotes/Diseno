@@ -14,6 +14,7 @@ sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 sock.bind((IP,PORT))
 
 while True:
+    print("hey mirame")
     data,addr=sock.recvfrom(1024)
     Fecha_captura = datetime.datetime.now()
     print("hola")
