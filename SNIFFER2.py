@@ -16,7 +16,7 @@ sock.bind((IP,PORT))
 while True:
     data,addr=sock.recvfrom(1024)
     Fecha_captura = datetime.datetime.now()
-
+    print("hola")
     print(data)
 
     if len(data) == 63:
@@ -82,5 +82,5 @@ while True:
         db.commit()
         cursor.close()
         db.close()
-        else:
+    else:
         print("Mensaje Corrupto")
