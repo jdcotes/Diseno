@@ -187,7 +187,7 @@ function car2onmap(){
           , strokeOpacity: 1
           , clickable: false
         });
-        polyline1.setMap(null);
+        polyline1old.setMap(null);
         polyline1old=polyline1;
           marker1 = new google.maps.Marker({
           position: myLatLng,
