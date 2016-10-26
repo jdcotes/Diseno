@@ -9,9 +9,9 @@ $server = "localhost";
 
 date_default_timezone_set('America/Bogota');
 $fecha_servidor = date('Y-m-d H:i:s');
+$id = 2;
 
-
-$consulta=mysql_query("INSERT INTO coordenadas (FechaGPS,FechaServer,Latitud,Longitud) VALUES('$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
+$consulta=mysql_query("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud) VALUES('$id','$_POST[Fecha_Hora_gps]','$fecha_servidor','$_POST[Latitud_gps]','$_POST[Longitud_gps]')");
 
 
 mysql_free_result($consulta);
