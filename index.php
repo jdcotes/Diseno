@@ -89,7 +89,7 @@
                                         }, 5000); // refresh every 5 seconds
                                     </script>
 
-								<div id="medicion"><center>Mediciones</center></div>
+								<div id="medicion"></div>
 								<div id='map'>
 							</section>
 						</div>
