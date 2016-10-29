@@ -149,12 +149,16 @@
 											 a=0;
 											 car1onmap();
 											 intevalo1 = setInterval(function(){car1onmap()},5000);
+											 var med = document.querySelector("#med"); 
+											 med.setAttribute("style","display: inline");
 								     }
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
 												marker.setMap(null);
 												polyline.setMap(null);
 												routes2=[];
+										 		var med = document.querySelector("#med"); 
+												med.setAttribute("style","display: none");
 										 }
 
 								 }
