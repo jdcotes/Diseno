@@ -85,7 +85,7 @@
                                     </script>			
 
 								<center>
-										 <div id="medicion" ></div>		
+										 <div id="medicion" style="display: inline"></div>		
 								</center>
 
 								<div id='map'>
@@ -149,7 +149,7 @@
 			                                    function ()
 			                                    {
 			                                    $('#medicion').load('LLAMAR1.php').fadeIn("slow");
-			                                    }, 5000); // refresh every 5 seconds
+			                                    }, 2000); // refresh every 5 seconds
 							     			}
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
