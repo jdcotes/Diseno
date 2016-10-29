@@ -21,7 +21,7 @@ while True:
     lon=len(data)
     print(lon)
 
-    if len(data)>=63 or len(data)<=69 or data.find("@")>=0:
+    if len(data)>=63 or len(data)<=69 or data.find("@")>=0 or data.find("-")>=0:
         data = str(data)
         indmax=data.find("+")
         indarr=data.find("@")
@@ -51,11 +51,14 @@ while True:
         titud=float(data[(indmax+1):(indmax+8)])/100000
    #     titud=float(data[19:26])/100000
         lat=str(titud)
+        
     #   long = str(float(data[28:35])/-100000)
         gtitud=float(data[(indmen+1):(indmen+8)])/-100000
     #   gtitud=float(data[28:35])/-100000
         longt=str(gtitud)
   
+        print titud
+        print gtitud
         f= '%Y-%m-%d %H:%M:%S'
         numweeks= float(data[(indmax-10):(indmax-6)])
         dayofweek=float(data[indmax-6])
