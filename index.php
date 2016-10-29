@@ -81,11 +81,7 @@
 						<div class="8u skel-cell-important">
 							<section>                                    
                                     <script type="text/javascript">
-                                        var auto_refresh = setInterval(
-                                        function ()
-                                        {
-                                        $('#medicion').load('LLAMAR1.php').fadeIn("slow");
-                                        }, 5000); // refresh every 5 seconds
+                                        
                                     </script>			
 
 								<center>
@@ -149,16 +145,20 @@
 											 a=0;
 											 car1onmap();
 											 intevalo1 = setInterval(function(){car1onmap()},5000);
-											 var med = document.querySelector("#med"); 
-											 med.setAttribute("style","display: inline");
-								     }
+											var auto_refresh2 = setInterval(
+			                                    function ()
+			                                    {
+			                                    $('#medicion').load('LLAMAR1.php').fadeIn("slow");
+			                                    }, 5000); // refresh every 5 seconds
+							     			}
 										 if ( document.getElementById('check0').checked === false ) {
 												clearInterval(intevalo1);
 												marker.setMap(null);
 												polyline.setMap(null);
 												routes2=[];
-										 		var med = document.querySelector("#med"); 
-												med.setAttribute("style","display: none");
+												clearInterval(auto_refresh2);
+												var w = document.querySelector("#medicion"); 
+    											w.setAttribute("style","display: none");
 										 }
 
 								 }
