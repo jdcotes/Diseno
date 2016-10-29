@@ -89,7 +89,7 @@
                                     </script>			
 
 								<center>
-										 <p id="medicion" style="display:none"></p>		
+										 <div id="medicion" ></div>		
 								</center>
 
 								<div id='map'>
