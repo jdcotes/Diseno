@@ -113,6 +113,7 @@
             	var tamano;
             	var vehi = [];
             	var i=0;
+            	var auto_refresh2;
 
 				$.post("server/vivoi.php",function(respuesta) {
 
@@ -145,7 +146,7 @@
 											 a=0;
 											 car1onmap();
 											 intevalo1 = setInterval(function(){car1onmap()},5000);
-											var auto_refresh2 = setInterval(
+											 auto_refresh2 = setInterval(
 			                                    function ()
 			                                    {
 			                                    $('#medicion').load('LLAMAR1.php').fadeIn("slow");
