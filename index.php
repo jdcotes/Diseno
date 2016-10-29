@@ -90,12 +90,12 @@
 								<center>
 									<table>
 										<tr>
-										    <td><center>La velocidad de su vehiculo es</td>
-										    <td><center><div id="medicion"></div></td> 
+										    <td>La velocidad de su vehiculo es</td>
+										    <td><div id="medicion"></div></td> 
 										  </tr>								
 									</table>
 								</center>
-								
+
 								<div id='map'>
 							</section>
 						</div>
