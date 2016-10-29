@@ -86,13 +86,6 @@ while True:
         cursor.close()
         db.close()
 
-
- 
-
-
-
-
-
-    else
+    else:
         print("Mensaje Corrupto")
     
