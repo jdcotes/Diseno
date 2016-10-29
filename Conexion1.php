@@ -22,7 +22,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
     	
-        echo "<h4>La velocidad del vehículo es:</h4><h2>" . $row["velocidad"] . " Km/h</h2>" ;
+        echo "<h4>La velocidad del vehículo es:</h4><h2>" . $row["Velocidad"] . " Km/h</h2>" ;
     }
 } else {
     echo "No hay medicion registrada";
