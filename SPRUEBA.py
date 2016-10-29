@@ -19,5 +19,80 @@ while True:
     print(data)
     lon=len(data)
     print(lon)
-    
+
+    if len(data)>=63 or len(data)<=68 or data.find("@")>=0
+        data = str(data)
+        indmax=data.find("+")
+        indarr=data.find("@")
+        indmen=data.find("-")
+        indx=data.find("X")        
+
+        Anio = str(Fecha_captura.year)
+        Mes = str(Fecha_captura.month)
+        if len(Mes) < 2:
+            Mes = "0%s" % Mes
+        Dia = str(Fecha_captura.day)
+        if len(Dia) < 2:
+            Dia = "0%s" % Dia
+
+        Hora = str(Fecha_captura.hour)
+        if len(Hora) < 2:
+            Hora = "0%s" % Hora
+        Mins = str(Fecha_captura.minute)
+        minutes=float(Fecha_captura.minute)
+        if len(Mins) < 2:
+            Mins = "0%s" % Mins
+        Secs = str(Fecha_captura.second)
+        if len(Secs) < 2:
+            Secs = "0%s" % Secs
+
+   #    lat = str(float(data[19:26])/100000)
+        titud=float(data[(indmax+1):(indmax+8)])/100000
+   #     titud=float(data[19:26])/100000
+        lat=str(titud)
+    #   long = str(float(data[28:35])/-100000)
+        gtitud=float(data[(indmen+1):(indmen+8)])/-100000
+    #   gtitud=float(data[28:35])/-100000
+        longt=str(gtitud)
+  
+        f= '%Y-%m-%d %H:%M:%S'
+        numweeks= float(data[(indmax-10):(indmax-6)])
+        dayofweek=float(data[indmax-6])
+        ref= datetime.datetime(1980, 1, 6)
+        delta= datetime.timedelta(weeks=numweeks, days=dayofweek )
+        actualdate=ref + delta
+        secsincemidnight= float(data[(indmax-5):indmax])
+        actualtime= datetime.timedelta(seconds=secsincemidnight)-datetime.timedelta(hours=5)
+        t= actualdate + actualtime
+        tsql= t.strftime(f)
+
+        veloc=data[(indx+1):indarr]
+        veloc2=float(veloc)
+
+
+        fecha_db="%s-%s-%s" %(Anio,Mes,Dia)
+        hora_db="%s:%s:%s" %(Hora, Mins, Secs)
+        t2= fecha_db +" "+ hora_db
+
+        db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
+        cursor = db.cursor()
+        if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 :
+              cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud,Velocidad) VALUES('%i','%s','%s','%s','%s','%s')" % (1,tsql,t2,lat,longt,veloc))
+              latnew=titud
+              longnew=gtitud
+              minnew=minutes
+              print("Data uploaded to DB")
+        db.commit()
+        cursor.close()
+        db.close()
+
+
+ 
+
+
+
+
+
+    else
+        print("Mensaje Corrupto")
     
