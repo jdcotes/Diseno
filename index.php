@@ -79,25 +79,23 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-							<section>
-                                    
+							<section>                                    
                                     <script type="text/javascript">
                                         var auto_refresh = setInterval(
                                         function ()
                                         {
                                         $('#medicion').load('LLAMAR1.php').fadeIn("slow");
                                         }, 5000); // refresh every 5 seconds
-                                    </script>
-
+                                    </script>								
+								<center>
+									<table>
+										<tr>
+										    <td><center>La velocidad de su vehiculo es</td>
+										    <td><center><div id="medicion"></div></td> 
+										  </tr>								
+									</table>
+								</center>
 								
-
-								<table>
-									<tr>
-									    <td><center>La velocidad de su vehiculo es</td>
-									    <td><center><div id="medicion"></div></td> 
-									  </tr>								
-								</table>
-
 								<div id='map'>
 							</section>
 						</div>
