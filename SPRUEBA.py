@@ -17,6 +17,7 @@ while True:
 
     data,addr=sock.recvfrom(1024)
     print(data)
-
+    lon=len(data)
+    print(lon)
     
     
