@@ -53,7 +53,7 @@ while True:
         lat=str(titud)
         
     #   long = str(float(data[28:35])/-100000)
-        gtitud=float(data[(indmen+1):(indmen+8)])/-100000
+        gtitud=float(data[(indmen+1):(indmen+8)])/-10000
     #   gtitud=float(data[28:35])/-100000
         longt=str(gtitud)
   
