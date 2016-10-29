@@ -16,6 +16,7 @@ sock.bind((IP,PORT))
 while True:
 
     data,addr=sock.recvfrom(1024)
+    Fecha_captura = datetime.datetime.now()
     print(data)
     lon=len(data)
     print(lon)
