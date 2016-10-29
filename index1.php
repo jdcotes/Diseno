@@ -25,7 +25,7 @@
         }
     </style>
 
-    	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+ 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
 	<title>Simple Tigra Calendar</title>
 
 	<!-- link calendar resources -->
