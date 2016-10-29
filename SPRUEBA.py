@@ -21,7 +21,7 @@ while True:
     lon=len(data)
     print(lon)
 
-    if len(data)>=63 or len(data)<=69 or data.find("@")>=0 or data.find("-")>=0:
+    if (len(data)>=63 or len(data)<=69) and data.find("@")>=0 and data.find("-")>=0:
         data = str(data)
         indmax=data.find("+")
         indarr=data.find("@")
