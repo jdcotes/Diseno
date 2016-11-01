@@ -69,7 +69,7 @@ var polyline1old = new google.maps.Polyline({
 
 //Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
-zoom: 13,
+zoom: 10,
 center: {lat: 10.963889, lng: -74.796389}});
 
 function getRandomColor() {
@@ -130,7 +130,7 @@ function car2onmap(){
           if (entro == 0){
             map2 = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
-            center: myLatLng)};
+            center: myLatLng});
             entro = 1;
           }
           polyline = new google.maps.Polyline({
@@ -181,7 +181,7 @@ function car2onmap(){
         if (entro == 0){
           map2 = new google.maps.Map(document.getElementById('map'), {
           zoom: 12,
-          center: myLatLng)};
+          center: myLatLng});
           entro = 1;
         }
         polyline1 = new google.maps.Polyline({
