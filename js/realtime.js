@@ -69,7 +69,7 @@ var polyline1old = new google.maps.Polyline({
 
 //Pintado inicial del mapa tiempo real
 map2 = new google.maps.Map(document.getElementById('map'), {
-zoom: 13,
+zoom: 12,
 center: {lat: 10.963889, lng: -74.796389}});
 
 function getRandomColor() {
@@ -95,14 +95,12 @@ function getRandomColor() {
 
 function car1onmap(){
 	color = polycolor[0];
-	console.log(color);
 	id = vehi[0];
 		mapa1();
 }
 
 function car2onmap(){
 	color1 = polycolor[1];
-	console.log(color1);
 	id1 = vehi[1];
 		mapa2();
 }
@@ -113,7 +111,6 @@ function car2onmap(){
      $.post("server/vivo.php",{movil: id},function(respuesta) {
      	/*bueno para que accedan a cada una de las filas de las tablas es así:*/
       Tabla_MySql = JSON.parse(respuesta);
-          console.log("hola");
          var prueba1 = JSON.parse(respuesta);
          var lat, lon;
           for (var j in prueba1) {
@@ -130,8 +127,6 @@ function car2onmap(){
             a = a + 1;
 
           }
-          console.log(routes2);
-          console.log(polyline);
           polyline = new google.maps.Polyline({
             path: routes2
             , map: map2
@@ -162,7 +157,6 @@ function car2onmap(){
    polyline1=[];
    $.post("server/vivo.php",{movil: id1},function(respuesta) {
     Tabla_MySql = JSON.parse(respuesta);
-        console.log("hola1");
        var prueba2 = JSON.parse(respuesta);
        var lat, lon;
         for (var j in prueba2) {
