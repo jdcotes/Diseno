@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
     		if ($row["Velocidad"] == '0'){
         // echo "<h4>La velocidad del vehículo es:</h4><h2>" . $row["Velocidad"] . " Km/h</h2>" ;
-				echo "<font color = "#24AAFF"><h4> Puerta del contenedor abierta </h4></font>";
+				echo "<font color = ''#24AAFF'><h4> Puerta del contenedor abierta </h4></font>";
 				}
 				if ($row["Velocidad"] == '11'){
 				echo "<h4> Puerta del contenedor cerrada </h4>";
