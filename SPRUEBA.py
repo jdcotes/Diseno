@@ -9,7 +9,7 @@ numero_mensaje = 1
 latnew=0
 longnew=0
 minnew=0
-
+velocnew=0
 sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 sock.bind((IP,PORT))
 
@@ -80,11 +80,12 @@ while True:
 
         db = MySQLdb.connect(host='localhost',user='root',passwd='1234',db='disenouninorte')
         cursor = db.cursor()
-        if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 :
+        if abs(titud-latnew)>0.0001 or abs(gtitud-longnew)>0.0001 or abs(minutes-minnew)>0 or veloc2 != velocnew :
               cursor.execute("INSERT INTO coordenadas (IDvehiculo,FechaGPS,FechaServer,Latitud,Longitud,Velocidad) VALUES('%i','%s','%s','%s','%s','%s')" % (1,tsql,t2,lat,longt,veloc))
               latnew=titud
               longnew=gtitud
               minnew=minutes
+              velocnew=veloc2
               print("Data uploaded to DB")
         db.commit()
         cursor.close()
