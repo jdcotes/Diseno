@@ -21,7 +21,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-    		if ($row["Velocidad"]==0){
+    		if ($row["Velocidad"]=='0'){
         // echo "<h4>La velocidad del vehículo es:</h4><h2>" . $row["Velocidad"] . " Km/h</h2>" ;
 				echo "<img src="images/blue.png"><h4> Puerta del contenedor cerrada</h4>";
 				}
