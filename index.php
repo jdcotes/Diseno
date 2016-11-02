@@ -62,13 +62,9 @@
                                        var auto_refresh = setInterval(
                                          function ()
                                         {
-                                        // $('#FECHA').load('LLAMAR.php').fadeIn("slow");
                                         $('#FECHA').load('LLAMAR.php',{id:1}).fadeIn("slow");
                                          }, 5000); // refresh every 5 seconds
                                     </script>
-
-                                        <!--<div id="FECHA"> </div>-->
-                                        <!-- <div id='Hora'> </div> -->
                                         <form id="vehiculos"></form>
                                 <br>
 								<ul class="actions">
@@ -79,13 +75,14 @@
 						</div>
 
 						<div class="8u skel-cell-important">
-							<section>                                    
+							<section>
                                     <script type="text/javascript">
-                                        
-                                    </script>			
+
+                                    </script>
 
 								<center>
-										 <div id="medicion" style="display: inline"></div>		
+										 <img src="images/blue.png">
+										 <div id="medicion" style="display: inline"></div>
 								</center>
 
 								<div id='map'>
@@ -158,7 +155,7 @@
 												polyline.setMap(null);
 												routes2=[];
 												clearInterval(auto_refresh2);
-												var w = document.querySelector("#medicion"); 
+												var w = document.querySelector("#medicion");
     											w.setAttribute("style","display: none");
 										 }
 
