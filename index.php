@@ -81,7 +81,7 @@
                                     </script>
 
 								<center>
-										 <img src="images/blue.png">
+										 
 										 <div id="medicion" style="display: inline"></div>
 								</center>
 
