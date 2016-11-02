@@ -29,6 +29,12 @@ var polyline;
 var polylineold;
 var polyline1;
 var polyline1old;
+
+//Pintado inicial del mapa tiempo real
+map2 = new google.maps.Map(document.getElementById('map'), {
+zoom: 10,
+center: {lat: 10.963889, lng: -74.796389}});
+
 //Inicio de polilinea en 0
 var polyline = new google.maps.Polyline({
   path: routes2,
@@ -67,10 +73,6 @@ var polyline1old = new google.maps.Polyline({
   clickable: false
 });
 
-//Pintado inicial del mapa tiempo real
-map2 = new google.maps.Map(document.getElementById('map'), {
-zoom: 10,
-center: {lat: 10.963889, lng: -74.796389}});
 
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
