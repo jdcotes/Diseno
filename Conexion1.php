@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT Velocidad FROM  `coordenadas`WHERE ID = '1' ORDER BY ID DESC LIMIT 1";
+$sql = "SELECT Velocidad FROM  `coordenadas`WHERE IDvehiculo = '1' ORDER BY ID DESC LIMIT 1";
 
 $result = $conn->query($sql);
 
