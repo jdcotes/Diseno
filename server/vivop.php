@@ -16,7 +16,7 @@
   $desde = $uno.$sapce.$tres;
   $hasta = $dos.$sapce.$cuatro;
 
-  $sql = "SELECT FechaGPS FROM  `coordenadas` WHERE IDvehiculo = '$cero' AND Velocidad = '11' AND FechaGPS BETWEEN  '$desde' AND  '$hasta';";
+  $sql = "SELECT FechaGPS FROM  `coordenadas` WHERE IDvehiculo = '$cero' AND Velocidad = 11 AND FechaGPS BETWEEN  '$desde' AND  '$hasta';";
   $ejecutar_sql1=mysql_query($sql) or die("Problemas en consulta: ".mysql_error());
 
   $tabla=array();
