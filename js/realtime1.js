@@ -96,7 +96,7 @@ function initMap() {
       Estado = parseFloat(prueba1[j].Velocidad);
 
      // Condición para dibujado, evitar saltos cuando está detenido el vehiculo
-      if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
+      if ((Math.abs(lat-latold)>0.0001) || (Math.abs(lon-longold)>0.0001)){
         routes2[a] = new google.maps.LatLng(lat,lon);
         markerdate[a] = DateGps;
         markerstate[a] = Estado;
