@@ -94,7 +94,6 @@ function initMap() {
       lon = parseFloat(prueba1[j].Longitud);
       DateGps = (prueba1[j].FechaGPS);
       Estado = parseFloat(prueba1[j].Velocidad);
-      console.log(Estado);
 
      // Condición para dibujado, evitar saltos cuando está detenido el vehiculo
       if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
