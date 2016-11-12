@@ -171,10 +171,10 @@ function DrawMarker(){
   var label = markerdate[slide].split(" ");
   var label2 = markerstate[slide];
   if (label2 == 11){
-    var label3 = "Cerrado";
+    var label3 = "Abierto";
   }
   else{
-    var label3 = "Abierto";
+    var label3 = "Cerrado";
   }
   document.getElementById("beendate").innerHTML = label[0];
   document.getElementById("beentime").innerHTML = label[1];
