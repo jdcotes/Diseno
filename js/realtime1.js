@@ -78,6 +78,7 @@ function initMap() {
   }
     //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
+    console.log("hola");
     $.post("server/vivop.php"),{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta1){
       var prueba5 = JSON.parse(respuesta1);
       console.log(prueba5);
