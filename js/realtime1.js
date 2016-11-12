@@ -6,7 +6,7 @@ var map;
 var total = 0;
 var markerArray = [];
 var routes2 = [];
-var markerdate = []
+var markerdate = [];
 var j = 0;
 var tamaño;
 var verificar = 0;
@@ -19,7 +19,7 @@ var dates = 0; //Variable control fecha 1 mayor fecha 2
 var times = 0; //Variabel control times 1 mayor que times 2
 var datesc =0; //Variable control cuando no se ingresan fechas
 var cor ="#33cc33";
-//COLOR #33cc33 verde 
+//COLOR #33cc33 verde
 
 //Mapa inicial al cargar página
 map2 = new google.maps.Map(document.getElementById('map'), {
@@ -28,10 +28,10 @@ zoom: 13});
 //Inicio de polilinea en 0
 var polyline = new google.maps.Polyline({
   path: routes2,
-  map: map2, 
-  strokeColor: '#143254', 
-  strokeWeight: 5, 
-  strokeOpacity: 1, 
+  map: map2,
+  strokeColor: '#143254',
+  strokeWeight: 5,
+  strokeOpacity: 1,
   clickable: false
 });
 
@@ -58,13 +58,13 @@ function initMap() {
   dates=0;
   times=0;
   datesc=0;
-  //Alertas posibles errores de ingreso de datos 
+  //Alertas posibles errores de ingreso de datos
   if (date1=="" && date2==""){
     alert("Necesario ingresar fechas para realizar la consulta");
     datesc=1;
   }
   if (date2 == ""){
-    date2=date1; 
+    date2=date1;
   }
   if (date1 > date2){
     alert("Consulta no realizada. Verificar fechas ingresadas.");
@@ -78,12 +78,16 @@ function initMap() {
   }
     //Consulta base de datos para procesar datos.
   if (dates== 0 && times == 0 && datesc == 0){
+    $.post("server/vivop.php"),{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta1){
+      var prueba5 = JSON.parse(respuesta1);
+      console.log(prueba5);
+    }
     $.post("server/vivoh.php",{auto: car,fechita: date1,fechita2: date2,horita: time1, horita2: time2},function(respuesta) {
     entro = 0;
     var prueba1 = JSON.parse(respuesta);
-    tamaño = prueba1.length
+    tamaño = prueba1.length;
     var lat, lon;
-    
+
     // LLenado de vector prueba 1 con la consulta realizada //
     for (var j in prueba1) {
 
@@ -92,7 +96,7 @@ function initMap() {
       lon = parseFloat(prueba1[j].Longitud);
       DateGps = (prueba1[j].FechaGPS);
 
-     // Condición para dibujado, evitar saltos cuando está detenido el vehiculo 
+     // Condición para dibujado, evitar saltos cuando está detenido el vehiculo
       if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
         routes2[a] = new google.maps.LatLng(lat,lon);
         markerdate[a] = DateGps;
@@ -104,8 +108,8 @@ function initMap() {
       j=j+1;
     }
     a = 0;
-    longitud = routes2.length; 
-    
+    longitud = routes2.length;
+
      //Consulta con 0 resultados
      if (longitud == 0){
          alert("No hay datos entre los límites establecidos");
@@ -128,29 +132,29 @@ function initMap() {
       control = 0;
     }
     // Pintado de polilinea y establecer ubicación de marcador //
-            
+
     if(tamaño>0){
       polyline = new google.maps.Polyline({
       path: routes2,
-      map: map2, 
-      strokeColor: cor, 
-      strokeWeight: 5, 
-      strokeOpacity: 1, 
-      clickable: false});  
+      map: map2,
+      strokeColor: cor,
+      strokeWeight: 5,
+      strokeOpacity: 1,
+      clickable: false});
       marker = new google.maps.Marker({
         position: myLatLng,
         map: map2,
         title: markerdate[longitud-1]
        });
-    } 
-    // Hacer visble el slider y los botones disponibles para el desplazamiento
-    var w = document.querySelector("#slider"); 
+    }
+    //Hacer visble el slider y los botones disponibles para el desplazamiento
+    var w = document.querySelector("#slider");
     w.setAttribute("style","display: inline");
     var z = document.querySelector("#fordward");
-    z.setAttribute("style","display: inline");   
+    z.setAttribute("style","display: inline");
     var y = document.querySelector("#backward");
-    y.setAttribute("style","display: inline"); 
-    
+    y.setAttribute("style","display: inline");
+
     });
   }
 }
@@ -177,22 +181,21 @@ function DrawMarker(){
 //Aumenta valor slider al presionar el boton mas. Muev eel slider
 function Forward(){
 var u = document.querySelector("#slider");
-var slide = slider.value; 
+var slide = slider.value;
 var now = parseInt(slide);
 u.setAttribute("value",now+1);
 DrawMarker();
 var q = document.querySelector("#infor");
-q.setAttribute("style","display: block"); 
-    
+q.setAttribute("style","display: block");
+
 }
 // Disminuye valor slider al preisonar el boton menos. Mueve el slider
 function Backward(){
 var v = document.querySelector("#slider");
 var slide = slider.value;
-var now = parseInt(slide);  
+var now = parseInt(slide);
 v.setAttribute("value",now-1);
 DrawMarker();
 var q = document.querySelector("#infor");
-q.setAttribute("style","display: block");     	
+q.setAttribute("style","display: block");
 }
-
