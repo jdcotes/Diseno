@@ -30,8 +30,8 @@
 
 	<!-- link calendar resources -->
 	<link rel="stylesheet" type="text/css" href="tcal.css" />
-	<script type="text/javascript" src="tcal.js"></script> 
-	
+	<script type="text/javascript" src="tcal.js"></script>
+
 	<!-- HORAS SRC LINK ETC -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="./jquery.datetimepicker.css"/>
@@ -41,7 +41,7 @@
 		background-color: red !important;
 	}
 
-	.input{	
+	.input{
 	}
 	.input-wide{
 	width: 600px;
@@ -79,32 +79,32 @@
 						<div class="4u">
 							<section><br>
 								<h3 align="justify"><center>¿Donde ha estado mi Vehículo?</center></h3>
-								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>							
+								<p align="justify"> Ingrese en las siguientes casillas los rangos de fecha y hora deseados para conocer el histórico de su vehículo</p>
 
 							<table>
-							<form action="">						 
+							<form action="">
 								  <tr>
 									    <td><center><h4>Elija Vehículo</h4></center></td>
-									    <td><center><input type="number" id="Carro" value="1" min="1" max="2" length="10" ></td> 
+									    <td><center><input type="number" id="Carro" value="1" min="1" max="2" length="10" ></td>
 								  </tr>
 							</form>
 
-							<form action="">							
+							<form action="">
 									  <tr>
 									    <td><center>Fecha Inicial</td>
-									    <td><center>Fecha Final</td> 
+									    <td><center>Fecha Final</td>
 									  </tr>
 									  <tr>
 									    <td><input id="fecha1"  runat="server" type="text" name="date1" class="tcal" value="" /></td>
-									    <td><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></td> 
+									    <td><input id="fecha2" runat= "server" type="text" name="date2" class="tcal" value="" /></td>
 									  </tr>
 									  <tr>
 									    <td><center>Hora Inicial</td>
-									    <td><center>Hora Final</td> 
+									    <td><center>Hora Final</td>
 									  </tr>
 									  <tr>
 									    <td><input type="text" runat ="server" value="00:00" id="Desde" /></td>
-									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td> 
+									    <td><input type="text" runat = "server" value="23:00" id="Hasta" /></td>
 									  </tr>
 									  <tr>
 							  	</table>
@@ -131,18 +131,19 @@
 						    <div>
 								<center>
 									<p id="infor" style="display: none"> Su vehiculo estuvo aqui el: <b id = "beendate"></b> a las: <b id = "beentime"></b></p>
+									<p id="infor2" style="display: none"> Estado de la puerta del contenedor: <b id = "state"></b></p>
 								</center>
 							</div>
 						    <div id='map'></div>
 
 						</div>
-					
+
 			</section>
 
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="container">
-				
+
 					<ul class="copyright">
 						<li>Diseño Electrónico. Universidad del Norte. 2016</li>
 						<li>Desarrollado por: Juan Diego Cotes | Cristian Cepeda | Hernán Carrillo | Andrea Fontalvo</li>
@@ -153,7 +154,7 @@
 
 
             <!-- MAPA -->
-			<script src="js/realtime1.js"></script>	
+			<script src="js/realtime1.js"></script>
 
 
 	</body>

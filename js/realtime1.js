@@ -7,6 +7,7 @@ var total = 0;
 var markerArray = [];
 var routes2 = [];
 var markerdate = [];
+var markerstate = [];
 var j = 0;
 var tamaño;
 var verificar = 0;
@@ -92,13 +93,14 @@ function initMap() {
       lat = parseFloat(prueba1[j].Latitud);
       lon = parseFloat(prueba1[j].Longitud);
       DateGps = (prueba1[j].FechaGPS);
-      Estado = (prueba1[j].Velocidad);
+      Estado = parseFloat(prueba1[j].Velocidad);
       console.log(Estado);
 
      // Condición para dibujado, evitar saltos cuando está detenido el vehiculo
       if ((Math.abs(lat-latold)>0.00001) || (Math.abs(lon-longold)>0.00001)){
         routes2[a] = new google.maps.LatLng(lat,lon);
         markerdate[a] = DateGps;
+        markerstate[a] = Estado;
         latold=lat;
         longold=lon;
         myLatLng = new google.maps.LatLng(lat,lon);
@@ -168,8 +170,16 @@ function DrawMarker(){
   x.setAttribute("max",longitud - 1);
   var slide = slider.value;
   var label = markerdate[slide].split(" ");
+  var label2 = markerstate[slide];
+  if (label2 == 11){
+    var label3 = "Cerrado";
+  }
+  else{
+    var label3 = "Abierto";
+  }
   document.getElementById("beendate").innerHTML = label[0];
   document.getElementById("beentime").innerHTML = label[1];
+  document.getElementById("state").innerHTML = label3;
     marker = new google.maps.Marker({
     position: routes2[slide],
     map: map2,
@@ -186,7 +196,8 @@ u.setAttribute("value",now+1);
 DrawMarker();
 var q = document.querySelector("#infor");
 q.setAttribute("style","display: block");
-
+var z = document.querySelector("#infor2");
+z.setAttribute("style","display: block");
 }
 // Disminuye valor slider al preisonar el boton menos. Mueve el slider
 function Backward(){
@@ -197,4 +208,6 @@ v.setAttribute("value",now-1);
 DrawMarker();
 var q = document.querySelector("#infor");
 q.setAttribute("style","display: block");
+var z = document.querySelector("#infor2");
+z.setAttribute("style","display: block");
 }
