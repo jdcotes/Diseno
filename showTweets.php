@@ -71,7 +71,7 @@ class Twitter{
   }
 }
   $twitterObject = new Twitter();
-  $jsonraw = $twitterObject->getTweets("Cadizum");
+  $jsonraw = $twitterObject->getTweets("NoticiasCaracol");
   $rawdata = $twitterObject->getArrayTweets($jsonraw);
   $twitterObject->displayTable($rawdata);
 ?>
