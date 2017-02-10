@@ -84,13 +84,13 @@ class TwitterAPIExchange
             throw new RuntimeException('TwitterAPIExchange requires cURL extension to be loaded, see: http://curl.haxx.se/docs/install.html');
         }
 
-        if (!isset($settings['oauth_access_token'])
-            || !isset($settings['oauth_access_token_secret'])
-            || !isset($settings['consumer_key'])
-            || !isset($settings['consumer_secret']))
-        {
-            throw new InvalidArgumentException('Incomplete settings passed to TwitterAPIExchange');
-        }
+        // if (!isset($settings['oauth_access_token'])
+        //     || !isset($settings['oauth_access_token_secret'])
+        //     || !isset($settings['consumer_key'])
+        //     || !isset($settings['consumer_secret']))
+        // {
+        //     throw new InvalidArgumentException('Incomplete settings passed to TwitterAPIExchange');
+        // }
 
         $this->oauth_access_token = $settings['oauth_access_token'];
         $this->oauth_access_token_secret = $settings['oauth_access_token_secret'];
