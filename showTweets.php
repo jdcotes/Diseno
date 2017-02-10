@@ -1,5 +1,6 @@
 <meta charset="utf-8">
 <?php
+class Twitter{
   function getTweets($user){
       ini_set('display_errors',1);
       require_once('TwitterAPIExchange.php')
@@ -68,6 +69,7 @@
       }
       echo '</table>';
   }
+}
   $twitterObject = new Twitter();
   $jsonraw = $twitterObject->getTweets("Cadizum");
   $rawdata = $twitterObject->getArratTweets($jsonraw);
