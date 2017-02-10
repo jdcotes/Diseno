@@ -26,7 +26,7 @@ class Twitter{
       $json = json_decode($jsonraw);
       $num_items = count($json);
 
-      for($i=0; $i<num_items; $i++){
+      for($i=0; $i<$num_items; $i++){
           $user = $json[$i];
           $fecha = $user->created_at;
           $url_imagen = $user->user->profile_image_url;
