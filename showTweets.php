@@ -3,7 +3,7 @@
 class Twitter{
   function getTweets($user){
       ini_set('display_errors',1);
-      require_once('TwitterAPIExchange.php')
+      require_once('TwitterAPIExchange.php');
 
       $settings = array(
         'oauth_acces_token' => "348069833-ZuXLAANB78ygs1VFoZpOZ08oGOZsQh9GvmV2e53b",
@@ -13,7 +13,7 @@ class Twitter{
       );
 
       $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-      $getfield = '?screen_name=Cadizum&count=100';
+      $getfield = '?screen_name='.$user.'&count=100';
       $requestMethod = 'GET';
       $twitter = new TwitterAPIExchange($settings);
       $json = $twitter->setGetfield($getfield)
@@ -24,7 +24,7 @@ class Twitter{
   function getArrayTweets($jsonraw){
       $rawdata = "";
       $json = json_decode($jsonraw);
-      $num_items = count($json->statuses);
+      $num_items = count($json);
 
       for($i=0; $i<num_items; $i++){
           $user = $json[$i];
@@ -72,6 +72,6 @@ class Twitter{
 }
   $twitterObject = new Twitter();
   $jsonraw = $twitterObject->getTweets("Cadizum");
-  $rawdata = $twitterObject->getArratTweets($jsonraw);
+  $rawdata = $twitterObject->getArrayTweets($jsonraw);
   $twitterObject->displayTable($rawdata);
 ?>
